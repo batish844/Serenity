@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'The Billion';
+  src: url('/public/fonts/the_billion/The\ Billion.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}  
+@font-face {
+  font-family: 'Embarcadero MVB Pro';
+  src: url('/public/fonts/Embarcadero MVB Pro/fonnts.com-Embarcadero_MVB_Pro_Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
