@@ -16,3 +16,10 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url('/public/fonts/Montserrat Medium/FontsFree-Net-Montserrat-Medium.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
