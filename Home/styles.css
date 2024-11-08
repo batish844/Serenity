@@ -375,6 +375,19 @@
     background-size: 100% 90%; /* Keeps the image at 100% width and 50% height */
  
  }
+ .cart-button-text-style {
+   outline: none;
+   border: none;
+   background-color: transparent; /* Keeps the original background */
+   cursor: pointer;
+}
+.cart-button-text-style:hover,
+.cart-button-text-style:focus {
+    outline: none;
+    opacity: 0.8; /* Optional for a slight dim effect */
+}
+
+
  
  
  
