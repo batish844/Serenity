@@ -371,7 +371,7 @@
  
  
  .main-background-container {
-    background: url("images/image_aedf65af.png") center 0% no-repeat; /* Moves the image down by 10% */
+    background: url("/images/background.png") center 0% no-repeat; /* Moves the image down by 10% */
     background-size: 100% 90%; /* Keeps the image at 100% width and 50% height */
  
  }
