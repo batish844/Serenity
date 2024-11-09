@@ -413,8 +413,181 @@
     outline: none;
     opacity: 0.8; /* Optional for a slight dim effect */
 }
+.b-quiz {
+   display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #fdf7ef;
+font-family: Arial, sans-serif;
+}
 
+.scent-seer-container {
+   margin: auto;
+   max-width: 1150px; 
+   width: 100%;
+ background-color: #ebd3bd;
+ padding: 40px 50px;
+ border-radius: 60px;
+ display: flex;
+ align-items: center;
+ min-height: auto;
+ max-height: 518px; 
+ padding-top: 0px;
+ display: flex;
 
+}
+
+.text-section0 {
+ flex: 1;
+ color: #5c4a42;
+}
+
+.text-section0 h2 {
+   
+ font-family:'Brush Script MT', cursive;
+ font-size: 2rem;
+ font-weight: 300;
+ margin-bottom: 10px;
+ color: #ae8e7a;
+}
+
+.text-section0 h3 {
+ font-family: 'Montserrat';
+ position: absolute;
+ font-weight: 700;
+ padding-top:0px;
+ padding-left: 520px;
+ transform: translate(-46%, -260%);
+ font-size: 1.83em; 
+ color: #8a623b;
+ word-spacing: 2px;
+ letter-spacing: 2px;
+ 
+}
+
+.text-section0 p.take {
+ font-family: 'Montserrat';
+ color: #8e6741;
+ 
+ font-size: 0.9rem;
+ transform: translate(40%, -60%) ;
+
+ margin-bottom: 20px;
+ font-weight: 500;
+ 
+}
+.text-section0 h4{
+ font-family: 'Montserrat';
+ color: #8d663f;
+ font-size: 2.1rem;
+ font-weight: 500;
+ transform: translate(6.5%, -10%);
+ text-align: center;
+}
+.text-section0 .still{
+ color: #906943;
+ /* Still can't decide? Take our Scent Finder Quiz to discover your perfect scent match. Find the candle that's just right for you. */
+
+font-family: 'Montserrat';
+font-weight: 600;
+font-size: 1rem;
+transform: translate(9%, 46%);
+
+}
+
+.text-section0 .quiz-button {
+   margin-left: 220px;
+   color: #8e6b4a;
+ padding: 8px 9px;
+ background-color: #ffffff;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ color: #7c542e;
+ transform: translate(5%, 175%);
+}
+
+.text-section0 .quiz-button:hover {
+ background-color: #78634b;
+ color: #ebd3bd;
+}
+
+.image-section {
+ flex: 1;
+ 
+}
+
+.image-section img {
+   max-width: 99%;
+ right: 0px;
+margin-left: 55px;
+margin-top: 39px;
+}
+.img2{
+ 
+ width: 73%;
+ margin-left: 100px;
+ transform: translate(0%, -60%);
+}
+@media (max-width: 600px) {
+ .scent-seer-container {
+   padding: 20px;
+   flex-direction: column;
+   align-items: center;
+   max-width: 96%;
+   text-align: center;
+
+ }
+
+ .text-section0 h3 {
+   font-size: 1.3em;
+   margin-top: -16px;
+   display: inline-block;
+   margin-left: -278px;
+   white-space: nowrap;
+   letter-spacing: 1px
+ }
+
+ .text-section0 h4 {
+   font-size: 1.4rem;
+   margin-bottom: 2px;
+   margin-left: -55px;
+ }
+
+ .text-section0 p.take {
+   font-size: 0.85rem;
+   margin-left: -1400px;
+ }
+
+ .text-section0 .still {
+   font-size: 0.9rem;
+   max-width:400px;
+   margin-bottom: 10px;
+   margin-left: -50px;
+ }
+
+ .text-section0 .quiz-button {
+   width: 40%;
+   padding: 10px;
+   font-size: 1rem;
+   margin-top:60px;
+   margin-left: -200px;
+  transform: translate(10%, 100%);
+ }
+
+ .image-section {
+   width: 50%;
+   margin-top: -120px;
+   margin-left: 92px;
+ }
+
+ .img2 {
+   width: 60%;
+   margin:18px;
+   margin-left: 40px;
+ }
+}
  
  
  
