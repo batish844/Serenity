@@ -1,5 +1,3 @@
-//Testimonial slider 
-
 const testimonialItems = document.querySelectorAll('.testimonial-item');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
@@ -17,12 +15,14 @@ function updateTestimonials() {
         }
     });
 }
-
+//right
 function nextTestimonial() {
     currentIndex = (currentIndex + 1) % testimonialItems.length;
     updateTestimonials();
 }
 
+
+//left
 function prevTestimonial() {
     currentIndex = (currentIndex - 1 + testimonialItems.length) % testimonialItems.length;
     updateTestimonials();

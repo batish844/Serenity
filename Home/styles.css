@@ -22,6 +22,7 @@
   font-weight: normal;
   font-style: normal;
 }
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;1,100;1,300;1,400;1,500;1,900&display=swap");
 /* Responsive Container */
 .container {
    max-width: 1200px;
@@ -39,7 +40,6 @@
 #about-us {
    position: relative;
    text-align: center;
-   padding-top: 100px;
  
 
 }
@@ -409,7 +409,6 @@ a {
 .Home-testimonial{
   
       font-family: Arial, sans-serif;
-      background-color: #FDF5E6;
       margin: 0;
       padding: 0;
       display: flex;
@@ -566,6 +565,150 @@ h2 {
 .next {
    right: 50px;
 }
+
+/* Responsivity */
+
+
+/* iPhone 14 pro max */
+@media(max-width:480px) {
+
+   body {
+       font-family: Arial, sans-serif;
+       background-color: #FDF5E6;
+       margin: 0;
+       padding: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       min-height: 100vh;
+       overflow: hidden;
+   }
+
+
+   .carousel-arrow {
+       display: none;
+   }
+   .testimonial-item.active {
+       opacity: 1;
+       transform: scale(0.7);
+       z-index: 2;
+       background-color: #ECD3BE;
+       color: #8B623C;
+       border-radius: 35px;
+       margin: auto;
+   }
+   .testimonial-logo {
+       display: block;
+       width: 100%;
+       max-width: 530px;
+       margin: -140px auto -90px auto;
+       transform: scale(0.7);
+       transform-origin: center;
+   }
+   .testimonial-item.active .testimonial-quotation {
+       transform: scale(3);
+       position: absolute;
+       bottom: -20px;
+       right: 50px;
+       z-index: 3;
+   }
+   .testimonial-text {
+       font-family: "Quicksand", sans-serif;
+       color: #8B7355;
+       font-size: 1.1em;
+       line-height: 1.6;
+       max-width: 600px;
+       margin: 0 auto;
+   }
+}
+   /* iPad Air  */
+
+   @media (max-width : 768px) {
+
+       body {
+           font-family: Arial, sans-serif;
+           background-color: #FDF5E6;
+           margin: 0;
+           padding: 0;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           min-height: 90vh;
+           overflow: hidden;
+       }
+       
+       .testimonial-item.left {
+           transform: scale(0.85) translateX(-120%);
+           opacity: .95;
+           z-index: 1;
+           background-color: #FFFFFF;
+       }
+
+       .testimonial-item.right {
+           transform: scale(0.85) translateX(120%);
+           opacity: 0.95;
+           z-index: 1;
+           background-color: #FFFFFF;
+       }
+
+       .testimonial-carousel {
+           position: relative;
+           margin-top: 40px;
+           height: 300px;
+           width: 100%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           overflow: hidden;
+       }
+   }
+/* iPad Air */
+   @media (max-width : 820px) {
+
+       body {
+           font-family: Arial, sans-serif;
+           background-color: #FDF5E6;
+           margin: 0;
+           padding: 0;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           min-height: 100vh;
+           overflow: hidden;
+       }
+       
+       .testimonial-item.left {
+           transform: scale(0.85) translateX(-120%);
+           opacity: .95;
+           z-index: 1;
+           background-color: #FFFFFF;
+       }
+
+       .testimonial-item.right {
+           transform: scale(0.85) translateX(120%);
+           opacity: 0.95;
+           z-index: 1;
+           background-color: #FFFFFF;
+       }
+
+   }
+
+   /* Large screens */
+   @media (max-width : 1024px) {
+
+       body {
+           font-family: Arial, sans-serif;
+           background-color: #FDF5E6;
+           margin: 0;
+           padding: 0;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           min-height: 100vh;
+           overflow: hidden;
+       }
+
+   }
 /* Landing Section */
 .Home-landing{
    font-family: Arial, sans-serif;
