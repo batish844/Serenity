@@ -406,15 +406,15 @@ a {
       background-position: center center; /* Keeps the image centered */
   }
 }
-.Home-testimonial{
-  
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+.Home-testimonial {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-height: 40vh;
+   margin-bottom: 180px;
 }
 .testimonial-container {
    width: 100%;
@@ -694,8 +694,13 @@ h2 {
    }
 
    /* Large screens */
-   @media (max-width : 1024px) {
 
+
+
+
+   /* Problem
+   @media (max-width : 1024px) {
+/* 
        body {
            font-family: Arial, sans-serif;
            background-color: #FDF5E6;
@@ -706,20 +711,20 @@ h2 {
            align-items: center;
            min-height: 100vh;
            overflow: hidden;
-       }
-
-   }
+       } */
+/* } */
 /* Landing Section */
-.Home-landing{
+.Home-landing {
    font-family: Arial, sans-serif;
    min-height: 100vh;
    background: url(/public/images/Landing_Image.jpg) no-repeat center center;
    background-size: cover;
    color: #FDF8F0;
    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #FDF8F0;
+   padding: 0;
+   box-sizing: border-box;
+   color: #FDF8F0;
+   margin-bottom: 40px;
 }
 .landing-container {
    margin: auto;
