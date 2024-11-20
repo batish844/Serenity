@@ -14,6 +14,8 @@ body {
     background-color:  #f9f3ee;
 }
 
+/* First Half Part  */
+
 .Contact_us_Container {
     display: contents;
     width: 90%;
@@ -148,9 +150,10 @@ textarea {
 
   /* Contact Detail */
   
-  .contact-details{
+  .contact-details {
     margin-top: 40px;
-  }
+}
+
   .contact-details p {
     max-width: 500px;
     color: #8B623C;
@@ -196,7 +199,6 @@ textarea {
     display: flex;
 }
 
-
 .icon{
     transform: scale(0.8);
 }
@@ -214,7 +216,6 @@ textarea {
     max-width: 300px;
     margin-top: 30px;
 }
-
 
 /* Social Media */
 
@@ -236,4 +237,119 @@ font-weight: 400;
     display: flex;
     gap: 18px;
 }
+
+
+/* Responsivity  */
+
+
+/* Iphone  */
+
+@media (max-width: 430px) {
+
+    .Reach-Out p {
+        margin: 20px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        width: 70%;
+        padding: 8px;
+        color: #8B623C;
+    }
+
+/* Form */
+    .Mini-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0px;
+        justify-content: center;
+        margin-left: 0px;
+        margin: 10px;
+    }
+    
+    .container h1 {
+        color: #8B623C;
+        font-weight: 600;
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    textarea {
+        min-height: 100px;
+        resize: vertical;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-right: 50px;
+    }
+
+    .form-group {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .contact-details h3 {
+        text-align: center;
+    }
+
+    .contact-details p {
+        max-width: 100%;
+        color: #8B623C;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .Mobile-icon {
+       width: 160px;
+    }
+
+/* Contact-items + icons */
+
+    .contact-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        height: 110px;
+        margin-bottom: 30px;
+        width: 100%;
+        text-align: center;
+        margin-left: 10px;
+    }
+    
+    .contact-row1 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .Contact-Section {
+        color: #6E4835;
+        display: flex;
+        flex-direction: column;
+        max-width: 180px;
+        margin-top: 30px;
+    }
+
+    .icon {
+        transform: scale(1);
+        margin-bottom: 5px;
+    }
+    .Email-icon {
+        width: 160px;
+        text-align: center;
+    }
+    .contact-item.Mobile{
+    gap: 35px;
+    }
+    .contact-item.Insta{
+        gap: 24px;
+    }
+    
+}
+
+/* Seconf Half Part  */
+
 
