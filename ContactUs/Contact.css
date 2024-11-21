@@ -12,11 +12,13 @@ body {
     margin: 0 auto;
     padding: 0px;
     background-color:  #f9f3ee;
+    text-align: center;
 }
 
 /* First Half Part  */
 
 .Contact_us_Container {
+    margin: 0 50px;
     display: contents;
     width: 90%;
     height: auto;
@@ -77,7 +79,6 @@ body {
     border-radius: 60px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin: 20px;
-    border: 1px solid #6E4835;
 }
   
  .container h1 {
@@ -143,9 +144,9 @@ textarea {
     font-weight: 500;
 }
   
-  button:hover {
+  /* button:hover {
     background-color: #e9e8e7;
-  }
+  } */
   
 
   /* Contact Detail */
@@ -352,4 +353,182 @@ font-weight: 400;
 
 /* Seconf Half Part  */
 
+.Quick-help-container {
 
+    background-color:  #f9f3ee;
+    padding: 20px;
+}
+
+.Quick-help-section1 {
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+.Quick-help-section1 p {
+    margin-top: 20px;
+    padding: 0px 600px;
+}
+
+.Quick-help-section2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+
+.Quick-help-image {
+    max-width: 200px;
+    margin-bottom: -18px;
+}
+
+.Quick-help-Questions {
+    max-width: 600px;
+    margin-left: 410px;
+}
+
+
+.Quick-help-Question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E0C1AC;
+    color: #FDF8F0;
+    border-radius: 15px;
+    padding-left: 10px;
+    max-width: 570px;
+    margin-bottom: 25px;
+    flex-direction: column;
+}
+
+.Quick-help-Question p{
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.Quick-help-button {
+    color: #ffffff;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.Quick-help-Answer {
+    margin-left: 20px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.Quick-help-Answer .Answer-P {
+    padding-left: 0;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+
+.Quick-help-button {
+    color: #ffffff;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    transition: transform 0.3s;
+}
+
+.Quick-help-button.open {
+    transform: rotate(45deg);
+    color: #FF5733;
+}
+
+
+.candle-image {
+    transform: scale(0.9);
+    margin-top: -120px;
+    margin-right: 290px;
+}
+
+.FAQ{
+    width: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Iphone  */
+@media(max-width:430px){
+    .Quick-help-section1 p {
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .Quick-help-Questions {
+        margin-left: 0;
+        margin-top: -60px;
+    }
+
+    .Quick-help-container {
+        background-color: #f9f3ee;
+        overflow: hidden;
+    }
+
+    .FAQ {
+       width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 0;
+        padding: 8px;
+    }
+    .Quick-help-section2 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 80px;
+        
+    }
+    .candle-image {
+        transform: scale(0.6);
+
+    }
+    .Quick-help-Question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #E0C1AC;
+        color: #FDF8F0;
+        border-radius: 15px;
+        max-width: 570px;
+        margin-bottom: 25px;
+        flex-direction: column;
+    }
+    .Quick-help-button {
+        color: #ffffff;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        background: none;
+        transition: transform 0.3s;
+        padding: 0;
+        margin-right: 35px;
+    }
+    .Quick-help-Question p{
+        font-size: 13px;
+    }
+
+    .Quick-help-Answer .Answer-P {
+        margin-left: 0;
+        font-size: 12px;
+        padding-right: 25px;
+        padding-bottom: 10px;
+    }
+
+    .candle-image {
+        transform: scale(0.5);
+        text-align: center;
+        margin-left: 50px;
+    }
+    
+}
