@@ -1,5 +1,3 @@
-
-
 // Show answers
 document.querySelectorAll('.Quick-help-button').forEach(button => {
     button.addEventListener('click', () => {
