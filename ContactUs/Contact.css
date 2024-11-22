@@ -252,7 +252,7 @@ font-weight: 400;
         font-size: 1rem;
         margin-bottom: 10px;
         width: 70%;
-        padding: 8px;
+        padding: 0px;
         color: #8B623C;
     }
 
@@ -350,7 +350,39 @@ font-weight: 400;
     }
     
 }
+@media(max-width:768px){
 
+    .Reach-Out {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 50px;
+        color: #8B623C;
+        margin-left: 130px;
+    }
+
+    .Reach-Out p {
+        margin: 20px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        width: 70%;
+        padding: 0px;
+        color: #8B623C;
+    }
+
+    .Mini-container {
+        display: flex;
+        gap: 0px;
+        max-width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 200px;
+    }
+}
 /* Seconf Half Part  */
 
 .Quick-help-container {
@@ -416,7 +448,7 @@ font-weight: 400;
 
 .Quick-help-Answer {
     margin-left: 20px;
-    overflow: hidden;
+    overflow-y: hidden;
     max-height: 0;
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
@@ -530,5 +562,87 @@ font-weight: 400;
         text-align: center;
         margin-left: 50px;
     }
-    
+
+}
+/* Ipad Mini */
+@media (max-width: 768px) {
+
+
+    .Reach-Out {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 50px;
+        color: #8B623C;
+        margin-left: 80px;
+    }
+
+    .Mini-container {
+        display: flex;
+        gap: 14px;
+        max-width: 68%;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 140px;
+    }
+
+    .Quick-help-container {
+        background-color: #f9f3ee;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 160px;
+    }
+
+    .Quick-help-Question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #E0C1AC;
+        color: #FDF8F0;
+        border-radius: 15px;
+        padding-left: 0px;
+        max-width: 570px;
+        margin-bottom: 25px;
+        flex-direction: column;
+    }
+
+    .Quick-help-section1 {
+        text-align: center;
+        margin-bottom: 20px;
+        max-width: 100%;
+        margin-top: 20px;
+        margin-left: 60px;
+    }
+
+    .Quick-help-section1 p {
+
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .Quick-help-Questions {
+        margin-left: 160px;
+        margin-top: -30px;
+    }
+
+    .Quick-help-section2 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 80px;
+        margin-left: -80px;
+        max-width: 80%;
+    }
+    .candle-image {
+        display: none;
+        transform: scale(0.8);
+        margin-right: 10px;
+    }
+    .candle-image img {
+        transform: scale(.6);
+    }
 }
