@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "name": "A Walk in the Woods (350G)",
+      "price": 25,
+      "quantity": 1,
+      "image": "Cart-Images/A Walk in the Woods (350G).png"
+    },
+    {
+      "id": 2,
+      "name": "Caramella Mini Mold",
+      "price": 6,
+      "quantity": 1,
+      "image": "Cart-Images/Caramella Mini Mold.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Circled Hanger",
+      "price": 3,
+      "quantity": 2,
+      "image": "Cart-Images/circled-hanger.jpg"
+    }
+  ]
+  

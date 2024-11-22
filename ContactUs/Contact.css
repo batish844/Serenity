@@ -608,9 +608,9 @@ font-weight: 400;
         margin-top: 20px;
     }
 }
+
 /* Ipad Mini */
 @media (max-width: 768px) {
-
 
     .Reach-Out {
         display: flex;
@@ -786,6 +786,8 @@ font-weight: 400;
         margin-top: 25px;
     }
 }
+
+
 
 /* Ipad Pro */
 /* @media(max-width:1024px) {
