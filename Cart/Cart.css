@@ -118,11 +118,113 @@ body {
     display: block;
 }
 
+.price {
+    color: #6E4835;
+    max-width: 19px;
+}
 
-    .price {
-        color: #6E4835;
-        max-width: 19px;
+    .border{
+        border-bottom: 2px solid #8B623C; 
+        width: 100%; 
+        margin-bottom: 10px;
     }
+
+    .promo-subtotal-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+        color: #8B623C;
+        font-size: 20px;
+        height: 100px;
+      }
+      
+      .promo-code-section {
+        flex: 1;
+        margin-top: -15px;
+        display: block;
+        font-size: 20px;
+    }
+    .promo-input {
+        max-height: 0px; 
+        overflow: hidden; 
+        opacity: 0; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+      }
+      
+      .promo-input.show {
+        max-height: 100px;
+        width: 300px;
+        opacity: 1;
+    }
+
+    .promo-toggle-btn i {
+        font-size: 1.5rem; 
+        color: #8B623C;  
+        transition: transform 0.3s ease; 
+      }
+      
+      .promo-toggle-btn i.rotate {
+        transform: rotate(180deg); 
+      }
+      
+
+    #promo-code{
+        width: 200px;
+        padding: 5px 10px;
+        border: 1px solid #7a5948;
+        border-radius: 20px;
+        background-color: #fdf7f2;
+        color: #6E4835;
+        margin-right: 10px;
+        transition: width 0.3s ease;
+    }
+    .promo-input.show button{
+        width: 70px;
+        background-color: #8B623C;
+        color: #fdf7f2;
+        border: none;
+        border-radius: 20px;
+        padding: 5px ;
+        text-align: center;
+        
+    }
+      
+      .promo-feedback {
+        font-size: 0.9rem;
+        margin-top: 5px;
+      }
+      .promo-toggle-btn{
+        background: none ;
+        border:none;
+        color: #8B623C;
+      }
+      
+      .subtotal-section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      
+      .checkout-btn {
+        margin-top: 10px;
+        padding: 10px 30px;
+        background-color: #8B623C;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .checkout-btn:hover {
+        background-color: #6F4835;
+      }
+
 
 /* For screens up to 820px */
 @media (max-width: 820px) {
@@ -171,3 +273,6 @@ body {
         width: 105%;
     }
 }
+
+
+

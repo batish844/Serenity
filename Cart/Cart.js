@@ -1,17 +1,27 @@
-let cartItems = []; 
+let cartItems = [];
+let subtotal = 0;
+let promoApplied = false; 
+let discount = 0; 
 
 function initializeCart() {
   const storedCart = localStorage.getItem("cartItems");
+  const storedDiscount = localStorage.getItem("discount");
 
   if (storedCart) {
     cartItems = JSON.parse(storedCart);
+    if (storedDiscount) {
+      discount = parseFloat(storedDiscount);
+      promoApplied = true; 
+      calculateSubtotal();
+    }
     renderCart();
   } else {
     fetch('Cart.json')
       .then(response => response.json())
       .then(products => {
-        cartItems = products; 
-        saveCartToLocalStorage(); 
+        cartItems = products;
+        saveCartToLocalStorage();
+        calculateSubtotal();
         renderCart();
       })
       .catch(error => console.error("Error loading products:", error));
@@ -20,11 +30,12 @@ function initializeCart() {
 
 function saveCartToLocalStorage() {
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  localStorage.setItem("discount", discount); 
 }
-// Rendering the cart
+
 function renderCart() {
   const cartItemsContainer = document.getElementById("cart-items");
-  cartItemsContainer.innerHTML = ""; 
+  cartItemsContainer.innerHTML = "";
 
   cartItems.forEach((product, index) => {
     const itemDiv = document.createElement("div");
@@ -51,19 +62,87 @@ function renderCart() {
 
     cartItemsContainer.appendChild(itemDiv);
   });
+
+  calculateSubtotal();
 }
-// Storage
+
 function updateQuantity(index, change) {
   const product = cartItems[index];
   product.quantity = Math.max(1, product.quantity + change);
-  saveCartToLocalStorage(); 
-  renderCart(); 
+  saveCartToLocalStorage();
+  renderCart();
 }
 
 function removeItem(index) {
   cartItems.splice(index, 1);
-  saveCartToLocalStorage(); 
-  renderCart(); 
+  saveCartToLocalStorage();
+  renderCart();
+}
+
+function calculateSubtotal() {
+  subtotal = cartItems.reduce((total, product) => {
+    return total + product.price * product.quantity;
+  }, 0);
+
+  if (promoApplied) {
+    const discountAmount = subtotal * discount;
+    subtotal -= discountAmount;
+  }
+
+  document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`;
+}
+
+function togglePromoCode() {
+  const promoInput = document.getElementById("promo-code-input");
+  const toggleIcon = document.querySelector(".promo-toggle-btn i");
+
+  promoInput.classList.toggle("show");
+
+  if (promoInput.classList.contains("show")) {
+    toggleIcon.classList.remove("fa-angle-down");
+    toggleIcon.classList.add("fa-angle-right");
+  } else {
+    toggleIcon.classList.remove("fa-angle-right");
+    toggleIcon.classList.add("fa-angle-down");
+  }
+}
+
+// Apply the promo code
+function applyPromoCode() {
+  const promoCode = document.getElementById("promo-code").value.trim(); 
+  const feedback = document.getElementById("promo-feedback"); 
+
+  const validPromoCodes = {
+    "Chicho ": 0.1, 
+    "Majd rwwe2a": 0.2, 
+    "humberger aa djej allah w mousa hjej": 0.5
+  };
+
+  if (promoApplied) {
+    feedback.textContent = "Promo code already applied.";
+    feedback.style.color = "red";
+    return;
+  }
+
+  if (validPromoCodes[promoCode]) {
+    discount = validPromoCodes[promoCode]; 
+    const discountAmount = subtotal * discount; 
+    subtotal -= discountAmount; 
+
+
+    document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`;
+
+
+    feedback.textContent = `Promo code applied! You saved $${discountAmount.toFixed(2)}.`;
+    feedback.style.color = "green"; 
+    promoApplied = true;
+
+    // Save 
+    saveCartToLocalStorage();
+  } else {
+    feedback.textContent = "Invalid promo code.";
+    feedback.style.color = "red"; 
+  }
 }
 
 initializeCart();

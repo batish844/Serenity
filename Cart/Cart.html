@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
     <link rel="stylesheet" href="Cart.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="Cart-Container">
+      <!-- Header-cart Section -->
       <div class="Shopping-Header">
-        <img src="Cart-Images/Shopping Bag.png" alt="" />
+        <img src="Cart-Images/Shopping Bag.png" alt="Shopping Bag" />
         <h2>YOUR CART</h2>
       </div>
 
+      <!-- Cart Items Section -->
       <div class="cart">
         <div class="cart-header">
           <span>Product</span>
@@ -20,9 +26,41 @@
             <span>Quantity</span>
             <span>Price</span>
           </div>
-
         </div>
-        <div class="cart-items" id="cart-items"></div>
+        <div id="cart-items"></div>
+        <div class="border"></div>
+
+        <!-- Promo Code & Subtotal Section -->
+        <div class="promo-subtotal-container">
+          <!-- Promo Code Section -->
+          <div class="promo-code-section">
+            <p class="promo-header">
+              <span>Have a promo code?</span>
+
+              <button class="promo-toggle-btn" onclick="togglePromoCode()">
+                <i class="fas fa-angle-down"></i>
+              </button>
+            </p>
+            <div id="promo-code-input" class="promo-input">
+              <input
+                type="text"
+                id="promo-code"
+                placeholder="Enter promo code"
+              />
+              <button onclick="applyPromoCode()">Apply</button>
+            </div>
+            <p id="promo-feedback" class="promo-feedback"></p>
+          </div>
+
+          <!-- Subtotal Section -->
+          <div class="subtotal-section">
+            <div class="subtotal-Price">
+              <span>Subtotal:</span>
+              <span id="subtotal">$0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+          </div>
+        </div>
       </div>
     </div>
 
