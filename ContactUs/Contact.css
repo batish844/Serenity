@@ -383,12 +383,12 @@ font-weight: 400;
         margin-left: 200px;
     }
 }
+
 /* Seconf Half Part  */
 
 .Quick-help-container {
-
-    background-color:  #f9f3ee;
-    padding: 20px;
+    background-image: url(Contact-Images/background.png) center 0% no-repeat;
+    background-size: 100% 90%;
 }
 
 .Quick-help-section1 {

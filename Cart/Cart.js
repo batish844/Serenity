@@ -95,15 +95,17 @@ function calculateSubtotal() {
 function togglePromoCode() {
   const promoInput = document.getElementById("promo-code-input");
   const toggleIcon = document.querySelector(".promo-toggle-btn i");
-
+  const applyButton = document.querySelector("#promo-code-input button");
   promoInput.classList.toggle("show");
 
   if (promoInput.classList.contains("show")) {
     toggleIcon.classList.remove("fa-angle-down");
     toggleIcon.classList.add("fa-angle-right");
+    applyButton.style.display = "block";
   } else {
     toggleIcon.classList.remove("fa-angle-right");
     toggleIcon.classList.add("fa-angle-down");
+    applyButton.style.display = "none";
   }
 }
 
@@ -115,7 +117,6 @@ function applyPromoCode() {
   const validPromoCodes = {
     "Chicho ": 0.1, 
     "Majd rwwe2a": 0.2, 
-    "humberger aa djej allah w mousa hjej": 0.5
   };
 
   if (promoApplied) {
