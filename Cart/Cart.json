@@ -1,4 +1,5 @@
-[
+{
+  "cartItems": [
     {
       "id": 1,
       "name": "A Walk in the Woods (350G)",
@@ -20,5 +21,26 @@
       "quantity": 2,
       "image": "Cart-Images/circled-hanger.jpg"
     }
+  ],
+
+  "recentlyViewed": [
+    {
+      "id": 4,
+      "name": "Goodnight Sleep",
+      "price": 8,
+      "image": "Cart-Images/GoodnightSleep.png"
+    },
+    {
+      "id": 5,
+      "name": "Sweetheart",
+      "price": 8,
+      "image": "Cart-Images/Sweetheart.png"
+    },
+    {
+      "id": 6,
+      "name": "Delight",
+      "price": 8,
+      "image": "Cart-Images/Delight.png"
+    }
   ]
-  
+}

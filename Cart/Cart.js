@@ -1,8 +1,9 @@
 let cartItems = [];
 let subtotal = 0;
-let promoApplied = false; 
-let discount = 0; 
+let promoApplied = false;
+let discount = 0;
 
+// Initialize Cart - Load from localStorage or fetch from JSON
 function initializeCart() {
   const storedCart = localStorage.getItem("cartItems");
   const storedDiscount = localStorage.getItem("discount");
@@ -11,28 +12,30 @@ function initializeCart() {
     cartItems = JSON.parse(storedCart);
     if (storedDiscount) {
       discount = parseFloat(storedDiscount);
-      promoApplied = true; 
+      promoApplied = true;
       calculateSubtotal();
     }
     renderCart();
   } else {
-    fetch('Cart.json')
-      .then(response => response.json())
-      .then(products => {
-        cartItems = products;
+    fetch("Cart.json")
+      .then((response) => response.json())
+      .then((products) => {
+        cartItems = products.cartItems || [];
         saveCartToLocalStorage();
         calculateSubtotal();
         renderCart();
       })
-      .catch(error => console.error("Error loading products:", error));
+      .catch((error) => console.error("Error loading products:", error));
   }
 }
 
+// Save cart and discount to localStorage
 function saveCartToLocalStorage() {
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  localStorage.setItem("discount", discount); 
+  localStorage.setItem("discount", discount);
 }
 
+// Render cart items
 function renderCart() {
   const cartItemsContainer = document.getElementById("cart-items");
   cartItemsContainer.innerHTML = "";
@@ -62,10 +65,10 @@ function renderCart() {
 
     cartItemsContainer.appendChild(itemDiv);
   });
-
   calculateSubtotal();
 }
 
+// Update item quantity
 function updateQuantity(index, change) {
   const product = cartItems[index];
   product.quantity = Math.max(1, product.quantity + change);
@@ -73,12 +76,14 @@ function updateQuantity(index, change) {
   renderCart();
 }
 
+// Remove item from the cart
 function removeItem(index) {
   cartItems.splice(index, 1);
   saveCartToLocalStorage();
   renderCart();
 }
 
+// Calculate subtotal
 function calculateSubtotal() {
   subtotal = cartItems.reduce((total, product) => {
     return total + product.price * product.quantity;
@@ -88,10 +93,10 @@ function calculateSubtotal() {
     const discountAmount = subtotal * discount;
     subtotal -= discountAmount;
   }
-
   document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`;
 }
 
+// Toggle promo code input visibility
 function togglePromoCode() {
   const promoInput = document.getElementById("promo-code-input");
   const toggleIcon = document.querySelector(".promo-toggle-btn i");
@@ -111,12 +116,12 @@ function togglePromoCode() {
 
 // Apply the promo code
 function applyPromoCode() {
-  const promoCode = document.getElementById("promo-code").value.trim(); 
-  const feedback = document.getElementById("promo-feedback"); 
+  const promoCode = document.getElementById("promo-code").value.trim();
+  const feedback = document.getElementById("promo-feedback");
 
   const validPromoCodes = {
-    "Chicho ": 0.1, 
-    "Majd rwwe2a": 0.2, 
+    "Chicho": 0.1,
+    "Majd rwwe2a": 0.2,
   };
 
   if (promoApplied) {
@@ -126,24 +131,118 @@ function applyPromoCode() {
   }
 
   if (validPromoCodes[promoCode]) {
-    discount = validPromoCodes[promoCode]; 
-    const discountAmount = subtotal * discount; 
-    subtotal -= discountAmount; 
-
+    discount = validPromoCodes[promoCode];
+    const discountAmount = subtotal * discount;
+    subtotal -= discountAmount;
 
     document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`;
 
-
     feedback.textContent = `Promo code applied! You saved $${discountAmount.toFixed(2)}.`;
-    feedback.style.color = "green"; 
+    feedback.style.color = "green";
     promoApplied = true;
 
-    // Save 
+    // Save
     saveCartToLocalStorage();
   } else {
     feedback.textContent = "Invalid promo code.";
-    feedback.style.color = "red"; 
+    feedback.style.color = "red";
   }
 }
 
-initializeCart();
+// Add item from any section
+function addToCart(productId) {
+  fetch("Cart.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const product = data.cartItems.find((item) => item.id === productId);
+
+      if (product) {
+        // Check if the product is already in the cart
+        const existingProductIndex = cartItems.findIndex((item) => item.id === productId);
+
+        if (existingProductIndex >= 0) {
+          cartItems[existingProductIndex].quantity++;
+        } else {
+          product.quantity = 1;
+          cartItems.push(product);
+        }
+
+        saveCartToLocalStorage();
+        renderCart();
+      } else {
+        console.error("Product not found");
+      }
+    })
+    .catch((error) => {
+      console.error("Error adding product to cart:", error);
+    });
+}
+
+// Add item from Recently Viewed section
+function addRecentlyViewedToCart(productId) {
+  fetch("Cart.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const product = data.recentlyViewed.find((item) => item.id === productId);
+
+      if (product) {
+        // Check if the product is already in the cart
+        const existingProductIndex = cartItems.findIndex((item) => item.id === productId);
+
+        if (existingProductIndex >= 0) {
+          cartItems[existingProductIndex].quantity++;
+        } else {
+          product.quantity = 1;
+          cartItems.push(product);
+        }
+
+        saveCartToLocalStorage();
+        renderCart();
+      } else {
+        console.error("Product not found in recently viewed");
+      }
+    })
+    .catch((error) => {
+      console.error("Error adding product to cart from recently viewed:", error);
+    });
+}
+
+// Render recently viewed items
+function renderRecentlyViewed() {
+  const recentlyViewedContainer = document.getElementById("recently-viewed");
+  fetch("Cart.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const recentlyViewed = data.recentlyViewed;
+
+      recentlyViewed.forEach((product) => {
+        const productDiv = document.createElement("div");
+        productDiv.classList.add("recent-item");
+
+        const productContent = `
+          <div class="Recent-cart" style="background: url(${product.image}) center center / cover;">
+            <div class="Recent-Cart-Image">
+              <h4>${product.name}</h4>
+            </div>
+          </div>
+          <div class="Recent-Add-to-cart">
+            <button class="add-to-cart-btn" onclick="addRecentlyViewedToCart(${product.id})">
+              <span class="add-to-cart-text">Add to Cart</span>
+              <span class="add-to-cart-price">${product.price}$</span>
+            </button>
+          </div>
+        `;
+
+        productDiv.innerHTML = productContent;
+        recentlyViewedContainer.appendChild(productDiv);
+      });
+    })
+    .catch((error) => {
+      console.error("Error loading recently viewed items:", error);
+    });
+}
+
+window.onload = () => {
+  initializeCart(); 
+  renderRecentlyViewed(); 
+};
