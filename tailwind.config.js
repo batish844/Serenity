@@ -2,7 +2,19 @@
 module.exports = {
   content: [
     "./**/*.html",       
-    "./src/**/*.{js,jsx,ts,tsx}"
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "/data.json",
+  ],
+    safelist: [
+    'w-[199px]',
+    'h-[42px]',
+    'rounded-[10px]',
+    'bg-[#e0c1ac]',
+    'text-[#fdf8f0]',
+    'z-10',
+    'relative',
+    'absolute',
+    'mt-14'
   ],
   theme: {
     extend: {fontFamily: {

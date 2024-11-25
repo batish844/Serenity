@@ -1,0 +1,25 @@
+{
+    "categories": {
+      "Soy Wax Melts": [
+        { "image": "/Categories/photos/1.png", "name": "Hearts Soy Wax Melts", "price": "6$" },
+        { "image": "/Categories/photos/2.png", "name": "Flowers Soy Wax Melts", "price": "6$" },
+        { "image": "/Categories/photos/3.png", "name": "Soy Wax Melts", "price": "6$" }
+      ],
+      "Diffusers": [
+        { "image": "/Categories/photos/4.png", "name": "White Mini Diffuser", "price": "6$" },
+        { "image": "/Categories/photos/5.png", "name": "Black Mini Diffuser", "price": "6$" },
+        { "image": "/Categories/photos/6.png", "name": "Stick Diffuser", "price": "10$" }
+      ],
+      "Closet Hangers": [
+        { "image": "/Categories/photos/7.png", "name": "Wooden Hanger Set", "price": "3$" },
+        { "image": "/Categories/photos/8.png", "name": "Metal Hanger Set", "price": "3$" },
+        { "image": "/Categories/photos/9.png", "name": "Plastic Hanger Set", "price": "3$" }
+      ],
+      "Making Kits": [
+        { "image": "/Categories/photos/10.png", "name": "Candle Making Kit", "price": "17$" },
+        { "image": "/Categories/photos/11.png", "name": "Soap Making Kit", "price": "30$" },
+        { "image": "/Categories/photos/12.png", "name": "DIY Craft Kit", "price": "10$" }
+      ]
+    }
+  }
+  
