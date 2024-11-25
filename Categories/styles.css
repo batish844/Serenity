@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "The Billion";
+  src: url("/public/fonts/the_billion/The\ Billion.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Embarcadero MVB Pro";
+  src: url("/public/fonts/Embarcadero MVB Pro/fonnts.com-Embarcadero_MVB_Pro_Bold.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url("/public/fonts/Montserrat Medium/FontsFree-Net-Montserrat-Medium.ttf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;1,100;1,300;1,400;1,500;1,900&display=swap");
