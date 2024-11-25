@@ -121,7 +121,7 @@ function applyPromoCode() {
 
   const validPromoCodes = {
     "Chicho": 0.1,
-    "Majd rwwe2a": 0.2,
+    "Majd Helo": 0.2,
   };
 
   if (promoApplied) {
@@ -246,3 +246,16 @@ window.onload = () => {
   initializeCart(); 
   renderRecentlyViewed(); 
 };
+
+// Checkout
+
+let checkoutButton = document.querySelector(".checkout-btn");
+
+checkoutButton.addEventListener("click", function () {
+  document.getElementById("checkout-modal").style.display = "block";
+});
+
+// close the modal
+function closeModal() {
+  document.getElementById("checkout-modal").style.display = "none";
+}
