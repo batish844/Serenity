@@ -8,65 +8,132 @@
     <link href="../dist/styles.css" rel="stylesheet" />
   </head>
   <body class="bg-[#FDF8F0]">
-    <nav class="bg-[#e0c1ac] shadow-md rounded-b-[25px] h-[120px] relative flex items-center justify-between px-4 md:px-16">
+    <nav
+      class="bg-[#e0c1ac] shadow-md rounded-b-[25px] h-[120px] relative flex items-center justify-between px-4 md:px-16"
+    >
       <div class="flex items-center space-x-4 md:space-x-16">
-        <button class="text-[#fdf8f0] focus:outline-none md:hidden" id="menu-toggle">
-          <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"/>
+        <button
+          class="text-[#fdf8f0] focus:outline-none md:hidden"
+          id="menu-toggle"
+        >
+          <svg
+            class="h-8 w-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
         </button>
-        <a href="#" class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline">Home</a>
-        <a href="#" class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline">About Us</a>
-        <a href="#" class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline">Products</a>
+        <a
+          href="#"
+          class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline"
+          >About Us</a
+        >
+        <a
+          href="#"
+          class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline"
+          >Products</a
+        >
       </div>
-    
+
       <div class="flex-grow flex justify-center items-center">
-        <img src="../public/images/image.png" alt="Logo" class="h-12">
+        <img src="../public/images/image.png" alt="Logo" class="h-12" />
       </div>
-    
+
       <div class="flex items-center space-x-4 md:space-x-16">
-        <a href="#" class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline">Contact Us</a>
-        <a href="#" class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline">Log In</a>
-        <a href="#" class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline">Cart</a>
+        <a
+          href="#"
+          class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline"
+          >Contact Us</a
+        >
+        <a
+          href="#"
+          class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline"
+          >Log In</a
+        >
+        <a
+          href="#"
+          class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline"
+          >Cart</a
+        >
         <a href="#" class="hidden md:block text-[#fdf8f0]">
-          <img src="/public/images/search.png" alt="Search" class="h-6 w-6">
+          <img src="/public/images/search.png" alt="Search" class="h-6 w-6" />
         </a>
       </div>
     </nav>
-    
 
+    <div
+      class="hidden bg-[#e0c1ac] fixed inset-0 z-40 flex flex-col items-start px-6 py-8 space-y-6"
+      id="mobile-menu"
+    >
+      <button
+        id="menu-close"
+        class="text-[#fdf8f0] text-2xl font-bold self-end hover:underline"
+      >
+        ✕ Close
+      </button>
 
-<div class="hidden bg-[#e0c1ac] fixed inset-0 z-40 flex flex-col items-start px-6 py-8 space-y-6" id="mobile-menu">
-  <button id="menu-close" class="text-[#fdf8f0] text-2xl font-bold self-end hover:underline">
-    ✕ Close
-  </button>
+      <a
+        href="#"
+        class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline"
+        >Home</a
+      >
+      <a
+        href="#"
+        class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline"
+        >About Us</a
+      >
+      <a
+        href="#"
+        class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline"
+        >Products</a
+      >
+      <a
+        href="#"
+        class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline"
+        >Contact Us</a
+      >
+      <a
+        href="#"
+        class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline"
+        >Log In</a
+      >
+      <a
+        href="#"
+        class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline"
+        >Cart</a
+      >
 
-  <a href="#" class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline">Home</a>
-  <a href="#" class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline">About Us</a>
-  <a href="#" class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline">Products</a>
-  <a href="#" class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline">Contact Us</a>
-  <a href="#" class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline">Log In</a>
-  <a href="#" class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline">Cart</a>
+      <a href="#" class="block">
+        <img
+          src="/public/images/search.png"
+          alt="Search Icon"
+          class="h-8 w-8"
+        />
+      </a>
+    </div>
 
-  <a href="#" class="block">
-    <img src="/public/images/search.png" alt="Search Icon" class="h-8 w-8">
-  </a>
-</div>
-
-    
-    
-    
     <div class="container mx-auto mt-10 bg-[#fff8f4] p-8 text-left">
       <div class="mb-20 w-full">
         <h1
-          class="text-[40px] lg:p-0 md:p-0 p-3 md:text-[65px] lg:text-[74px] lg:ml-40 text-center lg:text-left text-[#c5a491]"
+          class="text-[40px] lg:p-0 md:p-0 p-3 md:text-[65px] lg:text-[74px]  text-center text-[#c5a491]"
           style="font-family: 'The Billion'; margin-bottom: -40px"
         >
           Create Your Candle
         </h1>
         <p
-          class="text-[#8b623c] lg:text-[35px] text-[25px] lg:ml-72 text-center lg:text-left font-bold tracking-[2.88px]"
+          class="text-[#8b623c] lg:text-[35px] text-[25px] text-center font-bold tracking-[2.88px]"
           style="font-family: 'Embarcadero MVB Pro'"
         >
           CUSTOMIZATION
@@ -78,7 +145,7 @@
         class="flex flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-8"
       >
         <!-- Left Column with Image -->
-        <div class="w-full md:w-1/2 mb-8 md:mb-0 md:pr-4">
+        <div class="w-full md:w-1/2 mb-8 md:mb-0 md:pr-4 flex justify-center">
           <img
             class="w-full h-auto rounded-[44px]"
             src="/public/images/customizationpage.png"
@@ -146,28 +213,28 @@
             <div
               class="flex flex-wrap items-center gap-4 mb-8 lg:mb-12 sm:mb-10 mt-4"
             >
-              <button
-                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px]"
-              >
+                <button
+                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px] flex items-center justify-center"
+                >
                 Vanilla
-              </button>
+                </button>
               <button
-                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px]"
+                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px] flex items-center justify-center"
               >
                 Musk
               </button>
               <button
-                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px]"
+                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px] flex items-center justify-center"
               >
                 Gardenia
               </button>
               <button
-                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px]"
+                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px] flex items-center justify-center"
               >
                 Raspberry
               </button>
               <button
-                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px]"
+                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px] flex items-center justify-center"
               >
                 Other
               </button>
@@ -186,27 +253,27 @@
               class="flex flex-wrap items-center gap-4 mb-8 lg:mb-20 sm:mb-10 mt-4"
             >
               <button
-                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px]"
+                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px] flex items-center justify-center"
               >
                 Lemon
               </button>
               <button
-                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px]"
+                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px] flex items-center justify-center"
               >
                 Patchouli
               </button>
               <button
-                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px]"
+                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px] flex items-center justify-center"
               >
                 Oud
               </button>
               <button
-                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px]"
+                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px] flex items-center justify-center"
               >
                 Wood
               </button>
               <button
-                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px]"
+                class="h-[42px] w-[120px] px-6 bg-[#e0c1ac] text-[#fdf8f0] rounded-[10px] text-[21px] flex items-center justify-center"
               >
                 Other
               </button>
