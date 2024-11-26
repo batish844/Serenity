@@ -30,16 +30,27 @@ body {
 }
 
 .Qun-Pri{
+  display: flex;
+  align-items: center;
+  width: 350px;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+.cart-items{
+  max-width: 90%;
+}
+
+.TrashPrice{
 display: flex;
-margin-right: 20px;
-gap: 270px;
+align-items: center;
+gap: 40px;
+margin-left: 80%;
 }
 
 .cart-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 10px 0; */
     font-size: 20px;
     margin: 0px;
     width: 80%;
@@ -93,11 +104,12 @@ gap: 270px;
 }
 
 .actions {
-    display: flex;
-    align-items: center;
-    gap: 180px;
-    color: #6E4835;
-    background-color: #fdf7f2;
+  display: flex;
+  align-items: center;
+  /* width: 50%; */
+  justify-content: space-between;
+  color: #6E4835;
+  background-color: #fdf7f2;
 }
 
 .quantity-controls {
@@ -113,6 +125,7 @@ gap: 270px;
     border: none;
     cursor: pointer;
     padding: 5px;
+    margin-left: 0;
 }
 
 .delete-btn img {
@@ -128,13 +141,13 @@ gap: 270px;
 
     .border{
         border-bottom: 2px solid #8B623C; 
-        width: 100%; 
+        width: 105%; 
         margin-bottom: 10px;
         margin-top: 20px;
     }
 
     .promo-subtotal-container {
-        width: 100%;
+        width: 105%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -207,6 +220,10 @@ gap: 270px;
         border:none;
         color: #8B623C;
       }
+
+      #subtotal{
+        color: #6E4835;
+      }
       
       .subtotal-section {
         flex: 1;
@@ -222,13 +239,13 @@ gap: 270px;
       }
       #sub{
         color: #6E4835;
-        font-weight: 300;
+        font-weight: 400;
       }
       
       .checkout-btn {
         margin-top: 10px;
         padding: 10px 50px;
-        background-color: #8B623C;
+        background-color: #E0C1AC;
         color: white;
         border: none;
         border-radius: 5px;
@@ -427,10 +444,11 @@ gap: 270px;
 /* Recent Cart viewd Section  */
 
 .Recents-section {
-    max-width: 90%;
-    margin-left: 50px;
-    /* margin: auto; */
-    /* padding: 20px; */
+  margin-top: 10px;
+  max-width: 95%;
+  /* margin-left: 50px; */
+  margin: auto;
+  /* padding: 20px; */
 }
 
 .Recents-section img{
@@ -567,7 +585,7 @@ gap: 270px;
   }
   
   .modal-content {
-    width: 50%;
+    width: 40%;
     margin: auto;
     color: #764C25;
     background-color: #ECD3BE;
@@ -591,6 +609,7 @@ gap: 270px;
   
   label {
     text-align: left;
+    font-weight: 600;
   }
   
   .main-wrapper {
@@ -639,7 +658,7 @@ gap: 270px;
   .row3 {
     display: flex;
     justify-content: center;
-    margin-left: 40%;
+    margin: auto;
   }
   
   button {
@@ -651,7 +670,7 @@ gap: 270px;
     border-radius: 5px;
     cursor: pointer;
     max-width: 200px; 
-    
+  
   }
 
   .expiry-inputs input {

@@ -56,11 +56,14 @@ function renderCart() {
           <input type="text" value="${product.quantity}" readonly>
           <button onclick="updateQuantity(${index}, 1)">+</button>
         </div>
+        <div class="TrashPrice">
+        <div class="price">${(product.price * product.quantity).toFixed(2)}$</div>
         <button class="delete-btn" onclick="removeItem(${index})">
           <img src="Cart-images/Trash.png" alt="Trash Icon">
         </button>
+        </div>
       </div>
-      <div class="price">${(product.price * product.quantity).toFixed(2)}$</div>
+      
     `;
 
     cartItemsContainer.appendChild(itemDiv);
