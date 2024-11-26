@@ -56,11 +56,14 @@ function renderCart() {
           <input type="text" value="${product.quantity}" readonly>
           <button onclick="updateQuantity(${index}, 1)">+</button>
         </div>
+        <div class="TrashPrice">
+        <div class="price">${(product.price * product.quantity).toFixed(2)}$</div>
         <button class="delete-btn" onclick="removeItem(${index})">
           <img src="Cart-images/Trash.png" alt="Trash Icon">
         </button>
+        </div>
       </div>
-      <div class="price">${(product.price * product.quantity).toFixed(2)}$</div>
+      
     `;
 
     cartItemsContainer.appendChild(itemDiv);
@@ -121,7 +124,7 @@ function applyPromoCode() {
 
   const validPromoCodes = {
     "Chicho": 0.1,
-    "Majd rwwe2a": 0.2,
+    "Majd Helo": 0.2,
   };
 
   if (promoApplied) {
@@ -246,3 +249,75 @@ window.onload = () => {
   initializeCart(); 
   renderRecentlyViewed(); 
 };
+
+// Checkout
+let checkoutButton = document.querySelector(".checkout-btn");
+
+checkoutButton.addEventListener("click", function () {
+  // Open the checkout modal
+  document.getElementById("checkout-modal").style.display = "block";
+});
+
+// Function to close the modal
+function closeModal() {
+  document.getElementById("checkout-modal").style.display = "none";
+}
+
+// Validation
+function validateAndCheckout() {
+  const cardHolder = document.getElementById("card-holder").value.trim();
+  const cardNumber = document.getElementById("card-number").value.trim();
+
+  const expiryMonth = document.getElementById("expiry-month").value.trim();
+  const expiryYear = document.getElementById("expiry-year").value.trim();
+
+  if (!cardHolder || !expiryMonth || !expiryYear || !cardNumber) {
+    alert("Please fill out all the required fields.");
+    return;
+  }
+
+  if (cardNumber.length !== 16 || !/^\d+$/.test(cardNumber)) {
+    alert("Please enter a valid 16-digit card number.");
+    return;
+  }
+
+  const currentMonth = new Date().getMonth() + 1; 
+  const currentYear = new Date().getFullYear(); 
+
+
+  saveCheckoutData(cardHolder, expiryMonth, expiryYear, cardNumber);
+
+  alert("Checkout successful!");
+}
+
+function saveCheckoutData(cardHolder, expiryMonth, expiryYear, cardNumber) {
+  const cvcCode = "****"; 
+  const checkoutData = {
+    cardHolder,
+    expiryMonth,
+    expiryYear,
+    cardNumber: cardNumber.replace(/\d(?=\d{4})/g, "*"), 
+    cvcCode,
+    subtotal: 0,
+    date: new Date().toLocaleString(),
+  };
+
+  localStorage.setItem("checkoutData", JSON.stringify(checkoutData));
+
+  const cartItems = []; 
+  localStorage.setItem("cartItems", JSON.stringify(cartItems)); 
+  const subtotal = 0; 
+  document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`; 
+
+  console.log("Checkout data saved locally:", checkoutData);
+
+  alert("Payment information saved. Proceeding to payment...");
+
+  closeModal();
+  renderCart();
+}
+
+document.querySelector(".pop-up-form button[type='submit']").addEventListener("click", function (e) {
+  e.preventDefault(); 
+  validateAndCheckout(); 
+});

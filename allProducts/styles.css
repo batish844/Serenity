@@ -1,0 +1,345 @@
+font-face {
+    font-family: 'The Billion';
+    src: url('/public/fonts/the_billion/The\ Billion.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }  
+  @font-face {
+    font-family: 'Embarcadero MVB Pro';
+    src: url('/public/fonts/Embarcadero MVB Pro/fonnts.com-Embarcadero_MVB_Pro_Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('/public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Montserrat Medium';
+    src: url('/public/fonts/Montserrat Medium/FontsFree-Net-Montserrat-Medium.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;}
+ 
+ 
+ 
+ 
+ /* Global Reset */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+  }
+  
+  body {
+     background-color: #FDF8F0;
+  }
+  
+  /* Responsive Container */
+  .container {
+     max-width: 1200px;
+     margin: 0 auto;
+   
+  }
+  
+  .cursive-title img {
+     max-width: 50%;
+     margin-top: 170px;
+    
+  }
+  
+  
+  
+  /* Titles with Centering */
+  .cursive-title {
+    text-align: center;
+    font-family: 'The Billion', cursive;
+    font-weight: 400;
+    font-size: 85px;
+    color: #C9B8A6;
+    margin: 0 auto; /* Centers the div horizontally */
+    padding-bottom: 0%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .best-sellers-title {
+     text-align: center;
+     font-family: 'Embarcadero MVB Pro', serif;
+     font-weight: 700;
+     font-size: 36px;
+     padding: auto;
+     color: #8B623C;
+     letter-spacing: 0.08em;
+     margin: 0px 0;
+  
+  }
+  
+ 
+  
+  /* Media Queries for Responsive Adjustments */
+  @media (max-width: 768px) {
+     .cursive-title {
+         font-size: 55px;
+     }
+  
+     .best-sellers-title {
+         font-size: 24px;
+     }
+  
+     .best-sellers-description,
+     .about-text {
+         font-size: 15px;
+         padding: 0 10px;
+     }
+  
+    
+  }
+  
+  
+  
+  /* Fragrance Details */
+  .fragrance-details-container {
+     margin-top: -3px;
+     display: flex;
+     flex: 0 0 auto;
+     flex-direction: column;
+     align-items: center;
+     justify-content: flex-start;
+  
+  }
+  
+  /* Candle Name */
+  .unique-scent-description-style {
+     flex: 0 0 auto;
+     margin-top: -10px;
+     padding: 0;
+     margin: 0;
+     font-family: 'Montserrat', sans-serif;
+ 
+     font-size: 18px;
+     font-weight: 600 !important;
+     color: #6f4835;
+     top: 1882.46px;;
+     margin-bottom: -5px
+  }
+  
+  /* Candle Description */
+  .gardenia-blackberry-text-style {
+     flex: 0 0 auto;
+     padding: 0;
+     margin: 0;
+     margin-top: 5.75px;
+     margin-left: -8px;
+     font-family: 'Montserrat', sans-serif;
+   
+     font-size: 15.5px;
+     font-weight: 400 !important;
+     color: #6f4835;
+     margin-bottom: 0.5px; /* Added space between description and add to cart */
+  
+    
+     
+  }
+  
+  
+  
+  .cart-button-container {
+     box-sizing: border-box;
+     display: flex;
+     flex: 0 0 auto;
+     flex-direction: column;
+     align-items: stretch;
+     width: 132px; /* Width set to 132px as specified */
+     height: 42px; /* Height set to 42px as specified */
+     justify-content: center;
+     padding-right: 5px;
+     padding-left: 16px;
+     border-right: 1px solid #805e4c;
+  }
+  
+  /* Add to Cart Text */
+  .cart-button-text-style {
+     flex: 0 0 auto;
+     padding: 0;
+     margin: 0;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 17px;
+     font-weight: 550; /* Set to 500 as requested */
+     color: #6e4835;
+     white-space: nowrap; /* Prevent the text from wrapping */
+     display: inline-block; 
+  }
+  
+  /* Price Container */
+  .price-container {
+     box-sizing: border-box;
+     display: flex;
+     flex: 1 0 auto;
+     flex-direction: column;
+     align-items: stretch;
+     justify-content: center;
+     padding-right: 1px;
+     padding-left: 10px;
+     width: 100px; /* Width set to 67px as specified */
+      height: 42px; /* Height set to 42px as specified */
+  }
+  
+  /* Price Tag */
+  .price-tag-text-style {
+     flex: 0 0 auto;
+     padding: 0;
+     padding-right: 8.5px;
+     margin: 0;
+     font-family: 'Montserrat', sans-serif;
+    
+     font-size: 17px;
+     font-weight: 550; /* Set to 500 as requested */
+     color: #6e4835;
+  }
+  
+  a {
+     text-decoration: none;
+  }
+  
+  
+  .aroma-card {
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: column;
+     align-items: stretch;
+     justify-content: flex-start;
+     width: 100%;
+     padding-top: 129px;
+     padding-bottom: 30px;
+     margin-top: -100px;
+     background: #ecd3be;
+     border-radius: 10px;
+  }
+  
+  .scent-seeker-container {
+     background-color: #FDF8F0;
+  }
+  
+  
+  
+  .product-card-widget {
+     box-sizing: border-box;
+     display: flex;
+     flex: 0 0 auto;
+     flex-direction: row;
+     align-items: stretch;
+     align-self: center;
+     justify-content: flex-start;
+     min-width: 199px;
+     height: 42px;
+     margin-top: 15px;
+     margin-left: -9px;
+     background: #fdf8f0;
+     border-radius: 10px;
+  }
+  
+  
+  a {
+     text-decoration: none;
+  }
+  
+  .product-card-list {
+  
+       display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+       gap: 60px; 
+       row-gap: 90px; 
+       padding: 20px;
+       margin-top: 65px;
+   }
+   
+  
+  
+  .product-card {
+     box-sizing: border-box;
+     flex: 0 0 auto;
+     width: 302px;
+  }
+  
+  .product-card-img {
+     box-sizing: border-box;
+     display: block;
+     width: 100%;
+     max-width: initial;
+     height: 307px;
+     clip-path: path(
+         "M0,150.997c0,-83.3932 67.6038,-150.997 150.997,-150.997v0c83.394,0 150.998,67.6038 150.998,150.997v156.41h-301.995z"
+     );
+     object-fit: cover;
+  }
+  
+  .product-card-footer {
+     box-sizing: border-box;
+     display: flex;
+     flex: 0 0 auto;
+     flex-direction: row;
+     align-items: stretch;
+     justify-content: flex-start;
+     height: 42px;
+     margin-top: 14px;
+     background: #fdf8f0;
+     border-radius: 10px;
+  }
+  
+  .price-container1 {
+     box-sizing: border-box;
+     display: flex;
+     flex: 0 0 auto;
+     flex-direction: column;
+     align-items: stretch;
+     justify-content: center;
+     padding-right: 17.5px;
+     padding-left: 17.5px;
+  }
+  
+     
+  
+ 
+  .cart-button-text-style {
+    outline: none;
+    border: none;
+    background-color: transparent; 
+    cursor: pointer;
+ }
+ .cart-button-text-style:hover,
+ .cart-button-text-style:focus {
+     outline: none;
+     opacity: 0.8; 
+ }
+ .breadcrumb {
+    position: absolute;
+    width: 147px;
+    height: 28px;
+    left: 96px;
+    top: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28px;
+    color: #8B623C;
+  }
+  @media (max-width: 768px) {
+    .breadcrumb {
+      font-size: 2vw; 
+      top: 40%; 
+      left: 7%; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .breadcrumb {
+      font-size: 2vw; 
+      top: 37%; 
+      left: 10%; 
+    }
+  }

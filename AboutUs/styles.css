@@ -1,0 +1,659 @@
+body {
+    background-color: #FDF8F0; /* Replace with your desired color */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+  }
+  
+  /* Serenity Title */
+  .serenity {
+    position: absolute;
+    width: 274px;
+    height: 57px;
+    left: calc(50% - 274px / 2 + 249px);
+    top: 312px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .serenity img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* About Us Title */
+  .about-us-title {
+    position: absolute;
+    width: 234px;
+    height: 57px;
+    left: calc(50% - 234px / 2 + 253px);
+    top: 362px;
+    font-family: 'Embarcadero MVB Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: 0.08em;
+    color: #764C25;
+    text-align: center;
+  }
+  
+  /* About Us Text */
+  .about-us-text {
+    position: absolute;
+    width: 781px;
+    height: auto; /* Allow height to adapt to content */
+    left: calc(50% - 781px / 2 + 301.5px);
+    top: 487px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #764C25;
+    text-align: justify;
+  }
+  
+  /* Owner Name */
+  .owner-name {
+    position: absolute;
+    width: 297px; /* Maintain image dimensions */
+    height: auto; /* Dynamic height */
+    left: calc(50% - 297px / 2 - 538.5px);
+    top: 945px; /* Original top value */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .owner-name img {
+    max-width: 100%; /* Ensure the image scales properly */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Fit container without distortion */
+  }
+  
+  /* Owner Title */
+  .owner-title {
+    position: absolute;
+    width: 256px;
+    height: 57px;
+    left: calc(50% - 256px / 2 - 538px);
+    top: 1026px; /* Original position */
+    font-family: 'Embarcadero MVB Pro', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: 0.08em;
+    color: #764C25;
+    text-align: center;
+  }
+  
+  /* Owner Image */
+  .owner-image {
+    position: absolute;
+    width: 496px;
+    height: 500px;
+    top: 255px;
+    left: 120px;
+    background: url('images/about-us.png') no-repeat center;
+    background-size: cover;
+    border-radius: 16px;
+  }
+  
+  /* Owner Description */
+  .owner-description {
+    position: absolute;
+    width: 703px;
+    height: auto; /* Allow dynamic height */
+    left: calc(50% - 703px / 2 - 335.5px);
+    top: 1138px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #764C25;
+    text-align: justify;
+  }
+  
+  /* Product Image */
+  .product-image {
+    position: absolute;
+    width: 542px;
+    height: 571px;
+    left: 906px;
+    top: 788px;
+    background: url('images/owner.png') no-repeat center;
+    background-size: cover;
+    border-radius: 44px;
+  }
+  
+  /* Responsive Styles */
+  
+  /* Mobile (max-width: 767px) */
+  @media (max-width: 767px) {
+    .serenity,
+    .about-us-title,
+    .about-us-text,
+    .owner-name,
+    .owner-title,
+    .owner-description,
+    .owner-image,
+    .product-image,
+    .mission-container
+   
+  
+     {
+      position: relative;
+      width: 90%; /* Reduce width for smaller screens */
+      height: auto; /* Adjust height dynamically */
+      left: 3%;
+      top: 100px;
+      margin: 10px auto; /* Center all elements */
+      text-align: center;
+    }
+  
+    .serenity img {
+      width: 40%; /* Smaller image size for mobile */
+      margin: 0 auto;
+    }
+  
+    .about-us-title {
+      font-size: 24px; /* Adjust font size for readability */
+      line-height: 30px;
+    }
+  
+    .about-us-text {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: justify;
+    }
+  
+    .owner-title
+    {
+      font-size: 24px; /* Adjust font size for readability */
+      line-height: 30px;
+    }
+  
+  
+    .owner-description {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: justify;
+    }
+  
+    .owner-image,
+    .product-image {
+      width: 100%;
+      height: 300px; /* Fixed height for responsiveness */
+      margin: 20px auto; /* Center images */
+      background-size: contain; /* Ensure images fit */
+      background-position: center;
+    }
+        /* Mission Container */
+    .mission-container {
+       position: relative;
+      top: auto; /* Remove absolute positioning */
+      margin-top: -40px; 
+      margin-left: 3%;
+      border-radius: 16px;
+  
+  
+  
+      
+    }
+  
+    /* Tranquility Container */
+    .tranquility-container {
+      position: relative; /* Ensure it remains in the document flow */
+      margin-top: -700px; /* Adjust the value to bring it closer to the top */
+      padding: 15px;
+   align-content: center;
+  
+    }
+  }  
+  
+  /* Tablet (min-width: 768px and max-width: 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .serenity,
+    .about-us-title,
+    .about-us-text,
+    .owner-name,
+    .owner-title,
+    .owner-description,
+    .owner-image,
+    .product-image,
+    .mission-container
+     {
+      position: relative;
+      width: 80%; /* Adjust for tablet size */
+      height: auto;
+      left: 10%;
+      top: 100px;
+    
+      margin: 20px auto; /* Center all elements */
+      text-align: center;
+    }
+  
+    .serenity img {
+      width: 60%; /* Scale images appropriately */
+      margin: 0 auto;
+    }
+  
+    .about-us-title {
+      font-size: 28px; /* Slightly larger font for tablets */
+      line-height: 30px;
+    }
+  
+    .about-us-text {
+      font-size: 18px;
+      line-height: 26px;
+      text-align: justify;
+    }
+    .owner-title {
+      font-size: 28px; /* Slightly larger font for tablets */
+      line-height: 30px;
+    }
+  
+  
+    .owner-description {
+      font-size: 18px;
+      line-height: 26px;
+      text-align: justify;
+    }
+    
+    
+  
+    .owner-image,
+    .product-image {
+      width: 80%; /* Scale images to fit */
+      height: 400px; /* Adjust height for tablets */
+      margin: 10px auto;
+      background-size: contain;
+      background-position: center;
+    }
+    .mission-container {
+      top: auto; /* Remove absolute positioning */
+      margin-top: 0px; 
+      margin-left: 10%;
+  
+      border-radius: 16px;
+    }
+    .tranquility-container {
+      top: auto;
+      position: relative; /* Ensure it remains in the document flow */
+      padding: 15px;
+      margin-left: 10%;
+  
+    }
+   
+    }
+   
+  
+  
+  
+   
+  /* Mission Container */
+  .mission-container {
+    position: absolute;
+    width: 100%; /* Use percentage for responsiveness */
+    max-width: 1381px; /* Maintain max width */
+    height: auto;
+    left: 50%;
+    top: 1451px;
+    transform: translateX(-50%);
+    background: #ECD3BE;
+    border-radius: 72px;
+    padding: 20px; /* Add padding for inner spacing */
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  /* Purpose Title (Replaced with Image) */
+  .mission-container .purpose-title {
+    position: absolute;
+    width: 300px; /* Adjust width based on image size */
+    height: auto; /* Dynamic height for image */
+    left: 50%;
+    top: 20px; /* Adjust top to fine-tune the vertical position */
+    transform: translateX(-50%); /* Center align the image horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mission-container .purpose-title img {
+    max-width: 100%; /* Ensure the image fits the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+  }
+  
+  
+  /* Mission Title */
+  .mission-container .mission-title {
+    font-family: 'Embarcadero MVB Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: 0.08em;
+    color: #764C25;
+    margin-top: 90px;
+    margin-bottom: 50px;
+  }
+  
+  /* Mission Description */
+  .mission-container .mission-description {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #764C25;
+    margin: 20px auto; /* Center text */
+    max-width: 1264px;
+  
+  }
+  
+  /* Subtext */
+  .mission-container .subtext {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: #8B623C;
+    margin: 20px auto;
+    max-width: 780px;
+     margin-bottom: 50px;
+  }
+  .tranquility-container {
+    position: relative; /* Set relative positioning for the pseudo-element */
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh; /* Ensure it covers the full height */
+    left: 50%;
+    top: 1977px;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    z-index: 1; /* Ensure content is above the pseudo-element */
+  }
+  
+  .tranquility-container::before {
+    content: ''; /* Create a pseudo-element for the background */
+    position: absolute;
+    top: -93px; /* Extend background 20px above to cover margin */
+    left: -120px; /* Extend background 20px left to cover margin */
+    right: -120px; /* Extend background 20px right to cover margin */
+    bottom: 150px; /* Extend background 20px below to cover margin */
+    background: url('images/image.png') no-repeat center;
+    background-size: cover; /* Scale image to cover */
+    z-index: -1; /* Place behind the content */
+  }
+  
+  
+  
+  
+  
+  /* Tranquility Title (Replaced with Image) */
+  .tranquility-title {
+    position: absolute;
+    width: auto; /* Let the image size itself naturally */
+    height: auto; /* Ensure height adjusts dynamically */
+    max-width: 300px; /* Set a maximum width for the image */
+    left: 50%; /* Center align horizontally */
+    top: 0px; /* Adjust top to fine-tune vertical position */
+    transform: translateX(-50%); /* Center align horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  
+  
+  /* Subtitle (What Sets Us Apart) */
+  .tranquility-subtitle {
+    font-family: 'Embarcadero MVB Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: 0.08em;
+    color: #764C25;
+    margin-bottom: 50px;
+    margin-top: 50px
+    
+  }
+  
+  /* Description */
+  .tranquility-description {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center; /* Center text within the element */
+    color: #8B623C;
+    margin: 0 auto 40px; /* Center horizontally and add spacing below */
+    max-width: 780px; /* Restrict width for better readability */
+  }
+  
+  
+  /* Grouped Icons Container */
+  .icon-group {
+    display: flex; /* Ensures alignment */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    margin-top: 40px; /* Keep spacing above */
+    margin-bottom: 40px; /* Add spacing below */
+  }
+  
+  /* Grouped Icons Image */
+  .grouped-icons {
+    max-width: 80%; /* Constrain the image width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+  }
+  
+  @media (max-width: 767px) {
+    .serenity img{
+      width: 50%; /* Scale image to 50% of its container */
+      height: auto; /* Maintain aspect ratio */
+      max-width: 180px; /* Set a maximum width for smaller devices */
+      margin-bottom: -23px;
+  
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .serenity img,
+    .owner-name img {
+      width: 70%; /* Scale image to 70% of its container */
+      height: auto; /* Maintain aspect ratio */
+      max-width: 200px; /* Set a maximum width for tablets */
+      margin-bottom: -20px;
+    }
+  }
+  @media (max-width: 767px) {
+  .owner-name img {
+    width: 50%; /* Scale image to 50% of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 180px; /* Set a maximum width for smaller devices */
+    margin-bottom: -20px;
+  
+  }}
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .serenity img{ 
+    width: 70%; /* Scale image to 70% of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 200px; /* Set a maximum width for tablets */
+    margin-bottom: -35px;
+  }}
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .owner-name img{ 
+    width: 70%; /* Scale image to 70% of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 270px; /* Set a maximum width for tablets */
+    margin-bottom: -34px;
+    
+  }}
+  
+  /* Mobile (max-width: 767px) */
+  @media (max-width: 767px) {
+    .mission-container {
+      width: 90%; /* Full width for mobile */
+      padding: 30px; /* Reduce padding */
+      border-radius: 32px; /* Smaller border radius */
+  
+    
+    }
+  
+    .mission-container .mission-title {
+      font-size: 24px; /* Adjust font size for readability */
+      line-height: 30px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+  
+    .mission-container .mission-description {
+      font-size: 16px; /* Adjust font size for readability */
+      line-height: 24px;
+      max-width: 100%; /* Full width */
+    }
+  
+    .mission-container .subtext {
+      font-size: 14px; /* Smaller font */
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .mission-container .purpose-title {
+      width: 100%; /* Full width for mobile */
+      margin: 10px auto; /* Adjust spacing */
+    }
+  
+    .mission-container .purpose-title img {
+      max-width: 50%; /* Scale down the image */
+      margin-top: -20px;
+    }
+  
+  
+    
+  }
+  
+  /* Tablet (min-width: 768px and max-width: 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .mission-container {
+      width: 90%; /* Constrain width for tablets */
+      padding: 20px;
+      border-radius: 50px; /* Slightly smaller border radius */
+      margin-top: 80px;
+    }
+  
+    .mission-container .mission-title {
+      font-size: 28px; /* Slightly larger font for tablets */
+      line-height: 30px;
+      margin-top: 68px;
+      margin-bottom: 25px;
+    }
+  
+    .mission-container .mission-description {
+      font-size: 18px; /* Adjust font size */
+      line-height: 28px;
+      max-width: 90%; /* Keep content constrained */
+    }
+  
+    .mission-container .subtext {
+      font-size: 15px; /* Adjust font */
+      line-height: 22px;
+    }
+  
+    .mission-container .purpose-title {
+      max-width: 250px; /* Reduce image size for tablets */
+      margin: 20px auto;
+    }
+  
+    .mission-container .purpose-title img {
+      max-width: 95%; /* Scale image for tablets */
+      margin-top: -20px;
+    }
+  }
+  /* Mobile (max-width: 767px) */
+  @media (max-width: 767px) {
+    .tranquility-container {
+      width: 90%; /* Full width for mobile */
+      padding: 15px; /* Reduce padding */
+      margin-top: -1170px;
+  
+   
+    }
+  
+    .tranquility-container::before {
+      top: -10px; /* Adjust to prevent overlap */
+      left: 0;
+      right: 0;
+      bottom: 150px;
+      border-radius: 3px; /* Smaller radius for mobile */
+    }
+  
+    .tranquility-title {
+      width: 90%; /* Ensure title fits screen */
+      max-width: 200px; /* Reduce maximum width */
+      margin-top: 40px;
+      
+      
+    }
+  
+    .tranquility-subtitle {
+      font-size: 24px; /* Adjust font size for readability */
+      line-height: 30px;
+      margin-top: -40px;
+      margin-bottom: 20px;
+     
+    }
+  
+    .tranquility-description {
+      font-size: 14px; /* Adjust font size for readability */
+      line-height: 20px;
+    }
+   .grouped-icons{
+      width: 100%;
+      max-width: 200%;
+  
+   }
+  }
+  
+  /* Tablet (min-width: 768px and max-width: 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .tranquility-container {
+      width: 90%; /* Constrain width for tablets */
+      padding: 20px;
+      margin-top: -1290px;
+  
+    }
+  
+    .tranquility-container::before {
+      top: -50px; /* Maintain proportional background size */
+      border-radius: 12px; /* Adjust border radius */
+    }
+  
+    .tranquility-title {
+      width: 80%; 
+      max-width: 260px; 
+    }
+  
+    .tranquility-subtitle {
+      font-size: 28px; 
+      line-height: 30px;
+    }
+  
+    .tranquility-description {
+      font-size: 16px; 
+      line-height: 24px;
+    }
+  
+  
+  }

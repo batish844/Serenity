@@ -66,11 +66,92 @@
       <!-- Recent Cart viewd Section-->
       <div class="Recents-section">
         <div class="Recents">
-          <img src="Cart-Images/Recents.png" alt="">
+          <img src="Cart-Images/Recents.png" alt="" />
           <h2>RECENTLY VIEWED</h2>
         </div>
         <div id="recently-viewed" class="recently-viewed-section">
           <!-- Recently Viewed Items -->
+        </div>
+      </div>
+
+      <!-- Checkout -->
+      <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+          <button class="close-btn" onclick="closeModal()">X</button>
+          <h2>Checkout</h2>
+          <form class="pop-up-form">
+            <!-- Main Wrapper Div -->
+            <div class="main-wrapper">
+              <!-- Row Wrapper: Contains Two Columns -->
+              <div class="row-wrapper">
+                <!-- Card Holder and Expiry Date -->
+                <div class="row row1">
+                  <div class="form-group">
+                    <label for="card-holder">Card Holder</label>
+                    <input
+                      class="card-holder-input"
+                      type="text"
+                      id="card-holder"
+                      placeholder="xxxx xxxx xxxx xxxx"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="expiry-date">Expiry Date</label>
+                    <div class="expiry-inputs">
+                      <input
+                        type="text"
+                        id="expiry-month"
+                        placeholder="MM"
+                        maxlength="2"
+                      />
+                      <select id="expiry-year">
+                        <option value="" disabled selected>YY</option>
+                        <script>
+                          const currentYear = new Date().getFullYear();
+                          const selectYear =
+                            document.getElementById("expiry-year");
+                          for (let i = 0; i <= 10; i++) {
+                            const year = currentYear + i;
+                            const option = document.createElement("option");
+                            option.value = year.toString().slice(-2);
+                            option.text = year.toString();
+                            selectYear.add(option);
+                          }
+                        </script>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card Number and CVC -->
+                <div class="row row2">
+                  <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input
+                      class="card-number-input"
+                      type="text"
+                      id="card-number"
+                      placeholder=""
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="cvc-code">CVC Code</label>
+                    <input
+                      class="cvc-code-input"
+                      type="text"
+                      id="cvc-code"
+                      placeholder="xxx"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Confirm Payment Button -->
+              <div class="row row3">
+                <button type="submit">CONFIRM PAYMENT</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -78,5 +159,3 @@
     <script src="Cart.js"></script>
   </body>
 </html>
-
-

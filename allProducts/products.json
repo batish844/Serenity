@@ -1,0 +1,165 @@
+[
+    {
+        "id": 1,
+        "image": "images/Mask group-1.png",
+        "alt": "Absolute Candle",
+        "name": "ABSOLUTE",
+        "description": "Gardenia and blackberry",
+        "price": "From 8$"
+    },
+    {
+        "id": 2,
+        "image": "images/Mask group-3.png",
+        "alt": "A Walk in the Woods Candle",
+        "name": "A WALK IN THE WOODS",
+        "description": "Sandalwood & amber wood",
+        "price": "From 8$"
+    },
+    {
+        "id": 3,
+        "image": "images/Mask group.png",
+        "alt": "Rose Candle",
+        "name": "ROSE",
+        "description": "Vanilla and rose",
+        "price": "From 8$"
+    },
+    {
+        "id": 4,
+        "image": "images/Mask group-2.png",
+        "alt": "Firelight Candle",
+        "name": "FIRELIGHT",
+        "description": "Dark amber, lilac & moonlight",
+        "price": "From 8$"
+    },
+    {
+        "id": 5,
+        "image": "images/DELIGHT.png",
+        "alt": "Firelight Candle",
+        "name": "DELIGHT",
+        "description": "Raspberry & Vanilla ",
+        "price": "From 8$"
+    },
+    {
+        "id": 6,
+        "image": "images/FREE.png",
+        "alt": "Firelight Candle",
+        "name": "FREE",
+        "description": "Tea tree & lemon grass",
+        "price": "From 8$"
+    },
+    {
+        "id": 7,
+        "image": "images/LAVENDER.png",
+        "alt": "Firelight Candle",
+        "name": "LAVENDER FIELDS",
+        "description": "Fresh lavender & eucalyputs ",
+        "price": "From 8$"
+    },
+    {
+        "id": 8,
+        "image": "images/GOODNIGHT.png",
+        "alt": "Firelight Candle",
+        "name": "GOODNIGHT SLEEP",
+        "description": "Camomile, eucalptus, lavender ",
+        "price": "From 8$"
+    },
+    {
+        "id": 9,
+        "image": "images/SUN KISSED.png",
+        "alt": "Firelight Candle",
+        "name": "SUN KISSED",
+        "description": "Sandalwood & coconut",
+        "price": "From 8$"
+    },
+    {
+        "id": 10,
+        "image": "images/ORIENTAL.png",
+        "alt": "Firelight Candle",
+        "name": "ORIENTAL",
+        "description": "Oud & musk",
+        "price": "From 8$"
+    },
+    {
+        "id": 11,
+        "image": "images/FRENCH.png",
+        "alt": "Firelight Candle",
+        "name": "FRENCH TOAST",
+        "description": "Vanilla and cinnamon",
+        "price": "From 8$"
+    },
+    {
+        "id": 12,
+        "image": "images/AMBIENT.png",
+        "alt": "Firelight Candle",
+        "name": "AMBIENT",
+        "description": "jasmine, rose, grapefruit & vanilla",
+        "price": "From 8$"
+    },
+    {
+        "id": 13,
+        "image": "images/SWEETHEART.png",
+        "alt": "Firelight Candle",
+        "name": "SWEETHEART",
+        "description": "Cinnamon, orange & vanilla",
+        "price": "From 8$"
+    },
+    {
+        "id": 14,
+        "image": "images/BLUSH.png",
+        "alt": "Firelight Candle",
+        "name": "BLUSH",
+        "description": "Orange, musk, wood & ying yang",
+        "price": "From 8$"
+    },
+    {
+        "id": 15,
+        "image": "images/RELAX.png",
+        "alt": "Firelight Candle",
+        "name": "RELAX",
+        "description": "Vanilla and lavender",
+        "price": "From 8$"
+    },
+    {
+        "id": 16,
+        "image": "images/SUNRISE.png",
+        "alt": "Firelight Candle",
+        "name": "SUNRISE",
+        "description": "Orange & eucalyptus",
+        "price": "From 8$"
+    },
+    {
+        "id": 17,
+        "image": "images/NAQAYA.png",
+        "alt": "Firelight Candle",
+        "name": "NAQAYA",
+        "description": "Orange musk & Wood ",
+        "price": "From 8$"
+    },
+    {
+        "id": 18,
+        "image": "images/MASAYA.png",
+        "alt": "Firelight Candle",
+        "name": "MASAYA",
+        "description": "Jasmine rose & Soft vanilla ",
+        "price": "From 8$"
+    },
+    {
+        "id": 19,
+        "image": "images/PASSION.png",
+        "alt": "Firelight Candle",
+        "name": "PASSION PUNCH",
+        "description": "Mango, pineapple mint & tea tree",
+        "price": "From 8$"
+    },
+    {
+        "id": 20,
+        "image": "images/SANCTUARY.png",
+        "alt": "Firelight Candle",
+        "name": "SANCTUARY",
+        "description": "jasmine, rose, grapefruit & vanilla",
+        "price": "From 8$"
+    }
+   
+
+
+]
