@@ -34,7 +34,7 @@ $(document).ready(function () {
               }
               $(this).css({
                 color: "#white",
-                backgroundColor: "# 8B623C",
+                backgroundColor: "#8B623C",
               });
               selectedButton = this;
             });
