@@ -45,7 +45,7 @@ font-face {
   
   .cursive-title img {
      max-width: 50%;
-     margin-top: 170px;
+     margin-top: 100px;
     
   }
   
@@ -144,61 +144,62 @@ font-face {
      
   }
   
-  
-  
-  .cart-button-container {
-     box-sizing: border-box;
-     display: flex;
-     flex: 0 0 auto;
-     flex-direction: column;
-     align-items: stretch;
-     width: 132px; /* Width set to 132px as specified */
-     height: 42px; /* Height set to 42px as specified */
-     justify-content: center;
-     padding-right: 5px;
-     padding-left: 16px;
-     border-right: 1px solid #805e4c;
-  }
-  
-  /* Add to Cart Text */
-  .cart-button-text-style {
-     flex: 0 0 auto;
-     padding: 0;
-     margin: 0;
-     font-family: 'Montserrat', sans-serif;
-     font-size: 17px;
-     font-weight: 550; /* Set to 500 as requested */
-     color: #6e4835;
-     white-space: nowrap; /* Prevent the text from wrapping */
-     display: inline-block; 
-  }
-  
-  /* Price Container */
-  .price-container {
-     box-sizing: border-box;
-     display: flex;
-     flex: 1 0 auto;
-     flex-direction: column;
-     align-items: stretch;
-     justify-content: center;
-     padding-right: 1px;
-     padding-left: 10px;
-     width: 100px; /* Width set to 67px as specified */
-      height: 42px; /* Height set to 42px as specified */
-  }
-  
-  /* Price Tag */
-  .price-tag-text-style {
-     flex: 0 0 auto;
-     padding: 0;
-     padding-right: 8.5px;
-     margin: 0;
-     font-family: 'Montserrat', sans-serif;
+ 
+
+.cart-button-container {
+   box-sizing: border-box;
+   display: flex;
+   flex: 0 0 auto;
+   flex-direction: column;
+   align-items: stretch;
+   width: 132px; /* Width set to 132px as specified */
+   height: 42px; /* Height set to 42px as specified */
+   justify-content: center;
+   padding-right: 16px;
+   padding-left: 16px;
+   border-right: 1px solid #805e4c;
+}
+
+/* Add to Cart Text */
+.cart-button-text-style {
+   flex: 0 0 auto;
+   padding: 0;
+   margin: 0;
+   font-family: 'Montserrat Medium', sans-serif;
+   font-size: 17px;
+   font-weight: 550; /* Set to 500 as requested */
+   color: #6e4835;
+   white-space: nowrap; /* Prevent the text from wrapping */
+   display: inline-block; 
+}
+
+/* Price Container */
+.price-container {
+   box-sizing: border-box;
+   display: flex;
+   flex: 0 0 auto;
+   flex-direction: column;
+   align-items: stretch;
+   justify-content: center;
+   padding-right: 17.5px;
+   padding-left: 17.5px;
+   width: 30px; 
+    height: 42px; 
     
-     font-size: 17px;
-     font-weight: 550; /* Set to 500 as requested */
-     color: #6e4835;
-  }
+}
+
+/* Price Tag */
+.price-tag-text-style {
+   flex: 0 0 auto;
+   padding: 0;
+   padding-right: 8.5px;
+   margin: 0;
+   font-family: 'Montserrat Medium', sans-serif;
+   font-size: 17px;
+   font-weight: 550; /* Set to 500 as requested */
+   color: #6e4835;
+}
+
   
   a {
      text-decoration: none;
@@ -310,36 +311,5 @@ font-face {
     background-color: transparent; 
     cursor: pointer;
  }
- .cart-button-text-style:hover,
- .cart-button-text-style:focus {
-     outline: none;
-     opacity: 0.8; 
- }
- .breadcrumb {
-    position: absolute;
-    width: 147px;
-    height: 28px;
-    left: 96px;
-    top: 200px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 23px;
-    line-height: 28px;
-    color: #8B623C;
-  }
-  @media (max-width: 768px) {
-    .breadcrumb {
-      font-size: 2vw; 
-      top: 40%; 
-      left: 7%; 
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .breadcrumb {
-      font-size: 2vw; 
-      top: 37%; 
-      left: 10%; 
-    }
-  }
+
+ 
