@@ -77,13 +77,6 @@ margin-left: 80%;
     width: 300px;
 }
 
-.quantity-controls {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    border-radius: 13px;
-}
-
 .quantity-controls button {
     background: none;
     border-radius: 50%;
@@ -115,10 +108,9 @@ margin-left: 80%;
 .quantity-controls {
     display: flex;
     align-items: center;
-    gap: 5px;
     border: 1px solid #6E4835;
+    border-radius: 13px;
 }
-
 
 .delete-btn {
     background: none;
@@ -610,7 +602,8 @@ margin-left: 80%;
   label {
     text-align: left;
     font-weight: 600;
-  }
+    margin-top: 10px;
+}
   
   .main-wrapper {
     display: flex;
@@ -622,8 +615,8 @@ margin-left: 80%;
   .row-wrapper {
     display: flex;
     gap: 20px;
-    justify-content: space-between;;
-  }
+    justify-content: space-between;
+}
   
   .row {
     display: flex;
@@ -647,14 +640,17 @@ margin-left: 80%;
   
   input {
     padding: 8px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 10px;
+    background-color: #FDF8F0;
+    color: #C5A491;
   }
-  input ::placeholder{
+  input::placeholder {
     color: #C5A491;
     font-weight: normal;
+    border: none; 
   }
-  
+
   .row3 {
     display: flex;
     justify-content: center;
@@ -675,5 +671,45 @@ margin-left: 80%;
 
   .expiry-inputs input {
     width: 100%;
+    background-color: #FDF8F0;
+    color: #C5A491;
+  
   }
   
+  .expiry-inputs {
+    display: flex;
+    gap: 10px;
+  }
+
+  /* Style the select dropdown */
+  .expiry-inputs select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #FDF8F0; /* Matches input background color */
+    font-size: 14px;
+    color: #C5A491; /* Matches input placeholder color */
+    width: 100%;
+    cursor: pointer;
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    text-align: center; 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="%23C5A491" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px 12px;
+  }
+  
+  /* Hover and Focus Effects for Dropdown */
+  .expiry-inputs select:hover,
+  .expiry-inputs select:focus {
+    border-color: #C5A491;
+    outline: none;
+  }
+  
+  /* Ensure consistency with inputs */
+  .expiry-inputs input {
+    background-color: #FDF8F0;
+    color: #C5A491;
+  }
