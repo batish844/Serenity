@@ -12,3 +12,39 @@ document.querySelectorAll('.Quick-help-button').forEach(button => {
         }
     });
 });
+
+
+// Form
+const form = document.querySelector("#contactForm");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); 
+
+  const name = form.querySelector('input[placeholder="Name"]').value;
+  const email = form.querySelector('input[placeholder="Email"]').value;
+  const subject = form.querySelector('input[placeholder="Subject"]').value;
+  const message = form.querySelector('textarea').value;
+
+  const feedback = {
+    name,
+    email,
+    subject,
+    message,
+    date: new Date().toLocaleString(), 
+  };
+
+  const feedbacks = JSON.parse(localStorage.getItem("feedbacks")) || [];
+  
+  feedbacks.push(feedback);
+  
+  localStorage.setItem("feedbacks", JSON.stringify(feedbacks));
+
+  successMessage.classList.remove("hidden");
+  
+  form.reset();
+
+  setTimeout(() => {
+    successMessage.classList.add("hidden");
+  }, 3000);
+});

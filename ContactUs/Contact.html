@@ -28,7 +28,7 @@
       <div class="Mini-container">
         <div class="container">
           <h1>Get in Touch with Us</h1>
-          <form>
+          <form id="contactForm">
             <div class="form-group">
               <input type="text" placeholder="Name" required />
               <input type="email" placeholder="Email" required />
@@ -40,12 +40,14 @@
               required
             />
             <textarea
-              placeholder="Subject your message request "
+              placeholder="Subject your message request"
               required
             ></textarea>
-            <button class="submit" type="submit">send message</button>
+            <button class="submit" type="submit">Send Message</button>
           </form>
+          <div id="successMessage" class="hidden">Message sent successfully</div>
         </div>
+        
 
         <div class="contact-details">
           <div class="contact_text">

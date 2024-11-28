@@ -79,17 +79,33 @@ body {
     border-radius: 60px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin: 20px;
-}
+  }
   
- .container h1 {
+  .container h1 {
     color: #8B623C;
     font-weight: 600;
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: left;
     margin-left: 10px;
-}
+  }
   
+  #successMessage {
+    background-color: #d4edda;
+    color: #409654;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+
+
   .form-group {
     display: flex;
     gap: 15px;
@@ -144,20 +160,20 @@ textarea {
     /* width: 130px; */
     /* display: flex; */
 }
-.submit{
+.submit {
     opacity: 0.8;
     background-color: #f9f3ee;
     color: #6E4835;
     border: none;
-    padding: 7px 17px;
+    padding: 7px 15px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 0.9rem;
     transition: background-color 0.3s;
     margin-top: 10px;
     font-weight: 500;
-    width: 130px; 
-     display: flex;
+    width: 130px;
+    display: flex;
 }
   
   /* button:hover {
@@ -416,6 +432,21 @@ margin-left: 10px;
         width: 70%;
         padding: 0px;
         color: #8B623C;
+    }
+    .submit {
+        opacity: 0.8;
+        background-color: #f9f3ee;
+        color: #6E4835;
+        border: none;
+        padding: 7px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+        font-weight: 500;
+        width: 130px;
+        display: flex;
     }
 
     .Mini-container {
@@ -749,6 +780,8 @@ margin-left: 10px;
         margin-left: 180px;
     }
 } */
+
+
 
 /* Ipad Air */
 @media((min-width: 820px) and (max-width:1124px)) {
