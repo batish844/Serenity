@@ -8,9 +8,11 @@ body {
     text-align: center;
     font-size: 20px;
 }
+
 .Shopping-Header img{
     transform: scale(0.7);
 }
+
 .Shopping-Header h2{
     margin-top: -28px;
     color: #6F4835;
@@ -25,19 +27,17 @@ body {
 .cart-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     color: #8B623C;
+    font-size: 20px
 }
 
-.Qun-Pri{
+.Qun-Pri {
   display: flex;
   align-items: center;
   width: 350px;
   justify-content: space-between;
-  margin-right: 10px;
-}
-.cart-items{
-  max-width: 90%;
+  margin-right: 30px;
 }
 
 .TrashPrice{
@@ -55,6 +55,7 @@ margin-left: 80%;
     margin: 0px;
     width: 80%;
     margin-bottom: 15px;
+    
 }
 
 .cart-item img {
@@ -133,13 +134,28 @@ margin-left: 80%;
 
     .border{
         border-bottom: 2px solid #8B623C; 
-        width: 105%; 
+        width: 103%; 
         margin-bottom: 10px;
         margin-top: 20px;
+        opacity: .6;
+    }
+    .border-header{
+      width: 103%;
+      border: 1px solid #8B623C;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      opacity: .6;
+    }
+    .cart-border{
+      width: 103%;
+      border: 1px solid #8B623C;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      opacity: .6;
     }
 
     .promo-subtotal-container {
-        width: 105%;
+        width: 103%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -353,6 +369,7 @@ margin-left: 80%;
             border-bottom: 2px solid #8B623C;
             width: 160%;
             margin-bottom: 10px;
+            opacity: .6;
         }
 
         .price {

@@ -5,11 +5,10 @@ document.querySelectorAll('.Quick-help-button').forEach(button => {
         
         if (answerContainer.style.maxHeight && answerContainer.style.maxHeight !== '0px') {
             answerContainer.style.maxHeight = '0';
-            button.textContent = '+';
+            button.innerHTML = '<i class="fas fa-angle-down"></i>'; // Down arrow 
         } else {
-            answerContainer.style.maxHeight = answerContainer.scrollHeight + 'px'; // take the auto height
-            button.textContent = '−';
+            answerContainer.style.maxHeight = answerContainer.scrollHeight + 'px'; //auto width
+            button.innerHTML = '<i class="fas fa-angle-up"></i>'; // Up arrow 
         }
     });
 });
-
