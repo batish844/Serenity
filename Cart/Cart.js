@@ -65,12 +65,11 @@ function renderCart() {
       </div>
     `;
 
-    // Append the cart item content to the container
     cartItemsContainer.appendChild(itemDiv);
 
     // Check if it's the last item
     if (index !== cartItems.length - 1) {
-      // Create and append the border below each cart item except the last one
+// create the border element
       const borderDiv = document.createElement("div");
       borderDiv.classList.add("border-bottom");
       cartItemsContainer.appendChild(borderDiv);
