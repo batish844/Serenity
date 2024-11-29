@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "The Billion";
+  src: url("/public/fonts/the_billion/The\ Billion.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Embarcadero MVB Pro";
+  src: url("/public/fonts/Embarcadero MVB Pro/fonnts.com-Embarcadero_MVB_Pro_Bold.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url("/public/fonts/Montserrat Medium/FontsFree-Net-Montserrat-Medium.ttf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;1,100;1,300;1,400;1,500;1,900&display=swap");
+
 body {
     background-color: #FDF8F0; /* Replace with your desired color */
     margin: 0; /* Remove any default margin */
@@ -148,7 +177,7 @@ body {
       width: 90%; /* Reduce width for smaller screens */
       height: auto; /* Adjust height dynamically */
       left: 3%;
-      top: 200px;
+      top: 100px;
       margin: 10px auto; /* Center all elements */
       text-align: center;
     }
@@ -228,7 +257,7 @@ body {
       width: 80%; /* Adjust for tablet size */
       height: auto;
       left: 10%;
-      top: 200px;
+      top: 100px;
     
       margin: 20px auto; /* Center all elements */
       text-align: center;
@@ -366,13 +395,14 @@ body {
     max-width: 780px;
      margin-bottom: 50px;
   }
+
   .tranquility-container {
     position: relative; /* Set relative positioning for the pseudo-element */
     width: 100%;
     max-width: 1200px;
     min-height: 100vh; /* Ensure it covers the full height */
     left: 50%;
-    top: 1970px;
+    top: 1850px;
     transform: translateX(-50%);
     text-align: center;
     padding: 20px;
@@ -631,14 +661,14 @@ body {
     .tranquility-container {
       width: 90%; /* Constrain width for tablets */
       padding: 20px;
-      margin-top: -1130px;
+      margin-top: -1150px;
   
     }
   
     .tranquility-container::before {
       top: -60px; /* Maintain proportional background size */
       border-radius: 12px; /* Adjust border radius */
-      height: -80px;
+      height: -50px;
     }
   
     .tranquility-title {
@@ -659,10 +689,6 @@ body {
   
   }
 
-  .content-wrapper {
-    position: relative; /* Keep it in flow */
-    top: -150px; /* Adjust this value to control how far up the content moves */
-  }
   
   html, body {
     height: 100%;
