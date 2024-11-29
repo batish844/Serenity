@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "A Walk in the Woods (350G)",
+      "description": "It blends sandalwood and amber wood for a warm, earthy forest vibe.",
       "price": 25,
       "quantity": 1,
       "image": "Cart-Images/A Walk in the Woods (350G).png"
@@ -10,6 +11,7 @@
     {
       "id": 2,
       "name": "Caramella Mini Mold",
+      "description": "It's the medium sized cylinder sculpture candle. Perfect for house or office decoration!",
       "price": 6,
       "quantity": 1,
       "image": "Cart-Images/Caramella Mini Mold.jpg"
@@ -17,6 +19,7 @@
     {
       "id": 3,
       "name": "Circled Hanger",
+      "description": "The Lavender Closer Hanger fills your space with a soothing floral aroma while keeping clothes fresh.",
       "price": 3,
       "quantity": 2,
       "image": "Cart-Images/circled-hanger.jpg"
@@ -27,18 +30,21 @@
     {
       "id": 4,
       "name": "Goodnight Sleep",
+      "description": "A calming scented candle that promotes relaxation and a peaceful night's sleep with a blend of lavender and chamomile.",
       "price": 8,
       "image": "Cart-Images/GoodnightSleep.png"
     },
     {
       "id": 5,
       "name": "Sweetheart",
+      "description": "A sweet, romantic fragrance with hints of rose and vanilla, perfect for creating a cozy and loving atmosphere.",
       "price": 8,
       "image": "Cart-Images/Sweetheart.png"
     },
     {
       "id": 6,
       "name": "Delight",
+      "description": "A fresh and uplifting fragrance combining citrus and floral notes, designed to invigorate and refresh your space.",
       "price": 8,
       "image": "Cart-Images/Delight.png"
     }
