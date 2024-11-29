@@ -53,21 +53,35 @@ function renderCart() {
       <div class="actions">
         <div class="quantity-controls">
           <button onclick="updateQuantity(${index}, -1)">-</button>
-          <input type="text" value="${product.quantity}" readonly>
+          <input type="text" class="Quant-nb" value="${product.quantity}" readonly>
           <button onclick="updateQuantity(${index}, 1)">+</button>
         </div>
         <div class="TrashPrice">
           <div class="price">${(product.price * product.quantity).toFixed(2)}$</div>
           <button class="delete-btn" onclick="removeItem(${index})">
-            <img src="Cart-images/Trash.png" alt="Trash Icon">
+            <i class="fa fa-trash"></i>
           </button>
         </div>
       </div>
     `;
+
+    // Append the cart item content to the container
     cartItemsContainer.appendChild(itemDiv);
+
+    // Check if it's the last item
+    if (index !== cartItems.length - 1) {
+      // Create and append the border below each cart item except the last one
+      const borderDiv = document.createElement("div");
+      borderDiv.classList.add("border-bottom");
+      cartItemsContainer.appendChild(borderDiv);
+    }
   });
+
   calculateSubtotal();
 }
+
+
+
 
 // Update item quantity
 function updateQuantity(index, change) {
