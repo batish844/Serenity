@@ -45,7 +45,7 @@ font-face {
   
   .cursive-title img {
      max-width: 50%;
-     margin-top: 100px;
+     margin-top: 70px;
     
   }
   
@@ -144,21 +144,36 @@ font-face {
      
   }
   
- 
-
-.cart-button-container {
+  .cart-button-container {
    box-sizing: border-box;
    display: flex;
    flex: 0 0 auto;
    flex-direction: column;
    align-items: stretch;
-   width: 132px; /* Width set to 132px as specified */
-   height: 42px; /* Height set to 42px as specified */
+   width: 132px;
+   height: 42px;
    justify-content: center;
-   padding-right: 16px;
-   padding-left: 16px;
-   border-right: 1px solid #805e4c;
+   padding-right: 16px; /* Padding for the Add to Cart text */
+   padding-left: 13px; /* Keep this for symmetry */
+   position: relative; 
 }
+
+.cart-button-container::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: calc(100% - 123px); 
+   width: 1px;
+   height: 100%;
+   background-color: #805e4c; 
+}
+
+/* When the container is active */
+.cart-button-container.active::after {
+   background-color: #FDF8F0; 
+ }
+
+
 
 /* Add to Cart Text */
 .cart-button-text-style {
@@ -181,8 +196,8 @@ font-face {
    flex-direction: column;
    align-items: stretch;
    justify-content: center;
-   padding-right: 17.5px;
-   padding-left: 17.5px;
+   padding-right: 10px;
+   padding-left: 7px;
    width: 30px; 
     height: 42px; 
     
@@ -234,7 +249,7 @@ font-face {
      align-items: stretch;
      align-self: center;
      justify-content: flex-start;
-     min-width: 199px;
+     min-width: 176px;
      height: 42px;
      margin-top: 15px;
      margin-left: -9px;
@@ -253,7 +268,7 @@ font-face {
        justify-content: center;
        flex-wrap: wrap;
        gap: 60px; 
-       row-gap: 90px; 
+       row-gap: 100px; 
        padding: 20px;
        margin-top: 65px;
    }
@@ -291,20 +306,10 @@ font-face {
      border-radius: 10px;
   }
   
-  .price-container1 {
-     box-sizing: border-box;
-     display: flex;
-     flex: 0 0 auto;
-     flex-direction: column;
-     align-items: stretch;
-     justify-content: center;
-     padding-right: 17.5px;
-     padding-left: 17.5px;
-  }
+  
   
      
-  
- 
+
   .cart-button-text-style {
     outline: none;
     border: none;

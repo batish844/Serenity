@@ -148,7 +148,7 @@ body {
       width: 90%; /* Reduce width for smaller screens */
       height: auto; /* Adjust height dynamically */
       left: 3%;
-      top: 100px;
+      top: 200px;
       margin: 10px auto; /* Center all elements */
       text-align: center;
     }
@@ -228,7 +228,7 @@ body {
       width: 80%; /* Adjust for tablet size */
       height: auto;
       left: 10%;
-      top: 100px;
+      top: 200px;
     
       margin: 20px auto; /* Center all elements */
       text-align: center;
@@ -372,7 +372,7 @@ body {
     max-width: 1200px;
     min-height: 100vh; /* Ensure it covers the full height */
     left: 50%;
-    top: 1850px;
+    top: 1970px;
     transform: translateX(-50%);
     text-align: center;
     padding: 20px;
@@ -549,7 +549,7 @@ body {
       width: 90%; /* Constrain width for tablets */
       padding: 20px;
       border-radius: 50px; /* Slightly smaller border radius */
-      margin-top: 240px;
+      margin-top: 230px;
     }
   
     .mission-container .mission-title {
@@ -591,11 +591,12 @@ body {
     }
   
     .tranquility-container::before {
-      top: -10px; /* Adjust to prevent overlap */
+      top: 0px; /* Adjust to prevent overlap */
       left: 0;
       right: 0;
-      bottom: 150px;
+      bottom: 170px;
       border-radius: 3px; /* Smaller radius for mobile */
+      margin-bottom: 0px;
     }
   
     .tranquility-title {
@@ -635,8 +636,9 @@ body {
     }
   
     .tranquility-container::before {
-      top: -70px; /* Maintain proportional background size */
+      top: -60px; /* Maintain proportional background size */
       border-radius: 12px; /* Adjust border radius */
+      height: -80px;
     }
   
     .tranquility-title {
@@ -656,3 +658,17 @@ body {
   
   
   }
+
+  .content-wrapper {
+    position: relative; /* Keep it in flow */
+    top: -150px; /* Adjust this value to control how far up the content moves */
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+footer {
+  position: relative;
+}
