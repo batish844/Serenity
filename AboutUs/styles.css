@@ -94,10 +94,10 @@ body {
 /* Owner Image */
 .owner-image {
   position: absolute;
-  width: 610px;
+  width: 590px;
   height: 462px;
   top: 280px;
-  left: 40px;
+  left: 60px;
   background: url('images/Group\ 824.png') no-repeat center;
   background-size: contain; /* Changed from 'cover' to 'contain' */
   border-radius: 16px;
@@ -549,7 +549,7 @@ body {
       width: 90%; /* Constrain width for tablets */
       padding: 20px;
       border-radius: 50px; /* Slightly smaller border radius */
-      margin-top: 230px;
+      margin-top: 240px;
     }
   
     .mission-container .mission-title {
@@ -585,7 +585,7 @@ body {
     .tranquility-container {
       width: 90%; /* Full width for mobile */
       padding: 15px; /* Reduce padding */
-      margin-top: -1000px;
+      margin-top: -1045px;
   
    
     }
@@ -635,7 +635,7 @@ body {
     }
   
     .tranquility-container::before {
-      top: -50px; /* Maintain proportional background size */
+      top: -70px; /* Maintain proportional background size */
       border-radius: 12px; /* Adjust border radius */
     }
   
