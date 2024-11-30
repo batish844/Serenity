@@ -3,6 +3,10 @@ body {
     background-color: #fdf7f2;
     margin: 70px;
 }
+.Cart-Container{
+  width: 100%;
+  margin: 0;
+}
 
 .Shopping-Header{
     text-align: center;
@@ -277,7 +281,14 @@ transform: scale(1.6);
       }
       /* Recent Cart viewd Section  */
 
+.Recents{
+  margin-left: 20px;
+}
 
+.Recents-section{
+  margin-left: 50px;
+  margin-right: 50px;
+}
 .Recents-section img{
   transform:scale(0.7) ;
 }
@@ -293,7 +304,7 @@ transform: scale(1.6);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin: 40px;
 }
 
 .Recent-cart {
@@ -636,14 +647,15 @@ button {
       color: #8B623C;
       font-size: 20px;
     }
+
     .Recents-section {
       text-align: center;
       margin-top: 130px;
-      max-width: 100%;
+      max-width: 120%;
       /* margin-left: 50px; */
       /* margin: auto; */
       /* padding: 20px; */
-    }
+  }
     .recent-item{
       margin: auto;
       margin-bottom: 20px;
@@ -676,12 +688,12 @@ button {
     gap: 10px;
     transition: max-height 0.3s ease, opacity 0.3s ease;
     }
+
     .recently-viewed-section {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       margin-top: 40px;
-      margin: 15px;
     }
 
 }
