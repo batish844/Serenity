@@ -714,7 +714,7 @@ button {
 }
 }
 /* Ipad Air */
-@media (min-width: 820px) {
+@media ((min-width: 820px) and (max-width:1024px)) {
   .Cart-Container {
     width: 100%;
     margin-left: -50px;
@@ -727,13 +727,13 @@ button {
     color: #6F4835;
     margin-bottom: -70px;
   }
-.actions {
-  display: flex;
-  align-items: center;
-  width: 0px;
-  justify-content: space-between;
-  color: #6E4835;
-  background-color: #fdf7f2;
+  .actions {
+    display: flex;
+    align-items: center;
+    width: 0px;
+    justify-content: space-between;
+    color: #6E4835;
+    background-color: #fdf7f2;
   }
   .TrashPrice {
     display: flex;
@@ -779,8 +779,7 @@ button {
     text-align: center;
     position: relative;
     top: 30%;
-}
-
+  }
 }
 
 
