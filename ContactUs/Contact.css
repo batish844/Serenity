@@ -193,17 +193,17 @@ textarea {
     font-size: 14px;
 }
 
-.contact-row1 {
+.contact-row {
     display: flex;
     align-items: center;
-
     margin-bottom: 15px;
+    gap: 60px;
 }
-.contact-row{
+.contact-row {
     display: flex;
     align-items: center;
-
     margin-bottom: 15px;
+    gap: 65px;
 }
 
 .contact-details h3 {
@@ -247,10 +247,10 @@ margin-left: 30px;
 }
 
 .Contact-Section {
-    color: #6E4835;
+    color: rgb(110, 72, 53);
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 100%;
     margin-top: 30px;
 }
 
@@ -274,6 +274,7 @@ font-weight: 400;
     display: flex;
     gap: 18px;
 }
+
 
 
 /* Responsivity  */

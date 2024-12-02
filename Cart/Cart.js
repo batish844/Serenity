@@ -158,6 +158,7 @@ function applyPromoCode() {
   const validPromoCodes = {
     "Chicho": 0.1,
     "Majd Helo": 0.2,
+    "Majd-10-Off":0.1
   };
 
   if (promoApplied) {

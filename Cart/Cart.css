@@ -71,20 +71,29 @@ margin-left: 75%;
 }
 
 .product-details {
-    flex: 1;
-    margin-left: 20px;
-    max-width: 300px;
-    margin-right: 50%;
-    color: #6F4835;
+  flex: 1;
+  margin-left: 50px;
+  max-width: 280px;
+  margin-right: 50%;
+  color: #6F4835;
 }
 
-.product-details h4{
-    font-weight: normal;
-    width: 300px;
+.product-details h4 {
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  color: #6F4835;
+  font-weight: normal;
+  width: 300px;
+  margin: 0;
 }
+
 .product-details p{
+  font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   width: 400px;
+  color: #8B623C;
+  opacity: 1;
+  font-size: 15px;
 }
 
 .quantity-controls button {
@@ -120,10 +129,11 @@ margin-left: 75%;
     border: 1px solid #6E4835;
     border-radius: 15px;
 }
-.TrashPrice .price{
+.TrashPrice .price {
   font-size: 25px;
   font-weight: 500;
   color: #6F4835;
+  width: 76px;
 }
 
 .delete-btn {
