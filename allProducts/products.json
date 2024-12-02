@@ -5,7 +5,7 @@
         "alt": "Absolute Candle",
         "name": "ABSOLUTE",
         "description": "Gardenia and blackberry",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "alt": "A Walk in the Woods Candle",
         "name": "A WALK IN THE WOODS",
         "description": "Sandalwood & amber wood",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "alt": "Rose Candle",
         "name": "ROSE",
         "description": "Vanilla and rose",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "alt": "Firelight Candle",
         "name": "FIRELIGHT",
         "description": "Dark amber, lilac & moonlight",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "alt": "Firelight Candle",
         "name": "DELIGHT",
         "description": "Raspberry & Vanilla ",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "alt": "Firelight Candle",
         "name": "FREE",
         "description": "Tea tree & lemon grass",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "alt": "Firelight Candle",
         "name": "LAVENDER FIELDS",
         "description": "Fresh lavender & eucalyputs ",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 8,
@@ -61,7 +61,8 @@
         "alt": "Firelight Candle",
         "name": "GOODNIGHT SLEEP",
         "description": "Camomile, eucalptus, lavender ",
-        "price": "From 8$"
+        "price": "8$"
+       
     },
     {
         "id": 9,
@@ -69,7 +70,7 @@
         "alt": "Firelight Candle",
         "name": "SUN KISSED",
         "description": "Sandalwood & coconut",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 10,
@@ -77,7 +78,7 @@
         "alt": "Firelight Candle",
         "name": "ORIENTAL",
         "description": "Oud & musk",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 11,
@@ -85,7 +86,7 @@
         "alt": "Firelight Candle",
         "name": "FRENCH TOAST",
         "description": "Vanilla and cinnamon",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 12,
@@ -93,7 +94,7 @@
         "alt": "Firelight Candle",
         "name": "AMBIENT",
         "description": "jasmine, rose, grapefruit & vanilla",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 13,
@@ -101,7 +102,7 @@
         "alt": "Firelight Candle",
         "name": "SWEETHEART",
         "description": "Cinnamon, orange & vanilla",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 14,
@@ -109,7 +110,7 @@
         "alt": "Firelight Candle",
         "name": "BLUSH",
         "description": "Orange, musk, wood & ying yang",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 15,
@@ -117,7 +118,7 @@
         "alt": "Firelight Candle",
         "name": "RELAX",
         "description": "Vanilla and lavender",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 16,
@@ -125,7 +126,7 @@
         "alt": "Firelight Candle",
         "name": "SUNRISE",
         "description": "Orange & eucalyptus",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 17,
@@ -133,7 +134,7 @@
         "alt": "Firelight Candle",
         "name": "NAQAYA",
         "description": "Orange musk & Wood ",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 18,
@@ -141,7 +142,8 @@
         "alt": "Firelight Candle",
         "name": "MASAYA",
         "description": "Jasmine rose & Soft vanilla ",
-        "price": "From 8$"
+        "price": "8$"
+       
     },
     {
         "id": 19,
@@ -149,7 +151,7 @@
         "alt": "Firelight Candle",
         "name": "PASSION PUNCH",
         "description": "Mango, pineapple mint & tea tree",
-        "price": "From 8$"
+        "price": "8$"
     },
     {
         "id": 20,
@@ -157,7 +159,7 @@
         "alt": "Firelight Candle",
         "name": "SANCTUARY",
         "description": "jasmine, rose, grapefruit & vanilla",
-        "price": "From 8$"
+        "price": "8$"
     }
    
 

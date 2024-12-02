@@ -1,3 +1,25 @@
+
+// $(document).ready(function () {
+//   let menu = document.getElementById("mobile-menu");
+//   let toggleButton = document.getElementById("menu-toggle");
+//   let closeButton = document.getElementById("menu-close");
+
+//   toggleButton.addEventListener("click", () => {
+//     menu.classList.remove("hidden");
+//   });
+
+//   closeButton.addEventListener("click", () => {
+//     menu.classList.add("hidden");
+//   });
+
+//   menu.addEventListener("click", (e) => {
+//     if (e.target === menu) {
+//       menu.classList.add("hidden");
+//     }
+//   });
+// });
+
+
 let cartItems = [];
 let subtotal = 0;
 let promoApplied = false;
@@ -48,28 +70,39 @@ function renderCart() {
       <img src="${product.image}" alt="${product.name}">
       <div class="product-details">
         <h4>${product.name}</h4>
-        <p>${product.price}$</p>
+        <p>${product.description}</p>
       </div>
       <div class="actions">
         <div class="quantity-controls">
           <button onclick="updateQuantity(${index}, -1)">-</button>
-          <input type="text" value="${product.quantity}" readonly>
+          <input type="text" class="Quant-nb" value="${product.quantity}" readonly>
           <button onclick="updateQuantity(${index}, 1)">+</button>
         </div>
         <div class="TrashPrice">
-        <div class="price">${(product.price * product.quantity).toFixed(2)}$</div>
-        <button class="delete-btn" onclick="removeItem(${index})">
-          <img src="Cart-images/Trash.png" alt="Trash Icon">
-        </button>
+          <div class="price">${(product.price * product.quantity).toFixed(2)}$</div>
+          <button class="delete-btn" onclick="removeItem(${index})">
+            <i class="fa fa-trash"></i>
+          </button>
         </div>
       </div>
-      
     `;
 
     cartItemsContainer.appendChild(itemDiv);
+
+    // Check if it's the last item
+    if (index !== cartItems.length - 1) {
+// create the border element
+      const borderDiv = document.createElement("div");
+      borderDiv.classList.add("border-bottom");
+      cartItemsContainer.appendChild(borderDiv);
+    }
   });
+
   calculateSubtotal();
 }
+
+
+
 
 // Update item quantity
 function updateQuantity(index, change) {
@@ -160,7 +193,6 @@ function addToCart(productId) {
       const product = data.cartItems.find((item) => item.id === productId);
 
       if (product) {
-        // Check if the product is already in the cart
         const existingProductIndex = cartItems.findIndex((item) => item.id === productId);
 
         if (existingProductIndex >= 0) {
@@ -189,7 +221,6 @@ function addRecentlyViewedToCart(productId) {
       const product = data.recentlyViewed.find((item) => item.id === productId);
 
       if (product) {
-        // Check if the product is already in the cart
         const existingProductIndex = cartItems.findIndex((item) => item.id === productId);
 
         if (existingProductIndex >= 0) {
@@ -246,28 +277,25 @@ function renderRecentlyViewed() {
 }
 
 window.onload = () => {
-  initializeCart(); 
-  renderRecentlyViewed(); 
+  initializeCart();
+  renderRecentlyViewed();
 };
 
 // Checkout
 let checkoutButton = document.querySelector(".checkout-btn");
 
 checkoutButton.addEventListener("click", function () {
-  // Open the checkout modal
   document.getElementById("checkout-modal").style.display = "block";
 });
 
-// Function to close the modal
 function closeModal() {
   document.getElementById("checkout-modal").style.display = "none";
 }
 
-// Validation
+// Checkout validation and data storage
 function validateAndCheckout() {
   const cardHolder = document.getElementById("card-holder").value.trim();
   const cardNumber = document.getElementById("card-number").value.trim();
-
   const expiryMonth = document.getElementById("expiry-month").value.trim();
   const expiryYear = document.getElementById("expiry-year").value.trim();
 
@@ -281,9 +309,8 @@ function validateAndCheckout() {
     return;
   }
 
-  const currentMonth = new Date().getMonth() + 1; 
-  const currentYear = new Date().getFullYear(); 
-
+  const currentMonth = new Date().getMonth() + 1;
+  const currentYear = new Date().getFullYear();
 
   saveCheckoutData(cardHolder, expiryMonth, expiryYear, cardNumber);
 
@@ -298,26 +325,22 @@ function saveCheckoutData(cardHolder, expiryMonth, expiryYear, cardNumber) {
     expiryYear,
     cardNumber: cardNumber.replace(/\d(?=\d{4})/g, "*"), 
     cvcCode,
-    subtotal: 0,
+    subtotal: subtotal,  // store the final subtotal
     date: new Date().toLocaleString(),
   };
 
   localStorage.setItem("checkoutData", JSON.stringify(checkoutData));
 
-  const cartItems = []; 
-  localStorage.setItem("cartItems", JSON.stringify(cartItems)); 
-  const subtotal = 0; 
-  document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`; 
-
-  console.log("Checkout data saved locally:", checkoutData);
+  cartItems = []; // Clear cart
+  saveCartToLocalStorage();
+  document.getElementById("subtotal").textContent = "$0.00"; // Reset subtotal
 
   alert("Payment information saved. Proceeding to payment...");
-
   closeModal();
   renderCart();
 }
 
 document.querySelector(".pop-up-form button[type='submit']").addEventListener("click", function (e) {
-  e.preventDefault(); 
-  validateAndCheckout(); 
+  e.preventDefault();
+  validateAndCheckout();
 });

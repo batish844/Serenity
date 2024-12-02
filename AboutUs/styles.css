@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "The Billion";
+  src: url("/public/fonts/the_billion/The\ Billion.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Embarcadero MVB Pro";
+  src: url("/public/fonts/Embarcadero MVB Pro/fonnts.com-Embarcadero_MVB_Pro_Bold.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url("/public/fonts/Montserrat Medium/FontsFree-Net-Montserrat-Medium.ttf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;1,100;1,300;1,400;1,500;1,900&display=swap");
+
 body {
     background-color: #FDF8F0; /* Replace with your desired color */
     margin: 0; /* Remove any default margin */
@@ -60,8 +89,8 @@ body {
     position: absolute;
     width: 297px; /* Maintain image dimensions */
     height: auto; /* Dynamic height */
-    left: calc(50% - 297px / 2 - 538.5px);
-    top: 945px; /* Original top value */
+    left: calc(50% - 703px / 2 - 260.5px); /* Adjusted left position */
+    top: 943px; /* Original top value */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,7 +107,7 @@ body {
     position: absolute;
     width: 256px;
     height: 57px;
-    left: calc(50% - 256px / 2 - 538px);
+    left: calc(50% - 703px / 2 - 240.5px); /* Adjusted left position */
     top: 1026px; /* Original position */
     font-family: 'Embarcadero MVB Pro', sans-serif;
     font-weight: 700;
@@ -89,24 +118,27 @@ body {
     text-align: center;
   }
   
-  /* Owner Image */
-  .owner-image {
-    position: absolute;
-    width: 496px;
-    height: 500px;
-    top: 255px;
-    left: 120px;
-    background: url('images/about-us.png') no-repeat center;
-    background-size: cover;
-    border-radius: 16px;
-  }
-  
+
+
+/* Owner Image */
+.owner-image {
+  position: absolute;
+  width: 590px;
+  height: 462px;
+  top: 280px;
+  left: 60px;
+  background: url('images/Group\ 824.png') no-repeat center;
+  background-size: contain; /* Changed from 'cover' to 'contain' */
+  border-radius: 16px;
+}
+
+
   /* Owner Description */
   .owner-description {
     position: absolute;
     width: 703px;
     height: auto; /* Allow dynamic height */
-    left: calc(50% - 703px / 2 - 335.5px);
+    left: calc(50% - 703px / 2 - 260.5px); /* Adjusted left position */
     top: 1138px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -128,9 +160,7 @@ body {
     border-radius: 44px;
   }
   
-  /* Responsive Styles */
   
-  /* Mobile (max-width: 767px) */
   @media (max-width: 767px) {
     .serenity,
     .about-us-title,
@@ -139,8 +169,7 @@ body {
     .owner-title,
     .owner-description,
     .owner-image,
-    .product-image,
-    .mission-container
+    .product-image
    
   
      {
@@ -194,7 +223,7 @@ body {
     .mission-container {
        position: relative;
       top: auto; /* Remove absolute positioning */
-      margin-top: -40px; 
+      margin-top: 120px; 
       margin-left: 3%;
       border-radius: 16px;
   
@@ -206,7 +235,6 @@ body {
     /* Tranquility Container */
     .tranquility-container {
       position: relative; /* Ensure it remains in the document flow */
-      margin-top: -700px; /* Adjust the value to bring it closer to the top */
       padding: 15px;
    align-content: center;
   
@@ -367,13 +395,14 @@ body {
     max-width: 780px;
      margin-bottom: 50px;
   }
+
   .tranquility-container {
     position: relative; /* Set relative positioning for the pseudo-element */
     width: 100%;
     max-width: 1200px;
     min-height: 100vh; /* Ensure it covers the full height */
     left: 50%;
-    top: 1977px;
+    top: 1850px;
     transform: translateX(-50%);
     text-align: center;
     padding: 20px;
@@ -550,7 +579,7 @@ body {
       width: 90%; /* Constrain width for tablets */
       padding: 20px;
       border-radius: 50px; /* Slightly smaller border radius */
-      margin-top: 80px;
+      margin-top: 230px;
     }
   
     .mission-container .mission-title {
@@ -586,17 +615,18 @@ body {
     .tranquility-container {
       width: 90%; /* Full width for mobile */
       padding: 15px; /* Reduce padding */
-      margin-top: -1170px;
+      margin-top: -1045px;
   
    
     }
   
     .tranquility-container::before {
-      top: -10px; /* Adjust to prevent overlap */
+      top: 0px; /* Adjust to prevent overlap */
       left: 0;
       right: 0;
-      bottom: 150px;
+      bottom: 170px;
       border-radius: 3px; /* Smaller radius for mobile */
+      margin-bottom: 0px;
     }
   
     .tranquility-title {
@@ -631,13 +661,14 @@ body {
     .tranquility-container {
       width: 90%; /* Constrain width for tablets */
       padding: 20px;
-      margin-top: -1290px;
+      margin-top: -1150px;
   
     }
   
     .tranquility-container::before {
-      top: -50px; /* Maintain proportional background size */
+      top: -60px; /* Maintain proportional background size */
       border-radius: 12px; /* Adjust border radius */
+      height: -50px;
     }
   
     .tranquility-title {
@@ -657,3 +688,13 @@ body {
   
   
   }
+
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+footer {
+  position: relative;
+}

@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"
+  />
     <link rel="stylesheet" href="Contact.css" />
   </head>
   <body>
@@ -24,10 +28,10 @@
       <div class="Mini-container">
         <div class="container">
           <h1>Get in Touch with Us</h1>
-          <form>
+          <form id="contactForm">
             <div class="form-group">
-              <input type="text" placeholder="Write your name" required />
-              <input type="email" placeholder="Write your email" required />
+              <input type="text" placeholder="Name" required />
+              <input type="email" placeholder="Email" required />
             </div>
             <input
               class="subject-input"
@@ -36,12 +40,14 @@
               required
             />
             <textarea
-              placeholder="Subject your message request "
+              placeholder="Subject your message request"
               required
             ></textarea>
-            <button type="submit">send message</button>
+            <button class="submit" type="submit">Send Message</button>
           </form>
+          <div id="successMessage" class="hidden">Message sent successfully</div>
         </div>
+        
 
         <div class="contact-details">
           <div class="contact_text">
@@ -138,7 +144,7 @@
             <div class="Quick-help-Question">
               <div class="FAQ">
                 <p>How long do your candles burn?</p>
-                <button class="Quick-help-button">+</button>
+                <button class="Quick-help-button"><i class="fas fa-angle-down"></i></button>
               </div>
               <div class="Quick-help-Answer">
                 <p class="Answer-P">
@@ -152,7 +158,7 @@
             <div class="Quick-help-Question">
               <div class="FAQ">
                 <p>Are your candles made with natural ingredients?</p>
-                <button class="Quick-help-button">+</button>
+                <button class="Quick-help-button"><i class="fas fa-angle-down"></i></button>
               </div>
               <div class="Quick-help-Answer">
                 <p class="Answer-P">
@@ -165,7 +171,7 @@
             <div class="Quick-help-Question">
               <div class="FAQ">
                 <p>Do you offer custom candle scents?</p>
-                <button class="Quick-help-button">+</button>
+                <button class="Quick-help-button"><i class="fas fa-angle-down"></i></button>
               </div>
               <div class="Quick-help-Answer">
                 <p class="Answer-P">
@@ -179,7 +185,7 @@
             <div class="Quick-help-Question">
               <div class="FAQ">
                 <p>What's the best way to care for my candle?</p>
-                <button class="Quick-help-button">+</button>
+                <button class="Quick-help-button"><i class="fas fa-angle-down"></i></button>
               </div>
               <div class="Quick-help-Answer">
                 <p class="Answer-P">
@@ -197,24 +203,7 @@
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="Contact.js"></script>
   </body>
 </html>
