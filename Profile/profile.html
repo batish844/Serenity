@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
+    <div class="profile-container">
+        <div class="Account-Photo">
+            <img id="profile-picture" src="Images/Profile-sample.png" alt="User Icon" />
+            <label for="photo-upload" class="change-btn">Change photo</label>
+            <input id="photo-upload" type="file" accept="image/*" style="display: none;" />
+        </div>
+        
+
+      <div class="Account-Info">
+        <h1>Your Account</h1>
+
+        <div class="Account-Form">
+          <label for="">Username or email address</label>
+          <input type="email" name="" class="input Username" placeholder="Email" required/>
+
+          <label for="">Password</label>
+          <input type="password" name="" class="input password" placeholder="Password" required/>
+          <a class="Lost-Pass" href="###">Lost your password?</a>
+        </div>
+
+        <div class="edit-btns">
+          <a href="###"> <button class="edit-info">Edit Info</button></a>
+          <a href="###"><button class="Login">Log In</button></a>
+        </div>
+
+        <div class="remember-me">
+          <input type="checkbox" id="remember" />
+          <label for="remember">Remember me</label>
+        </div>
+      </div>
+    </div>
+    <button id="show-profile">+</button>
+
+    <script src="profile.js"></script>
+  </body>
+</html>

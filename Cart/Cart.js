@@ -19,7 +19,6 @@
 //   });
 // });
 
-
 let cartItems = [];
 let subtotal = 0;
 let promoApplied = false;
@@ -88,7 +87,6 @@ function renderCart() {
     `;
 
     cartItemsContainer.appendChild(itemDiv);
-
     // Check if it's the last item
     if (index !== cartItems.length - 1) {
 // create the border element
@@ -100,9 +98,6 @@ function renderCart() {
 
   calculateSubtotal();
 }
-
-
-
 
 // Update item quantity
 function updateQuantity(index, change) {
@@ -158,6 +153,7 @@ function applyPromoCode() {
   const validPromoCodes = {
     "Chicho": 0.1,
     "Majd Helo": 0.2,
+    "Majd-10-Off":0.1
   };
 
   if (promoApplied) {
@@ -191,7 +187,7 @@ function addToCart(productId) {
     .then((response) => response.json())
     .then((data) => {
       const product = data.cartItems.find((item) => item.id === productId);
-
+      console.log(product)
       if (product) {
         const existingProductIndex = cartItems.findIndex((item) => item.id === productId);
 
@@ -201,7 +197,6 @@ function addToCart(productId) {
           product.quantity = 1;
           cartItems.push(product);
         }
-
         saveCartToLocalStorage();
         renderCart();
       } else {
