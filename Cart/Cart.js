@@ -1,23 +1,63 @@
+// menu mobile
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuClose = document.getElementById("menu-close");
+  const mobileMenu = document.getElementById("mobile-menu");
 
-// $(document).ready(function () {
-//   let menu = document.getElementById("mobile-menu");
-//   let toggleButton = document.getElementById("menu-toggle");
-//   let closeButton = document.getElementById("menu-close");
+  //open 
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.style.display = "flex";
+    setTimeout(() => {
+      mobileMenu.style.transform = "translateX(0)"; 
+      mobileMenu.style.opacity = "1"; 
+    }, 10); 
+  });
 
-//   toggleButton.addEventListener("click", () => {
-//     menu.classList.remove("hidden");
-//   });
+  //close 
+  menuClose.addEventListener("click", () => {
+    mobileMenu.style.transform = "translateX(-100%)"; 
+    mobileMenu.style.opacity = "0"; 
+    setTimeout(() => {
+      mobileMenu.style.display = "none";
+    }, 300); 
+  });
+});
 
-//   closeButton.addEventListener("click", () => {
-//     menu.classList.add("hidden");
-//   });
+// search mobile 
+document.addEventListener("DOMContentLoaded", () => {
+  const searchIcon = document.getElementById("search-icon");
+  const searchInput = document.getElementById("search-input2");
+  const searchAndProfile = document.querySelector(".search-and-profile");
 
-//   menu.addEventListener("click", (e) => {
-//     if (e.target === menu) {
-//       menu.classList.add("hidden");
-//     }
-//   });
-// });
+  if (searchIcon && searchInput && searchAndProfile) {
+    searchIcon.addEventListener("click", () => {
+      searchAndProfile.classList.toggle("active");
+
+      if (searchAndProfile.classList.contains("active")) {
+        searchInput.focus();
+      }
+    });
+  }
+});
+
+// search normal page 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const searchIcon = document.getElementById("search-icon");
+  const searchInput = document.getElementById("search-input1");
+  const rightDiv = document.querySelector(".right");
+
+  if (searchIcon && searchInput && rightDiv) {
+    searchIcon.addEventListener("click", () => {
+      rightDiv.classList.toggle("active");
+      searchInput.style.display="inline ";
+      if (rightDiv.classList.contains("active")) {
+        searchInput.focus();
+        searchInput.style.display="none";
+      }
+    });
+  }
+});
 
 let cartItems = [];
 let subtotal = 0;

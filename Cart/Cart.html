@@ -5,13 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
     <link rel="stylesheet" href="Cart.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!-- Navbar Section -->
+    <nav class="nav">
+      <div class="left">
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        <a href="/Serenity/Home/index.html">Home</a>
+        <a href="/Serenity/AboutUs/index.html">About Us</a>
+        <a href="/Serenity/allProducts/index.html">Products</a>
+      </div>
+
+      <div class="center">
+        <img src="Cart-Images/Logo.png" alt="Logo" />
+      </div>
+
+      <div class="right">
+        <a href="/Serenity/ContactUs/Contact.html">Contact Us</a>
+        <a href="#">Log In</a>
+        <a href="/Serenity/Cart/Cart.html">Cart</a>
+        <img src="Cart-Images/profileIcon.png" alt="Profile Icon">
+        <!-- Search Icon and Input Field -->
+        <a href="#" id="search-icon">
+          <img src="Cart-Images/search.png" alt="Search" style="height: 24px; width: 24px">
+        </a>
+        <input type="text" id="search-input1" class="search-input" placeholder="Search..."  />
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu" style="display: none;">
+      <div class="menu-header">
+        <div class="search-and-profile">
+          <img id="search-icon" class="search-icon" src="Cart-Images/search.png" alt="Search Icon" />
+          <input id="search-input2" class="search-input2" type="text" placeholder="Search..." />
+          <img src="Cart-Images/profileIcon.png" alt="Profile Icon" />
+        </div>
+        <button id="menu-close" class="menu-close"> Close</button>
+      </div>
+      <nav class="menu-links">
+        <a href="/Serenity/Home/index.html">Home</a>
+        <a href="/Serenity/AboutUs/index.html">About Us</a>
+        <a href="/Serenity/allProducts/index.html">Products</a>
+        <a href="/Serenity/ContactUs/Contact.html">Contact Us</a>
+        <a href="#">Log In</a>
+        <a href="/Serenity/Cart/Cart.html">Cart</a>
+      </nav>
+    </div>
+
+    <!-- Cart Section -->
     <div class="Cart-Container">
       <!-- Header-cart Section -->
       <div class="Shopping-Header">
@@ -29,8 +78,7 @@
           </div>
         </div>
         <div class="border-header"></div>
-        <div id="cart-items">
-        </div>
+        <div id="cart-items"></div>
         <div class="border"></div>
 
         <!-- Promo Code & Subtotal Section -->
@@ -66,7 +114,7 @@
         </div>
       </div>
 
-      <!-- Recent Cart viewd Section-->
+      <!-- Recent Cart viewed Section-->
       <div class="Recents-section">
         <div class="Recents">
           <img src="Cart-Images/Recents.png" alt="" />
@@ -158,6 +206,7 @@
         </div>
       </div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="Cart.js"></script>
   </body>
