@@ -18,11 +18,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #FDF8F0;
+    background: #fefefe;
     border-radius: 20px;
     padding: 20px;
     gap: 40px;
-    width: 90%;
+    width: 55%;
     margin: auto;
     opacity: 0; 
     transform: scale(0.9); 
@@ -40,6 +40,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 /* Form */
 .Account-Form{
     display: flex;
@@ -59,7 +60,7 @@ body {
     height: 30px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #6E4835;
+    border: none;
     border-radius: 10px;
     background-color:#FDF8F0 ;
 }
@@ -203,4 +204,58 @@ input[type="email"] {
     cursor: pointer;
     border: none;
     margin-right: 100px;
+}
+
+
+/* mobile responsivity */
+
+@media (max-width: 430px) {
+
+    .profile-container.active {
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        transform: scale(1);
+        width: 100%;
+    }
+
+    .Account-Form input {
+        width: 100%;
+        height: 30px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        border-radius: 10px;
+        background-color: #FDF8F0;
+    }
+
+    .Lost-Pass {
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        float: right;
+        color: #C5A491;
+        justify-content: flex-end;
+        width: 100%;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    #show-profile {
+        /* display: none; */
+        margin: auto;
+        transition: margin-top 0.1s ease-in-out;
+        font-size: 35px;
+        background-color: #FDF8F0;
+        color: #6F4835;
+        cursor: pointer;
+        border: none;
+        margin-right: 0px;
+    }
+    .edit-btns {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+
 }
