@@ -16,6 +16,7 @@ $(document).ready(function () {
   });
 });
 
+
   const fetchProducts = async () => {
     try {
       const response = await fetch("products.json"); // Path to your JSON file
