@@ -1605,6 +1605,10 @@ video {
     margin-bottom: 5rem;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:grid-cols-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
