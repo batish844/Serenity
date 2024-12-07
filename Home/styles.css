@@ -6,24 +6,27 @@
 }
 @font-face {
   font-family: "Embarcadero MVB Pro";
-  src: url("/public/fonts/Embarcadero MVB Pro/fonnts.com-Embarcadero_MVB_Pro_Bold.otf") format("opentype");
+  src: url("/public/fonts/Embarcadero MVB Pro/fonnts.com-Embarcadero_MVB_Pro_Bold.otf")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("/public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("opentype");
+  src: url("/public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat Medium";
-  src: url("/public/fonts/Montserrat Medium/FontsFree-Net-Montserrat-Medium.ttf") format("opentype");
+  src: url("/public/fonts/Montserrat Medium/FontsFree-Net-Montserrat-Medium.ttf")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 body {
-  background-color: #FDF8F0;
+  background-color: #fdf8f0;
   margin: 0;
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
@@ -40,7 +43,7 @@ body {
 
 /* Home Landing */
 .Home-landing {
-  border-bottom-left-radius: 45px; 
+  border-bottom-left-radius: 45px;
   border-bottom-right-radius: 45px;
   min-height: 100vh;
   background: url("/public/images/Landing_Image.jpg") no-repeat center center;
@@ -62,7 +65,17 @@ nav {
   align-items: center;
   position: relative;
 }
-
+.main-background-container::before {
+  content: "";
+  position: absolute;
+  top: 760px; 
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background: url("/public/images/background.png") center top no-repeat;
+  background-size: cover;
+  z-index: -1; 
+}
 .serenity-logo {
   position: absolute;
   left: 50%;
@@ -276,7 +289,7 @@ nav a:hover {
   max-width: 90%;
   margin: auto;
   font-family: "Montserrat Medium", sans-serif;
-  font-weight: 500; 
+  font-weight: 500;
   font-size: 20px;
   line-height: 30px;
   color: rgba(118, 76, 37, 1);
@@ -670,7 +683,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .testimonial-item {
@@ -711,7 +724,7 @@ nav a:hover {
   z-index: 2;
   background-color: #ecd3be;
   color: #8b623c;
-  pointer-events: auto; 
+  pointer-events: auto;
 }
 
 .testimonial-item.active .testimonial-quotation {
@@ -811,11 +824,10 @@ nav a:hover {
     margin-left: 0;
     max-width: 80%;
   }
-  .hero-divider, .shop-now-btn {
+  .hero-divider,
+  .shop-now-btn {
     margin-left: 0;
   }
-
- 
 
   .carousel-arrow {
     display: none;
@@ -984,7 +996,8 @@ nav a:hover {
 
 /* Hide main nav groups on small screens and show hamburger */
 @media (max-width: 768px) {
-  .nav-main-group, .nav-search-group {
+  .nav-main-group,
+  .nav-search-group {
     display: none;
   }
   .hamburger-btn {
@@ -993,4 +1006,3 @@ nav a:hover {
     background: none;
   }
 }
-

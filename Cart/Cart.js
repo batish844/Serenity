@@ -59,6 +59,37 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Pop Up 
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const profileIcon = document.getElementById("profile-icon");
+//   const profileContainer = document.querySelector(".profile-container");
+//   const overlay = document.querySelector(".overlay");
+
+//   profileIcon.addEventListener("click", () => {
+//       if (profileContainer.classList.contains("active")) {
+//           profileContainer.classList.remove("active");
+//           overlay.style.display = "none";
+//           setTimeout(() => {
+//               profileContainer.style.display = "none";
+//           }, 300);
+//       } else {
+//           profileContainer.style.display = "flex";
+//           overlay.style.display = "block";
+//           setTimeout(() => profileContainer.classList.add("active"), 10);
+//       }
+//   });
+
+//   // Close popup when clicking outside
+//   overlay.addEventListener("click", () => {
+//       profileContainer.classList.remove("active");
+//       overlay.style.display = "none";
+//       setTimeout(() => {
+//           profileContainer.style.display = "none";
+//       }, 300);
+//   });
+// });
+
 let cartItems = [];
 let subtotal = 0;
 let promoApplied = false;
