@@ -16,6 +16,52 @@
     <link rel="stylesheet" href="Contact.css" />
   </head>
   <body>
+
+    <nav class="nav">
+      <div class="left">
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        <a href="/Serenity/Home/index.html">Home</a>
+        <a href="/Serenity/AboutUs/index.html">About Us</a>
+        <a href="/Serenity/allProducts/index.html">Products</a>
+      </div>
+
+      <div class="center">
+        <img src="Contact-Images/Logo copy.png" alt="Logo" />
+      </div>
+
+      <div class="right">
+        <a href="/Serenity/ContactUs/Contact.html">Contact Us</a>
+        <a href="#">Log In</a>
+        <a href="/Serenity/Cart/Cart.html">Cart</a>
+        <img src="Contact-Images/profileIcon.png" alt="Profile Icon" id="profile-icon">
+        <!-- Search Icon and Input Field -->
+        <a href="#" id="search-icon">
+        <img src="Contact-Images/search copy.png" alt="Search" style="height: 24px; width: 24px">
+        </a>
+        <input type="text" id="search-input1" class="search-input" placeholder="Search..."  />
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu" style="display: none;">
+      <div class="menu-header">
+        <div class="search-and-profile">
+          <img id="search-icon" class="search-icon" src="Contact-Images/search copy.png" alt="Search Icon" />
+          <input id="search-input2" class="search-input2" type="text" placeholder="Search..." />
+          <img src="Contact-Images/profileIcon.png" alt="Profile Icon" />
+        </div>
+        <button id="menu-close" class="menu-close"> Close</button>
+      </div>
+      
+      <nav class="menu-links">
+        <a href="/Serenity/Home/index.html">Home</a>
+        <a href="/Serenity/AboutUs/index.html">About Us</a>
+        <a href="/Serenity/allProducts/index.html">Products</a>
+        <a href="/Serenity/ContactUs/Contact.html">Contact Us</a>
+        <a href="#">Log In</a>
+        <a href="/Serenity/Cart/Cart.html">Cart</a>
+      </nav>
+    </div>
+
     <div class="Contact_us_Container">
       <div class="Reach-Out">
         <img class="Reach-out-img" src="Contact-Images/Reach Out.png" alt="" />
@@ -49,7 +95,6 @@
           <div id="successMessage" class="hidden">Message sent successfully</div>
         </div>
         
-
         <div class="contact-details">
           <div class="contact_text">
             <h3>Contact Details</h3>

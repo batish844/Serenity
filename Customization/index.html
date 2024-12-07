@@ -44,7 +44,7 @@
         </a>
       </div>
 
-      <div class="flex justify-center items-center mt-8">
+      <div class="flex md:hidden lg:flex justify-center items-center mt-8">
         <a href="../Home/index.html">
           <img src="../public/images/Logo.png" alt="Logo" class="h-16 object-contain" />
         </a>
@@ -347,101 +347,61 @@
 
     <div class="w-full border-t border-black mt-40 my-8"></div>
 
-    <footer style="background-color: #fdf8f0" class="text-black py-8">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7">
-          <div style="margin: auto">
-            <ul>
-              <li class="font-bold mb-2">
-                <img src="/public/images/Logo.png" alt="" />
-              </li>
-            </ul>
-          </div>
-
-          <!-- Second Column -->
-          <div>
-            <ul>
-              <li class="font-bold mb-2">Links</li>
-              <li><a href="about.html" class="text-gray-600 hover:text-black">About Us</a></li>
-              <li><a href="best-sellers.html" class="text-gray-600 hover:text-black">Best Sellers</a></li>
-              <li><a href="testimonials.html" class="text-gray-600 hover:text-black">Testimonials</a></li>
-              <li><a href="quiz.html" class="text-gray-600 hover:text-black">Quiz</a></li>
-              <li><a href="footer.html" class="text-gray-600 hover:text-black">Footer</a></li>
-            </ul>
-          </div>
-
-          <!-- Third Column -->
-          <div>
-            <ul>
-              <li class="font-bold mb-2">About Us</li>
-              <li><a href="story.html" class="text-gray-600 hover:text-black">Story</a></li>
-              <li><a href="mission.html" class="text-gray-600 hover:text-black">Mission</a></li>
-              <li><a href="about-owner.html" class="text-gray-600 hover:text-black">About the Owner</a></li>
-            </ul>
-          </div>
-
-          <!-- Fourth Column -->
-          <div>
-            <ul>
-              <li class="font-bold mb-2">Products</li>
-              <li><a href="products.html" class="text-gray-600 hover:text-black">All Products</a></li>
-              <li><a href="customization.html" class="text-gray-600 hover:text-black">Customization</a></li>
-              <li><a href="categories.html" class="text-gray-600 hover:text-black">Categories</a></li>
-              <li><a href="collections.html" class="text-gray-600 hover:text-black">Collections</a></li>
-              <li><a href="candle-kits.html" class="text-gray-600 hover:text-black">Candle Kits</a></li>
-            </ul>
-          </div>
-
-          <!-- Fifth Column -->
-          <div>
-            <ul>
-              <li class="font-bold mb-2">Profile</li>
-              <li><a href="account.html" class="text-gray-600 hover:text-black">My Account</a></li>
-              <li><a href="signin.html" class="text-gray-600 hover:text-black">Sign In</a></li>
-            </ul>
-          </div>
-
-          <!-- Sixth Column -->
-          <div>
-            <ul>
-              <li class="font-bold mb-2">Cart</li>
-              <li><a href="product-info.html" class="text-gray-600 hover:text-black">Product Info</a></li>
-              <li><a href="checkout.html" class="text-gray-600 hover:text-black">Checkout</a></li>
-              <li><a href="tracking.html" class="text-gray-600 hover:text-black">Product Tracking</a></li>
-            </ul>
-          </div>
-
-          <!-- Seventh Column -->
-          <div>
-            <ul>
-              <li class="font-bold mb-2">Subscribe Now</li>
-              <li>
-                <div class="mt-4 space-x-2" style="margin-bottom: 10px">
-                  <input
-                    type="text"
-                    placeholder="Enter your email"
-                    style="
-                      background-color: #fdf8f0;
-                      border: 0;
-                      border-bottom: 2px solid black;
-                    "
-                  />
-                </div>
-              </li>
-              <li>
-                <button
-                  style="background-color: #c5a491"
-                  class="text-white rounded-md px-4 py-2 mt-2"
-                >
-                  Subscribe
-                </button>
-              </li>
-              <li>
-                <div class="flex" style="margin-top: 10px">
-                  <!-- Social icons omitted for brevity -->
-                </div>
-              </li>
-            </ul>
+    <footer class="footer">
+      <div class="footer-column">
+        <h3>Home</h3>
+        <a href="#">About us</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">Quiz</a>
+        <a href="#">Categories</a>
+        <a href="#">Customization</a>
+        <a href="#">Testimonials</a>
+      </div>
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <a href="#">Story</a>
+        <a href="#">About the Owner</a>
+        <a href="#">Mission</a>
+        <a href="#">Our Distinctive</a>
+      </div>
+      <div class="footer-column">
+        <h3>Products</h3>
+        <a href="#">All Products</a>
+        <a href="#">Customization</a>
+        <a href="#">Categories</a>
+        <a href="#">Collections</a>
+      </div>
+      <div class="footer-column">
+        <h3>Profile</h3>
+        <a href="#">My account</a>
+        <a href="#">Sign In</a>
+      </div>
+      <div class="footer-column">
+        <h3>Cart</h3>
+        <a href="#">Product Info</a>
+        <a href="#">Checkout</a>
+        <a href="#">Product Tracking</a>
+      </div>
+      <div class="footer-column newsletter">
+        <h3>Newsletter</h3>
+        <div class="input-wrapper">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Enter your email" />
+        </div>
+        <button>Subscribe</button>
+        <div class="social-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="WhatsApp"
+              ><img src="../public/images/wp.png" alt="WhatsApp"
+            /></a>
+            <a href="#" aria-label="Facebook"
+              ><img src="../public/images/fb.png" alt="Facebook"
+            /></a>
+            <a href="#" aria-label="X (Twitter)"><img src="../public/images/x.png" alt="X" /></a>
+            <a href="#" aria-label="Instagram"
+              ><img src="../public/images/inst.png" alt="Instagram"
+            /></a>
           </div>
         </div>
       </div>
