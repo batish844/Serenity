@@ -1,166 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Serenity</title>
-    <link href="styles.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet"/>
-    <link href="../dist/styles.css" rel="stylesheet">
-    
+    <link href="styles.css" rel="stylesheet" />
+    <link href="../dist/styles.css" rel="stylesheet" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet" />
 </head>
-<body class="bg-[#FDF8F0]">
-    <div class="Home-landing" style="border-bottom-left-radius: 45px; border-bottom-right-radius: 45px;">
-        <div class="landing-container"></div>
-            <nav>
-              <div class="nav-main-group">
-                <a href="../Home/index.html" class="home-link">Home</a>
-                <a href="../AboutUs/index.html">About Us</a>
-                <a href="../allProducts/index.html">Products</a>
-              </div>
-      
-              <img class="serenity-logo mt-10" src="/public/images/image.png" alt="Serenity Logo" />
-      
-              <div class="nav-search-group">
-                <a href="../ContactUs/Contact.html">Contact Us</a>
-                <a href="#">Log In</a>
-                <a href="../Cart/Cart.html">Cart</a>
-                <svg
-                  class="search-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-                <input type="text" class="search-input" placeholder="Search..." />
-              </div>
+<body>
+    <div class="Home-landing">
+        <div class="landing-container">
+            <nav class="flex justify-between items-center p-6">
+                <button id="menu-toggle" class="hamburger-btn text-[#fdf8f0] text-2xl cursor-pointer focus:outline-none md:hidden" aria-label="Open Menu">
+                    &#9776;
+                </button>
+
+                <div class="nav-main-group hidden md:flex space-x-6">
+                    <a href="../Home/index.html" class="home-link">Home</a>
+                    <a href="../AboutUs/index.html">About Us</a>
+                    <a href="../allProducts/index.html">Products</a>
+                </div>
+        
+                <img class="serenity-logo mt-10" src="/public/images/image.png" alt="Serenity Logo" />
+        
+                <div class="nav-search-group hidden md:flex items-center space-x-6">
+                    <a href="../ContactUs/Contact.html">Contact Us</a>
+                    <a href="#">Log In</a>
+                    <a href="../Cart/Cart.html">Cart</a>
+                    <svg
+                      class="search-icon w-6 h-6 cursor-pointer"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
+                    </svg>
+                    <input type="text" class="search-input hidden" placeholder="Search..." />
+                </div>
             </nav>
       
-            <section class="hero-section mb-16">
+            <div id="mobile-menu" class="hidden fixed inset-0 bg-[#e0c1ac] z-50 flex flex-col items-center justify-center space-y-6">
+              <div class="menu-header flex w-full justify-end px-6">
+                <button id="menu-close" class="text-2xl font-medium focus:outline-none" aria-label="Close Menu">
+                  &times;
+                </button>
+              </div>
+              <nav class="menu-links flex flex-col items-center gap-6">
+                <a href="../Home/index.html" class="text-[#fdf8f0] text-xl no-underline">Home</a>
+                <a href="../AboutUs/index.html" class="text-[#fdf8f0] text-xl no-underline">About Us</a>
+                <a href="../allProducts/index.html" class="text-[#fdf8f0] text-xl no-underline">Products</a>
+                <a href="../ContactUs/Contact.html" class="text-[#fdf8f0] text-xl no-underline">Contact Us</a>
+                <a href="#" class="text-[#fdf8f0] text-xl no-underline">Log In</a>
+                <a href="../Cart/Cart.html" class="text-[#fdf8f0] text-xl no-underline">Cart</a>
+              </nav>
+            </div>
+
+            <section class="hero-section">
               <h1>Elevate Your Home</h1>
               <img src="/public/images/with Our Candles.png" alt="With Our Candles" />
-      
               <hr class="hero-divider" />
-      
               <button class="shop-now-btn">Shop Now</button>
             </section>
         </div>   
-</div>
+    </div>
 
+    <div class="main-background-container">
+        <section id="about-us">
+            <p class="about-text">
+                Serenity was born out of necessity when scented candles became scarce in Lebanon after the closure of Bath &<br>
+                Body Works. Initially crafted for personal use, the captivating quality and durability of our candles ignited a<br> 
+                passion that inspired the development of our brand.
+            </p>
+        </section>
     
-        <div class="main-background-container">
-            <!-- About Us Section -->
-            <section id="about-us">
-                <p class="about-text">
-                    Serenity was born out of necessity when scented candles became scarce in Lebanon after the closure of Bath &<br>
-                    Body Works. Initially crafted for personal use, the captivating quality and durability of our candles ignited a<br> 
-                    passion that inspired the development of our brand.
-                </p>
-            </section>
-    
-            <div class="read-more-container">
-                <button class="read-more">Read More</button>
+        <div class="read-more-container">
+            <button class="read-more">Read More</button>
+        </div>
+   
+        <section id="best-sellers">
+            <div class="cursive-title">
+                <img src="/public/images/Group 77.png" alt="Our Serene Title">
             </div>
-       
-            <!-- Best Sellers Section -->
-            <section id="best-sellers">
-                <div class="cursive-title">
-                    <img src="/public/images/Group 77.png" alt="Our Serene Title">
-                </div>
     
-                <p class="best-sellers-description">Discover our top picks for more exclusive tracks and hidden gems!</p>
-                <div class="products">
-                    <div class="product">
-                        <div class="scent-seeker-container">
-                            <div class="product-card-list">
-                                <!-- Product Card 1 -->
-                                <div class="product-card">
-                                    <div class="mask-group">
-                                        <img src="/public/images/BestSellers1.png" class="product-card-img" alt="Absolute Candle">
+            <p class="best-sellers-description">Discover our top picks for more exclusive tracks and hidden gems!</p>
+            <div class="products">
+                <div class="product">
+                    <div class="scent-seeker-container">
+                        <div class="product-card-list">
+                            <div class="product-card">
+                                <div class="mask-group">
+                                    <img src="/public/images/BestSellers1.png" class="product-card-img" alt="Absolute Candle">
+                                </div>
+                                <div class="aroma-card">
+                                    <div class="fragrance-details-container">
+                                        <p class="unique-scent-description-style">ABSOLUTE</p>
+                                        <p class="gardenia-blackberry-text-style">Gardenia and blackberry</p>
                                     </div>
-                                    <div class="aroma-card">
-                                        <div class="fragrance-details-container">
-                                            <p class="unique-scent-description-style">ABSOLUTE</p>
-                                            <p class="gardenia-blackberry-text-style">Gardenia and blackberry</p>
+                                    <div class="product-card-widget">
+                                        <div class="cart-button-container">
+                                            <button class="cart-button-text-style">Add to Cart</button>
                                         </div>
-                                        <div class="product-card-widget">
-                                            <div class="cart-button-container">
-                                                <button class="cart-button-text-style">Add to Cart</button>
-                                            </div>
-                                            <div class="price-container">
-                                                <p class="price-tag-text-style">8$</p>
-                                            </div>
+                                        <div class="price-container">
+                                            <p class="price-tag-text-style">8$</p>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Product Card 2 -->
-                                <div class="product-card">
-                                    <div class="mask-group">
-                                        <img src="/public/images/BestSellers2.png" class="product-card-img" alt="A Walk in the Woods Candle">
+                            </div>
+                            <div class="product-card">
+                                <div class="mask-group">
+                                    <img src="/public/images/BestSellers2.png" class="product-card-img" alt="A Walk in the Woods Candle">
+                                </div>
+                                <div class="aroma-card">
+                                    <div class="fragrance-details-container">
+                                        <p class="unique-scent-description-style">A WALK IN THE WOODS</p>
+                                        <p class="gardenia-blackberry-text-style">Sandalwood & amber wood</p>
                                     </div>
-                                    <div class="aroma-card">
-                                        <div class="fragrance-details-container">
-                                            <p class="unique-scent-description-style">A WALK IN THE WOODS</p>
-                                            <p class="gardenia-blackberry-text-style">Sandalwood & amber wood</p>
+                                    <div class="product-card-widget">
+                                        <div class="cart-button-container">
+                                            <button class="cart-button-text-style">Add to Cart</button>
                                         </div>
-                                        <div class="product-card-widget">
-                                            <div class="cart-button-container">
-                                                <button class="cart-button-text-style">Add to Cart</button>
-                                            </div>
-                                            <div class="price-container">
-                                                <p class="price-tag-text-style">25$</p>
-                                            </div>
+                                        <div class="price-container">
+                                            <p class="price-tag-text-style">25$</p>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Product Card 3 -->
-                                <div class="product-card">
-                                    <div class="mask-group">
-                                        <img src="/public/images/BestSellers3.png" class="product-card-img" alt="Rose Candle">
+                            </div>
+                            <div class="product-card">
+                                <div class="mask-group">
+                                    <img src="/public/images/BestSellers3.png" class="product-card-img" alt="Rose Candle">
+                                </div>
+                                <div class="aroma-card">
+                                    <div class="fragrance-details-container">
+                                        <p class="unique-scent-description-style">ROSE</p>
+                                        <p class="gardenia-blackberry-text-style">Vanilla and rose</p>
                                     </div>
-                                    <div class="aroma-card">
-                                        <div class="fragrance-details-container">
-                                            <p class="unique-scent-description-style">ROSE</p>
-                                            <p class="gardenia-blackberry-text-style">Vanilla and rose</p>
+                                    <div class="product-card-widget">
+                                        <div class="cart-button-container">
+                                            <button class="cart-button-text-style">Add to Cart</button>
                                         </div>
-                                        <div class="product-card-widget">
-                                            <div class="cart-button-container">
-                                                <button class="cart-button-text-style">Add to Cart</button>
-                                            </div>
-                                            <div class="price-container">
-                                                <p class="price-tag-text-style">15$</p>
-                                            </div>
+                                        <div class="price-container">
+                                            <p class="price-tag-text-style">15$</p>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Product Card 4 -->
-                                <div class="product-card">
-                                    <div class="mask-group">
-                                        <img src="/public/images/BestSellers4.png" class="product-card-img" alt="Firelight Candle">
+                            </div>
+                            <div class="product-card">
+                                <div class="mask-group">
+                                    <img src="/public/images/BestSellers4.png" class="product-card-img" alt="Firelight Candle">
+                                </div>
+                                <div class="aroma-card">
+                                    <div class="fragrance-details-container">
+                                        <p class="unique-scent-description-style">FIRELIGHT</p>
+                                        <p class="gardenia-blackberry-text-style">Dark amber, lilac & moonlight</p>
                                     </div>
-                                    <div class="aroma-card">
-                                        <div class="fragrance-details-container">
-                                            <p class="unique-scent-description-style">FIRELIGHT</p>
-                                            <p class="gardenia-blackberry-text-style">Dark amber, lilac & moonlight</p>
+                                    <div class="product-card-widget">
+                                        <div class="cart-button-container">
+                                            <button class="cart-button-text-style">Add to Cart</button>
                                         </div>
-                                        <div class="product-card-widget">
-                                            <div class="cart-button-container">
-                                                <button class="cart-button-text-style">Add to Cart</button>
-                                            </div>
-                                            <div class="price-container">
-                                                <p class="price-tag-text-style">8$</p>
-                                            </div>
+                                        <div class="price-container">
+                                            <p class="price-tag-text-style">8$</p>
                                         </div>
                                     </div>
                                 </div>
@@ -168,11 +177,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="shop-more-container">
-                    <button class="shop-more-button">Shop More</button>
-                </div>
-            </section>
-        </div>
+            </div>
+            <div class="shop-more-container">
+                <button class="shop-more-button">Shop More</button>
+            </div>
+        </section>
+    </div>
+
     <div class="flex flex-wrap items-center justify-center min-h-screen mt-10 mx-2 sm:mx-4">
         <div class="Customization w-full max-w-[1430px] h-[664px] bg-[#ecd3be] rounded-[72px] flex flex-col md:flex-row overflow-hidden p-6 md:p-8">
             <div class="left md:ml-10 flex flex-col justify-center items-center p-2">
@@ -205,10 +216,7 @@
         </div>
         </div>
     </div>
-    
-    <!-- Categories Section -->
     <div class="container mx-auto mt-5 px-4 py-8">
-
         <div class="text-center">
             <h1 class="text-[#c9b8a6] opacity-65 text-[74px] font-normal" style="font-family: 'The Billion'; margin-bottom: -37px;">
                 Options
@@ -217,9 +225,7 @@
                 OUR CATEGORIES
             </h2>
         </div>
-        <!-- just a minor border issue in responsive mode to be tackled later -->
         <div class="mt-16 grid grid-cols-1 sm:flex sm:flex-wrap md:flex md:flex-wrap">
-
             <div class="w-full md:w-auto sm:w-auto mx-auto">
                 <div class="relative w-full h-[455px] rounded-lg overflow-hidden">
                     <img src="../public/images/Category1.png" class="w-full h-full object-cover">
@@ -265,11 +271,9 @@
             </div>
         </div>
     </div>       
-        
-      
- <!-- Customization Section -->
-<div class="flex flex-wrap items-center justify-center min-h-screen mt-10 mx-2 sm:mx-4">
-    <div class="Customization w-full max-w-[1430px] h-[664px] bg-[#ecd3be] rounded-[72px] flex flex-col md:flex-row overflow-hidden p-6 md:p-8">
+    
+ <div class="flex flex-wrap items-center justify-center min-h-screen mt-10 mx-2 sm:mx-4">
+    <div class="Customization w-full max-w-[1430px] h-[664px] bg-[#ecd3be] rounded-[72px] flex flex-col md:flex-row overflow-hidden p-6 md:p-8" style="margin-bottom:50px;">
       <div class="left md:ml-10 flex flex-col justify-center items-center p-2">
         <div class="TailoredToYou text-[#c5a491] text-4xl md:text-5xl lg:text-[74px] font-normal text-center" style="font-family: 'The Billion'; margin-bottom: -12px;">
           Tailored To You
@@ -296,41 +300,42 @@
       </div>
     </div>
   </div>
+    
     <div class="Home-testimonial">
-<div class="testimonial-container">
-    <img class="testimonial-logo" src="/public/images/real-talk2.png" alt="Real Talk Logo">
-    <h2 style="font-family: 'Embarcadero MVB Pro';">TESTIMONIALS</h2>
-    <div class="testimonial-carousel">
-        <div class="testimonial-item active">
-            <div class="testimonial-content">
-                <div class="testimonial-author">-Salma Meer</div>
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">This candle is amazing! The scent is so strong and long-lasting, it's the perfect way to relax after a long day.</p>
+        <div class="testimonial-container">
+            <img class="testimonial-logo" src="/public/images/real-talk2.png" alt="Real Talk Logo">
+            <h2 style="font-family: 'Embarcadero MVB Pro';">TESTIMONIALS</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial-item active">
+                    <div class="testimonial-content">
+                        <div class="testimonial-author">-Salma Meer</div>
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">This candle is amazing! The scent is so strong and long-lasting, it's the perfect way to relax after a long day.</p>
+                    </div>
+                    <img class="testimonial-quotation" src="/public/images/Quotation.png" alt="Quotation">
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-author">-Amir Gharib</div>
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">I recently tried Serenity and I'm absolutely in love! The scent is heavenly - it fills my whole apartment and creates such a cozy atmosphere. I was amazed at how long it lasted, too - it seems like it's burning forever! I've gotten so many compliments on how amazing my place smells. Definitely recommend!</p>
+                    </div>
+                    <img class="testimonial-quotation" src="/public/images/Quotation.png" alt="Quotation">
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-author">-Farah Mdawar</div>
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">I've tried so many candles, but this one is by far my favorite. The scent is incredible and it fills my whole house.</p>
+                    </div>
+                    <img class="testimonial-quotation" src="/public/images/Quotation.png" alt="Quotation">
+                </div>
+                <button class="carousel-arrow prev" aria-label="Previous testimonial">❮</button>
+                <button class="carousel-arrow next" aria-label="Next testimonial">❯</button>
             </div>
-            <img class="testimonial-quotation" src="/public/images/Quotation.png" alt="Quotation">
         </div>
-        <div class="testimonial-item">
-            <div class="testimonial-content">
-                <div class="testimonial-author">-Amir Gharib</div>
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">I recently tried Serenity and I'm absolutely in love! The scent is heavenly - it fills my whole apartment and creates such a cozy atmosphere. I was amazed at how long it lasted, too - it seems like it's burning forever! I've gotten so many compliments on how amazing my place smells. Definitely recommend!</p>
-            </div>
-            <img class="testimonial-quotation" src="/public/images/Quotation.png" alt="Quotation">
-        </div>
-        <div class="testimonial-item">
-            <div class="testimonial-content">
-                <div class="testimonial-author">-Farah Mdawar</div>
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">I've tried so many candles, but this one is by far my favorite. The scent is incredible and it fills my whole house.</p>
-            </div>
-            <img class="testimonial-quotation" src="/public/images/Quotation.png" alt="Quotation">
-        </div>
-        <button class="carousel-arrow prev" aria-label="Previous testimonial">❮</button>
-        <button class="carousel-arrow next" aria-label="Next testimonial">❯</button>
     </div>
-</div>
-    </div>
-    <div class="w-full border-t border-black my-8"></div>
+    <div class="horizontal-divider"></div>
 
     <footer class="footer">
         <div class="footer-column">
@@ -370,27 +375,20 @@
         <div class="footer-column newsletter">
           <h3>Newsletter</h3>
           <div class="input-wrapper">
-            <i class="fas fa-envelope"></i>
             <input type="email" placeholder="Enter your email" />
           </div>
           <button>Subscribe</button>
           <div class="social-section">
             <h3>Follow Us</h3>
             <div class="social-icons">
-              <a href="#" aria-label="WhatsApp"
-                ><img src="../public/images/wp.png" alt="WhatsApp"
-              /></a>
-              <a href="#" aria-label="Facebook"
-                ><img src="../public/images/fb.png" alt="Facebook"
-              /></a>
+              <a href="#" aria-label="WhatsApp"><img src="../public/images/wp.png" alt="WhatsApp"/></a>
+              <a href="#" aria-label="Facebook"><img src="../public/images/fb.png" alt="Facebook"/></a>
               <a href="#" aria-label="X (Twitter)"><img src="../public/images/x.png" alt="X" /></a>
-              <a href="#" aria-label="Instagram"
-                ><img src="../public/images/inst.png" alt="Instagram"
-              /></a>
+              <a href="#" aria-label="Instagram"><img src="../public/images/inst.png" alt="Instagram"/></a>
             </div>
           </div>
         </div>
-      </footer>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

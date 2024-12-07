@@ -1,687 +1,60 @@
 @font-face {
   font-family: "The Billion";
-  src: url("/public/fonts/the_billion/The\ Billion.ttf") format("opentype");
+  src: url("/public/fonts/the_billion/The Billion.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Embarcadero MVB Pro";
-  src: url("/public/fonts/Embarcadero MVB Pro/fonnts.com-Embarcadero_MVB_Pro_Bold.otf")
-    format("opentype");
+  src: url("/public/fonts/Embarcadero MVB Pro/fonnts.com-Embarcadero_MVB_Pro_Bold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("/public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
-    format("opentype");
+  src: url("/public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat Medium";
-  src: url("/public/fonts/Montserrat Medium/FontsFree-Net-Montserrat-Medium.ttf")
-    format("opentype");
+  src: url("/public/fonts/Montserrat Medium/FontsFree-Net-Montserrat-Medium.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;1,100;1,300;1,400;1,500;1,900&display=swap");
-/* Responsive Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.cursive-title img {
-  max-width: 50%;
-  margin-top: 30px;
-}
-
-/* About Us Section */
-#about-us {
-  position: relative;
-  text-align: center;
-}
-
-.about-text {
-  max-width: 90%;
-  margin: auto;
-  font-family: "Montserrat Medium", sans-serif;
-  font-weight: 500; /* Medium weight */
-  font-size: 20px;
-  line-height: 30px;
-  color: rgba(118, 76, 37, 1);
-}
-
-.read-more-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 35px;
-  width: 100%; /* Optional: Set width to full to span container */
-  height: 100%; /* Optional: Set height to auto-fill container */
-}
-
-.read-more {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 21px;
-  color: #fdf8f0;
-  background-color: #e0c1ac;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 6px 25px;
-  margin-bottom: 0px;
-}
-
-/* Titles with Centering */
-.cursive-title {
-  text-align: center;
-  font-family: "The Billion", cursive;
-  font-weight: 400;
-  font-size: 85px;
-  color: #c9b8a6;
-  margin: 0 auto; /* Centers the div horizontally */
-  padding-bottom: 0%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.best-sellers-title {
-  text-align: center;
-  font-family: "Embarcadero MVB Pro", serif;
-  font-weight: 700;
-  font-size: 36px;
-  padding: auto;
-  color: #8b623c;
-  letter-spacing: 0.08em;
-  margin: 0px 0;
-}
-
-.best-sellers-description {
-  max-width: 90%;
-  margin: -10px auto;
-  text-align: center;
-  font-family: "Montserrat Medium", sans-serif;
-  font-weight: 500;
-  font-size: 17px;
-  color: #8b623c;
-  line-height: 1.5;
-}
-
-/* Shop More Button */
-.shop-more-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.shop-more-button {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 21px;
-  color: #fdf8f0;
-  background-color: #e0c1ac;
-  border: none;
-  border-radius: 10px;
-  padding: 6px 25px;
-  cursor: pointer;
-  margin-bottom: 50px;
-}
-
-/* Media Queries for Responsive Adjustments */
-@media (max-width: 768px) {
-  .cursive-title {
-    font-size: 55px;
-  }
-
-  .best-sellers-title {
-    font-size: 24px;
-  }
-
-  .best-sellers-description,
-  .about-text {
-    font-size: 15px;
-    padding: 0 10px;
-  }
-}
-
-/* Fragrance Details */
-.fragrance-details-container {
-  margin-top: -3px;
-  display: flex;
-  flex: 0 0 auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-/* Candle Name */
-.unique-scent-description-style {
-  flex: 0 0 auto;
-  margin-top: -10px;
-  padding: 0;
+body {
+  background-color: #FDF8F0;
   margin: 0;
-  font-family: "Montserrat Medium", sans-serif;
-  font-size: 18px;
-  font-weight: 600 !important;
-  color: #6f4835;
-  top: 1882.46px;
-  margin-bottom: -5px;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
-/* Candle Description */
-.gardenia-blackberry-text-style {
-  flex: 0 0 auto;
-  padding: 0;
-  margin: 0;
-  margin-top: 5.75px;
-  margin-left: -8px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15.5px;
-  font-weight: 400 !important;
-  color: #6f4835;
-  margin-bottom: 0.5px; /* Added space between description and add to cart */
-}
-
-.cart-button-container {
-  box-sizing: border-box;
-  display: flex;
-  flex: 0 0 auto;
-  flex-direction: column;
-  align-items: stretch;
-  width: 132px; /* Width set to 132px as specified */
-  height: 42px; /* Height set to 42px as specified */
-  justify-content: center;
-  padding-right: 16px;
-  padding-left: 16px;
-  border-right: 1px solid #805e4c;
-}
-
-/* Add to Cart Text */
-.cart-button-text-style {
-  flex: 0 0 auto;
-  padding: 0;
-  margin: 0;
-  font-family: "Montserrat Medium", sans-serif;
-  font-size: 17px;
-  font-weight: 550; /* Set to 500 as requested */
-  color: #6e4835;
-  white-space: nowrap; /* Prevent the text from wrapping */
-  display: inline-block;
-}
-
-/* Price Container */
-.price-container {
-  box-sizing: border-box;
-  display: flex;
-  flex: 1 0 auto;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  padding-right: 17.5px;
-  padding-left: 17.5px;
-  width: 67px; /* Width set to 67px as specified */
-  height: 42px; /* Height set to 42px as specified */
-}
-
-/* Price Tag */
-.price-tag-text-style {
-  flex: 0 0 auto;
-  padding: 0;
-  padding-right: 8.5px;
-  margin: 0;
-  font-family: "Montserrat Medium", sans-serif;
-  font-size: 17px;
-  font-weight: 550; /* Set to 500 as requested */
-  color: #6e4835;
-}
-
-a {
-  text-decoration: none;
-}
-
-.aroma-card {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  padding-top: 129px;
-  padding-bottom: 30px;
-  margin-top: -100px;
-  background: #ecd3be;
-  border-radius: 10px;
-}
-
-.scent-seeker-container {
-  background-color: #fdf8f0;
-}
-
-.product-card-widget {
-  box-sizing: border-box;
-  display: flex;
-  flex: 0 0 auto;
-  flex-direction: row;
-  align-items: stretch;
-  align-self: center;
-  justify-content: flex-start;
-  min-width: 199px;
-  height: 42px;
-  margin-top: 15px;
-  margin-left: -9px;
-  background: #fdf8f0;
-  border-radius: 10px;
-}
-
-a {
-  text-decoration: none;
-}
-
-.product-card-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 60px;
-  padding: 20px;
-  margin-top: 65px;
-}
-
-.product-card {
-  box-sizing: border-box;
-  flex: 0 0 auto;
-  width: 302px;
-}
-
-.product-card-img {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  max-width: initial;
-  height: 307px;
-  clip-path: path(
-    "M0,150.997c0,-83.3932 67.6038,-150.997 150.997,-150.997v0c83.394,0 150.998,67.6038 150.998,150.997v156.41h-301.995z"
-  );
-  object-fit: cover;
-}
-
-.product-card-footer {
-  box-sizing: border-box;
-  display: flex;
-  flex: 0 0 auto;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  height: 42px;
-  margin-top: 14px;
-  background: #fdf8f0;
-  border-radius: 10px;
-}
-
-.price-container1 {
-  box-sizing: border-box;
-  display: flex;
-  flex: 0 0 auto;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  padding-right: 17.5px;
-  padding-left: 17.5px;
-}
-
-.main-background-container {
-  background: url("/public/images/background.png") center 0% no-repeat; /* Moves the image down by 10% */
-  background-size: 100% 90%; /* Keeps the image at 100% width and 50% height */
-}
-.cart-button-text-style {
-  outline: none;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-.cart-button-text-style:hover,
-.cart-button-text-style:focus {
-  outline: none;
-  opacity: 0.8;
-}
-
-@media (max-width: 768px) {
-  .main-background-container {
-    background-size: contain;
-    background-position: center center;
-  }
-}
-
-/* Responsive adjustments for phones */
-@media (max-width: 480px) {
-  .main-background-container {
-    background-size: contain; /* Scales to fit the container */
-    background-position: center center; /* Keeps the image centered */
-  }
-}
-.Home-testimonial {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+.section-center {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 40vh;
-  margin-bottom: 180px;
-}
-.testimonial-container {
-  width: 100%;
-  text-align: center;
+  margin: 40px auto;
+  padding: 0 20px;
+  max-width: 1430px;
 }
 
-.testimonial-logo {
-  display: block;
-  width: 100%;
-  max-width: 530px;
-  margin: -140px auto -110px auto;
-  transform: scale(0.7);
-  transform-origin: center;
-}
-
-h2 {
-  color: #8b7355;
-  font-size: 2em;
-  letter-spacing: 2px;
-  margin-top: 0;
-  font-weight: normal;
-}
-
-.testimonial-carousel {
-  position: relative;
-  margin-top: 40px;
-  height: 300px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.testimonial-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 35px;
-  padding: 20px;
-  width: 500px;
-  position: absolute;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  text-align: left;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.testimonial-content {
-  position: relative;
-}
-
-.testimonial-quotation {
-  width: 50px;
-  height: auto;
-  position: absolute;
-  bottom: -15px;
-  right: 50px;
-  transform: scale(1.8);
-}
-
-/* active */
-.testimonial-item.active {
-  opacity: 1;
-  transform: scale(1);
-  z-index: 2;
-  background-color: #ecd3be;
-  color: #8b623c;
-  border-radius: 35px;
-}
-
-.testimonial-item.active .testimonial-quotation {
-  transform: scale(2.2);
-  position: absolute;
-  bottom: -20px;
-  right: 50px;
-  z-index: 3;
-}
-
-.testimonial-item.left {
-  transform: scale(0.85) translateX(-120%);
-  opacity: 0.95;
-  z-index: 1;
-  background-color: #ffffff;
-}
-
-.testimonial-item.right {
-  transform: scale(0.85) translateX(120%);
-  opacity: 0.95;
-  z-index: 1;
-  background-color: #ffffff;
-}
-
-.testimonial-author {
-  display: inline-block;
-  border: 2px solid #c4a484;
-  border-radius: 20px;
-  padding: 5px 11px;
-  color: #8b623c;
-  font-size: 0.9em;
-  margin-bottom: 4px;
-  display: flex;
-  align-items: flex-start;
-  width: fit-content;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-stars {
-  color: #8b623c;
-  font-size: 1.7em;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: flex-start;
-}
-
-.testimonial-text {
-  font-family: "Quicksand", sans-serif;
-  color: #8b7355;
-  font-size: 1.1em;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 2em;
-  color: #8b7355;
-  cursor: pointer;
-  transition: color 0.3s;
-  z-index: 10;
-}
-
-.carousel-arrow:hover {
-  color: #c4a484;
-}
-
-.prev {
-  left: 50px;
-}
-
-.next {
-  right: 50px;
-}
-
-/* Responsivity */
-
-/* iPhone 14 pro max */
-@media (max-width: 480px) {
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #fdf5e6;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
-  }
-
-  .carousel-arrow {
-    display: none;
-  }
-  .testimonial-item.active {
-    opacity: 1;
-    transform: scale(0.7);
-    z-index: 2;
-    background-color: #ecd3be;
-    color: #8b623c;
-    border-radius: 35px;
-    margin: auto;
-  }
-  .testimonial-logo {
-    display: block;
-    width: 100%;
-    max-width: 530px;
-    margin: -140px auto -90px auto;
-    transform: scale(0.7);
-    transform-origin: center;
-  }
-  .testimonial-item.active .testimonial-quotation {
-    transform: scale(3);
-    position: absolute;
-    bottom: -20px;
-    right: 50px;
-    z-index: 3;
-  }
-  .testimonial-text {
-    font-family: "Quicksand", sans-serif;
-    color: #8b7355;
-    font-size: 1.1em;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-}
-/* iPad Air  */
-
-@media (max-width: 768px) {
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #fdf5e6;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    overflow: hidden;
-  }
-
-  .testimonial-item.left {
-    transform: scale(0.85) translateX(-120%);
-    opacity: 0.95;
-    z-index: 1;
-    background-color: #ffffff;
-  }
-
-  .testimonial-item.right {
-    transform: scale(0.85) translateX(120%);
-    opacity: 0.95;
-    z-index: 1;
-    background-color: #ffffff;
-  }
-
-  .testimonial-carousel {
-    position: relative;
-    margin-top: 40px;
-    height: 300px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-}
-/* iPad Air */
-@media (max-width: 820px) {
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #fdf5e6;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
-  }
-
-  .testimonial-item.left {
-    transform: scale(0.85) translateX(-120%);
-    opacity: 0.95;
-    z-index: 1;
-    background-color: #ffffff;
-  }
-
-  .testimonial-item.right {
-    transform: scale(0.85) translateX(120%);
-    opacity: 0.95;
-    z-index: 1;
-    background-color: #ffffff;
-  }
-}
-
-/* Large screens */
-
-/* Problem
-   @media (max-width : 1024px) {
-/* 
-       body {
-           font-family: Arial, sans-serif;
-           background-color: #FDF5E6;
-           margin: 0;
-           padding: 0;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           min-height: 100vh;
-           overflow: hidden;
-       } */
-/* } */
-/* Landing Section */
+/* Home Landing */
 .Home-landing {
-  font-family: Arial, sans-serif;
+  border-bottom-left-radius: 45px; 
+  border-bottom-right-radius: 45px;
   min-height: 100vh;
-  background: url(/public/images/Landing_Image.jpg) no-repeat center center;
+  background: url("/public/images/Landing_Image.jpg") no-repeat center center;
   background-size: cover;
   color: #fdf8f0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: #fdf8f0;
-  margin-bottom: 40px;
 }
+
 .landing-container {
-  margin: auto;
   width: 90%;
+  margin: 0 auto;
+  padding-top: 1rem;
 }
+
+/* Navigation Styles */
 nav {
   padding: 1.5rem 1.5rem;
   display: flex;
@@ -691,8 +64,10 @@ nav {
 }
 
 .serenity-logo {
-  color: #fdf8f0;
-  background-size: contain;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 80px;
 }
 
 .nav-main-group,
@@ -702,48 +77,32 @@ nav {
   align-items: center;
 }
 
-.nav-main-group {
-  margin-left: 0.5rem;
-}
-
-.nav-search-group {
-  margin-right: 0.5rem;
-}
-
-nav img {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  max-height: 80px;
-}
-
 nav a {
   color: #fdf8f0;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease, border-bottom 0.3s ease;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 nav a:hover {
-  color: #f0e6d6;
-  border-bottom: 2px solid #f0e6d6;
+  color: #e8dcd0;
+  border-bottom: 2px solid #c9b8a6;
 }
 
 .search-icon {
   width: 24px;
   height: 24px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #fdf8f0;
 }
 
 .search-icon:hover {
   transform: scale(1.1);
+  color: #c9b8a6;
 }
 
-/* search */
 .search-input {
   width: 0;
   opacity: 0;
@@ -774,31 +133,85 @@ nav a:hover {
   opacity: 0.7;
 }
 
-.search-icon {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
-  color: #fdf8f0;
-}
-
-.search-icon:hover {
-  transform: scale(1.1);
-  color: #f0e6d6;
-}
-
 .search-input:focus {
   outline: none;
   border: 1px solid #8b623c;
   background-color: #ffffff;
 }
 
-/*  Middle of the page */
+/* Hamburger Button */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fdf8f0;
+  cursor: pointer;
+}
 
+/* Mobile Menu Styles */
+#mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #e0c1ac;
+  z-index: 999;
+  flex-direction: column;
+  padding: 24px;
+  gap: 20px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#menu-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fdf8f0;
+  cursor: pointer;
+}
+
+.menu-links a {
+  color: #fdf8f0;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.menu-links a:hover {
+  color: #c9b8a6;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .nav-main-group,
+  .nav-search-group {
+    display: none;
+  }
+  .hamburger-btn {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  #mobile-menu {
+    display: none;
+  }
+}
+
+/* Hero Section */
 .hero-section {
   padding: 5rem 2rem;
   max-width: 1200px;
-  margin: 150px 140px;
+  margin: 150px auto;
+  text-align: left;
 }
 
 .hero-section h1 {
@@ -807,18 +220,20 @@ nav a:hover {
   font-family: "Poppins", serif;
   font-weight: 500;
   font-style: normal;
+  color: #fdf8f0;
 }
 
-.hero-section p {
-  font-family: "Parisienne", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  margin-left: 70px;
+.hero-section img {
+  margin-left: 60px;
+  max-width: 50%;
 }
 
-/* Show now Button */
+.hero-divider {
+  width: 17%;
+  border: 2px solid #ffffff;
+  margin: 30px;
+  margin-left: 220px;
+}
 
 .shop-now-btn {
   background: #fdf8f0;
@@ -845,39 +260,582 @@ nav a:hover {
   transform: translateY(2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-
-.hero-section img {
-  margin-left: 60px;
+/* Main Background Container */
+.main-background-container {
+  background: url("/public/images/background.png") center 0% no-repeat;
+  background-size: 100% 90%;
+  padding-bottom: 50px;
 }
 
-.hero-divider {
-  width: 17%;
-  border: 2px solid #ffffff;
-  margin: 30px;
-  margin-left: 220px;
+/* About Us */
+#about-us {
+  text-align: center;
+  margin-top: 50px;
+}
+.about-text {
+  max-width: 90%;
+  margin: auto;
+  font-family: "Montserrat Medium", sans-serif;
+  font-weight: 500; 
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(118, 76, 37, 1);
 }
 
-/* Responsivity  */
+/* Read More */
+.read-more-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 35px;
+}
+.read-more {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  color: #fdf8f0;
+  background-color: #e0c1ac;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 6px 25px;
+}
 
+/* Best Sellers */
+.cursive-title img {
+  max-width: 50%;
+  margin-top: 30px;
+}
+
+.cursive-title {
+  text-align: center;
+  font-family: "The Billion", cursive;
+  font-weight: 400;
+  font-size: 85px;
+  color: #c9b8a6;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.best-sellers-description {
+  max-width: 90%;
+  margin: -10px auto;
+  text-align: center;
+  font-family: "Montserrat Medium", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #8b623c;
+  line-height: 1.5;
+}
+
+/* Shop More Button */
+.shop-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.shop-more-button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  color: #fdf8f0;
+  background-color: #e0c1ac;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 25px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+/* Product Cards */
+.product-card-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 20px;
+  margin-top: 65px;
+}
+
+.product-card {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 302px;
+}
+
+.mask-group img {
+  width: 100%;
+  height: 307px;
+  object-fit: cover;
+  clip-path: path(
+    "M0,150.997c0,-83.3932 67.6038,-150.997 150.997,-150.997v0c83.394,0 150.998,67.6038 150.998,150.997v156.41h-301.995z"
+  );
+}
+
+.aroma-card {
+  background: #ecd3be;
+  border-radius: 10px;
+  margin-top: -100px;
+  padding-top: 129px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fragrance-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.unique-scent-description-style {
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #6f4835;
+  margin-bottom: -5px;
+}
+
+.gardenia-blackberry-text-style {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15.5px;
+  font-weight: 400;
+  color: #6f4835;
+  margin-top: 5px;
+}
+
+.product-card-widget {
+  display: flex;
+  margin-top: 15px;
+  background: #fdf8f0;
+  border-radius: 10px;
+}
+
+.cart-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #805e4c;
+  width: 132px;
+  padding: 8px;
+}
+.cart-button-text-style {
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 17px;
+  font-weight: 550;
+  color: #6e4835;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.cart-button-text-style:hover {
+  opacity: 0.8;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 67px;
+}
+.price-tag-text-style {
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 17px;
+  font-weight: 550;
+  color: #6e4835;
+}
+
+/* Perfect Match (Scent Seer) & Customization Section */
+.bg-ecd3be {
+  background-color: #ecd3be;
+  border-radius: 72px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 40px;
+  margin: 40px 0;
+}
+
+@media (min-width: 768px) {
+  .bg-ecd3be {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.right-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.TailoredToYou {
+  font-family: "The Billion";
+  color: #c5a491;
+  font-size: 50px;
+  margin-bottom: -12px;
+}
+
+.CustomizationTitle {
+  font-family: "Embarcadero MVB Pro";
+  color: #8b623c;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  letter-spacing: 2.88px;
+}
+
+.CreateYourOwn {
+  font-family: "Montserrat";
+  color: #8b623c;
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.HowWillYouCraftYourCandle {
+  font-family: "Montserrat Medium";
+  color: #8b623c;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.Description {
+  font-family: "Montserrat";
+  color: #8b623c;
+  margin-top: 20px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.StartCustomizing {
+  font-family: "Montserrat Medium";
+  background: #fdf8f0;
+  color: #764c25;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+/* Container Section (Categories) */
+.container-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.cursive-headline {
+  font-family: "The Billion";
+  color: #c9b8a6;
+  font-size: 74px;
+  margin-bottom: -37px;
+}
+
+.categories-heading {
+  font-family: "Embarcadero MVB Pro";
+  color: #8b623c;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.categories-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 640px) {
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.category-card {
+  margin: auto;
+}
+
+.category-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 455px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.category-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 123px;
+  background: #e0c1ac;
+  opacity: 0.75;
+  border-bottom-left-radius: 44px;
+  border-bottom-right-radius: 44px;
+}
+
+.category-text {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fdf8f0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Montserrat";
+  white-space: nowrap;
+  text-align: center;
+}
+
+.category-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.category-button {
+  background: #e0c1ac;
+  color: #fdf8f0;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: "Montserrat";
+  border: none;
+  border-radius: 10px;
+  width: 170px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Testimonials */
+.Home-testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 180px;
+}
+
+.testimonial-container {
+  width: 100%;
+  text-align: center;
+}
+
+.testimonial-logo {
+  display: block;
+  width: 100%;
+  max-width: 530px;
+  margin: -140px auto -110px auto;
+  transform: scale(0.7);
+}
+
+.testimonial-carousel {
+  position: relative;
+  margin-top: 40px;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+}
+
+.testimonial-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 35px;
+  padding: 20px;
+  width: 500px;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.8) translateX(0);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+.testimonial-content {
+  position: relative;
+}
+
+.testimonial-quotation {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  bottom: -15px;
+  right: 50px;
+  transform: scale(1.8);
+  margin-bottom: 10px;
+}
+
+.testimonial-item.active {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+  z-index: 2;
+  background-color: #ecd3be;
+  color: #8b623c;
+  pointer-events: auto; 
+}
+
+.testimonial-item.active .testimonial-quotation {
+  transform: scale(2.2);
+  bottom: -20px;
+  right: 50px;
+  z-index: 3;
+}
+
+.testimonial-author {
+  display: inline-block;
+  border: 2px solid #c4a484;
+  border-radius: 20px;
+  padding: 5px 15px;
+  color: #8b623c;
+  font-size: 0.9em;
+  margin-bottom: 4px;
+  width: fit-content;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-stars {
+  color: #8b623c;
+  font-size: 1.7em;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  font-family: "Quicksand", sans-serif;
+  color: #8b7355;
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.testimonial-item.left {
+  opacity: 0.6;
+  transform: scale(0.9) translateX(-150%);
+  z-index: 1;
+}
+
+.testimonial-item.right {
+  opacity: 0.6;
+  transform: scale(0.9) translateX(150%);
+  z-index: 1;
+}
+
+/* Adjust testimonial sizes on smaller screens */
 @media (max-width: 768px) {
-  .nav-group {
-    gap: 1rem;
+  .testimonial-item {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-item {
+    width: 100%;
+    transform: scale(0.8) translateX(0);
   }
 
+  .testimonial-item.left,
+  .testimonial-item.right {
+    transform: scale(0.8) translateX(0);
+    opacity: 0;
+  }
+}
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #8b7355;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 10;
+}
+
+.carousel-arrow:hover {
+  color: #c4a484;
+}
+
+.prev {
+  left: 50px;
+}
+
+.next {
+  right: 50px;
+}
+
+@media (max-width: 768px) {
   .hero-section h1 {
     font-size: 2.5rem;
   }
+  .hero-section img {
+    margin-left: 0;
+    max-width: 80%;
+  }
+  .hero-divider, .shop-now-btn {
+    margin-left: 0;
+  }
 
-  .hero-section p {
-    font-size: 1.8rem;
+ 
+
+  .carousel-arrow {
+    display: none;
   }
 }
 
-footer {
-  font-family: "Nunito", sans-serif;
-  margin: 0;
+@media (max-width: 480px) {
+  .testimonial-item.active {
+    transform: scale(0.7);
+  }
 }
 
+/* Horizontal divider */
+.horizontal-divider {
+  width: 100%;
+  border-top: 1px solid black;
+  margin: 40px 0;
+}
+
+/* Footer */
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -948,11 +906,6 @@ footer {
   margin-top: 1px;
 }
 
-.social-section h3 {
-  margin-bottom: 1px;
-  font-weight: 700;
-}
-
 .social-icons {
   display: flex;
   gap: 15px;
@@ -980,7 +933,6 @@ footer {
     flex: 1 1 45%;
     min-width: 200px;
   }
-
   .newsletter {
     flex: 1 1 100%;
   }
@@ -990,17 +942,55 @@ footer {
   .footer {
     padding: 20px 40px;
   }
-
   .footer-column {
     flex: 1 1 100%;
     min-width: auto;
   }
-
   .newsletter {
     margin-top: 20px;
   }
-
   .social-icons {
     justify-content: flex-start;
   }
 }
+
+/* Responsive Nav CSS */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+}
+
+#mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #e0c1ac;
+  z-index: 999;
+  flex-direction: column;
+  padding: 24px;
+  gap: 20px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+#mobile-menu a {
+  color: #fdf8f0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* Hide main nav groups on small screens and show hamburger */
+@media (max-width: 768px) {
+  .nav-main-group, .nav-search-group {
+    display: none;
+  }
+  .hamburger-btn {
+    display: block;
+    color: #fdf8f0;
+    background: none;
+  }
+}
+
