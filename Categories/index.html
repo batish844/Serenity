@@ -9,121 +9,144 @@
   </head>
 
   <body class="bg-[#FDF8F0]">
-    <nav
-      class="bg-[#e0c1ac] shadow-md rounded-b-[25px] h-[120px] relative flex items-center justify-between px-4 md:px-16"
+    <nav id="mainNav"
+      class="relative z-50 w-full bg-[#ECD3BE] shadow-md rounded-b-[25px] lg:rounded-b-[50px] h-[121px] px-6 md:px-12 mb-12 flex justify-between items-center"
     >
-      <div class="flex items-center space-x-4 md:space-x-16">
-        <button
-          class="text-[#fdf8f0] focus:outline-none md:hidden"
-          id="menu-toggle"
-        >
-          <svg
-            class="h-8 w-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
+      <div class="hidden md:flex items-center space-x-16">
         <a
-          href="#"
-          class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline"
-          >Home</a
+          href="../Home/index.html"
+          class="text-xl font-medium text-[#6E4835] relative group no-underline"
+          style="font-family: 'Montserrat Medium';"
         >
+          Home
+          <span
+            class="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-[#6E4835] transition-all duration-500 group-hover:w-1/2"
+          ></span>
+        </a>
         <a
-          href="#"
-          class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline"
-          >About Us</a
+          href="../AboutUs/index.html"
+          class="text-xl font-medium text-[#6E4835] relative group no-underline"
+          style="font-family: 'Montserrat Medium';"
         >
+          About Us
+          <span
+            class="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-[#6E4835] transition-all duration-500 group-hover:w-1/2"
+          ></span>
+        </a>
         <a
-          href="#"
-          class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline"
-          >Products</a
+          href="../allProducts/index.html"
+          class="text-xl font-medium text-[#6E4835] relative group no-underline"
+          style="font-family: 'Montserrat Medium';"
         >
-      </div>
-
-      <div class="flex-grow flex justify-center items-center">
-        <img src="../public/images/image.png" alt="Logo" class="h-12" />
-      </div>
-
-      <div class="flex items-center space-x-4 md:space-x-16">
-        <a
-          href="#"
-          class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline"
-          >Contact Us</a
-        >
-        <a
-          href="#"
-          class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline"
-          >Log In</a
-        >
-        <a
-          href="#"
-          class="hidden md:block text-[#fdf8f0] text-xl font-bold font-['Montserrat'] hover:underline"
-          >Cart</a
-        >
-        <a href="#" class="hidden md:block text-[#fdf8f0]">
-          <img src="/public/images/search.png" alt="Search" class="h-6 w-6" />
+          Products
+          <span
+            class="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-[#6E4835] transition-all duration-500 group-hover:w-1/2"
+          ></span>
         </a>
       </div>
+
+      <div class="flex justify-center items-center mt-8">
+        <a href="../Home/index.html">
+          <img src="../public/images/Logo.png" alt="Logo" class="h-16 object-contain" />
+        </a>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-16">
+        <a
+          href="../ContactUs/Contact.html"
+          class="text-xl font-medium text-[#6E4835] relative group no-underline"
+          style="font-family: 'Montserrat Medium';"
+        >
+          Contact Us
+          <span
+            class="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-[#6E4835] transition-all duration-500 group-hover:w-1/2"
+          ></span>
+        </a>
+        <a
+          href="#"
+          class="text-xl font-medium text-[#6E4835] relative group no-underline"
+          style="font-family: 'Montserrat Medium';"
+        >
+          Log In
+          <span
+            class="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-[#6E4835] transition-all duration-500 group-hover:w-1/2"
+          ></span>
+        </a>
+        <a
+          href="../Cart/Cart.html"
+          class="text-xl font-medium text-[#6E4835] relative group no-underline"
+          style="font-family: 'Montserrat Medium';"
+        >
+          Cart
+          <span
+            class="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-[#6E4835] transition-all duration-500 group-hover:w-1/2"
+          ></span>
+        </a>
+        <a href="#" class="relative">
+          <img src="../public/images/search.png" alt="Search Icon" class="w-6 h-6 cursor-pointer transition-transform duration-300 hover:scale-110" />
+        </a>
+      </div>
+
+      <button
+        id="menu-toggle"
+        class="block md:hidden text-[#6E4835] text-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#6E4835]"
+        aria-label="Open Menu"
+      >
+        &#9776;
+      </button>
     </nav>
 
     <div
-      class="hidden bg-[#e0c1ac] fixed inset-0 z-40 flex flex-col items-start px-6 py-8 space-y-6"
       id="mobile-menu"
+      class="hidden fixed inset-0 z-40 flex-col p-6 gap-5 text-center bg-[#e0c1ac] overflow-y-auto"
+      aria-hidden="true"
     >
-      <button
-        id="menu-close"
-        class="text-[#fdf8f0] text-2xl font-bold self-end hover:underline"
-      >
-        ✕ Close
-      </button>
-
-      <a
-        href="#"
-        class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline"
-        >Home</a
-      >
-      <a
-        href="#"
-        class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline"
-        >About Us</a
-      >
-      <a
-        href="#"
-        class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline"
-        >Products</a
-      >
-      <a
-        href="#"
-        class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline"
-        >Contact Us</a
-      >
-      <a
-        href="#"
-        class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline"
-        >Log In</a
-      >
-      <a
-        href="#"
-        class="block text-[#fdf8f0] text-2xl font-bold font-['Montserrat'] hover:underline"
-        >Cart</a
-      >
-
-      <a href="#" class="block">
-        <img
-          src="/public/images/search.png"
-          alt="Search Icon"
-          class="h-8 w-8"
-        />
-      </a>
+      <div class="menu-header flex justify-between items-center mb-8">
+        <div class="flex items-center">
+        </div>
+        <button id="menu-close" class="text-2xl font-medium focus:outline-none focus:ring-2 focus:ring-[#6E4835]" aria-label="Close Menu">
+          Close
+        </button>
+      </div>
+      <nav class="menu-links flex flex-col items-center gap-6 mt-8">
+        <a
+          href="../Home/index.html"
+          class="border-b border-[#cda78f] py-3 w-full text-center text-xl font-medium text-[#6E4835] no-underline"
+        >
+          Home
+        </a>
+        <a
+          href="../AboutUs/index.html"
+          class="border-b border-[#cda78f] py-3 w-full text-center text-xl font-medium text-[#6E4835] no-underline"
+        >
+          About Us
+        </a>
+        <a
+          href="../allProducts/index.html"
+          class="border-b border-[#cda78f] py-3 w-full text-center text-xl font-medium text-[#6E4835] no-underline"
+        >
+          Products
+        </a>
+        <a
+          href="../ContactUs/Contact.html"
+          class="border-b border-[#cda78f] py-3 w-full text-center text-xl font-medium text-[#6E4835] no-underline"
+        >
+          Contact Us
+        </a>
+        <a
+          href="#"
+          class="border-b border-[#cda78f] py-3 w-full text-center text-xl font-medium text-[#6E4835] no-underline"
+        >
+          Log In
+        </a>
+        <a
+          href="../Cart/Cart.html"
+          class="border-b border-[#cda78f] py-3 w-full text-center text-xl font-medium text-[#6E4835] no-underline">
+          Cart
+        </a>
+      </nav>
     </div>
+
 
     <div class="container mx-auto mt-10 bg-[#fff8f4] p-8">
       <div class="mb-14 w-full">

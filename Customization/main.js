@@ -1,22 +1,4 @@
 $(document).ready(function () {
-  let menu = document.getElementById("mobile-menu");
-  let toggleButton = document.getElementById("menu-toggle");
-  let closeButton = document.getElementById("menu-close");
-
-  toggleButton.addEventListener("click", () => {
-    menu.classList.remove("hidden");
-  });
-
-  closeButton.addEventListener("click", () => {
-    menu.classList.add("hidden");
-  });
-
-  menu.addEventListener("click", (e) => {
-    if (e.target === menu) {
-      menu.classList.add("hidden");
-    }
-  });
-
   function setupFragranceSelection(fragranceName) {
     let selectedButton = null;
     $("h2").each(function () {
@@ -33,7 +15,7 @@ $(document).ready(function () {
                 });
               }
               $(this).css({
-                color: "#white",
+                color: "white",
                 backgroundColor: "#8B623C",
               });
               selectedButton = this;
@@ -46,29 +28,35 @@ $(document).ready(function () {
   setupFragranceSelection("Fragrance One");
   setupFragranceSelection("Fragrance Two");
 
-  let quantityDisplay = $("span.font-medium");
-  let quantity = parseInt(quantityDisplay.text());
+  let quantity = 1;
+  let quantityDisplay = $('#quantity-display');
+  let decrementButton = $('#decrement-button');
+  let incrementButton = $('#increment-button');
 
-  let decrementButton, incrementButton;
-
-  $("button").each(function () {
-    let text = $(this).text().trim();
-    if (text === "-") {
-      decrementButton = $(this);
-    } else if (text === "+") {
-      incrementButton = $(this);
-    }
-  });
-
-  decrementButton.on("click", function () {
+  decrementButton.on('click', function () {
     if (quantity > 1) {
       quantity--;
       quantityDisplay.text(quantity);
     }
   });
 
-  incrementButton.on("click", function () {
+  incrementButton.on('click', function () {
     quantity++;
     quantityDisplay.text(quantity);
+  });
+
+  let menuToggle = $('#menu-toggle');
+  let menuClose = $('#menu-close');
+  let mobileMenu = $('#mobile-menu');
+  let mainNav = $('#mainNav');
+
+  menuToggle.on('click', function () {
+    mobileMenu.removeClass('hidden').addClass('flex').attr('aria-hidden', 'false');
+    mainNav.addClass('hidden');
+  });
+
+  menuClose.on('click', function () {
+    mobileMenu.removeClass('flex').addClass('hidden').attr('aria-hidden', 'true');
+    mainNav.removeClass('hidden');
   });
 });

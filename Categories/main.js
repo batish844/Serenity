@@ -1,20 +1,18 @@
 $(document).ready(function () {
-  let menu = document.getElementById("mobile-menu");
-  let toggleButton = document.getElementById("menu-toggle");
-  let closeButton = document.getElementById("menu-close");
+ 
+  let menuToggle = $('#menu-toggle');
+  let menuClose = $('#menu-close');
+  let mobileMenu = $('#mobile-menu');
+  let mainNav = $('#mainNav');
 
-  toggleButton.addEventListener("click", () => {
-    menu.classList.remove("hidden");
+  menuToggle.on('click', function () {
+    mobileMenu.removeClass('hidden').addClass('flex').attr('aria-hidden', 'false');
+    mainNav.addClass('hidden');
   });
 
-  closeButton.addEventListener("click", () => {
-    menu.classList.add("hidden");
-  });
-
-  menu.addEventListener("click", (e) => {
-    if (e.target === menu) {
-      menu.classList.add("hidden");
-    }
+  menuClose.on('click', function () {
+    mobileMenu.removeClass('flex').addClass('hidden').attr('aria-hidden', 'true');
+    mainNav.removeClass('hidden');
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
