@@ -418,9 +418,9 @@ body {
     right: -120px;
     bottom: 150px;
     background: url('images/image.png') no-repeat center;
-    background-size: cover; /* Scale image to cover */
-    opacity: 2; /* Reduce opacity (adjust as needed) */
-    z-index: -1; /* Place behind the content */
+    background-size: cover; 
+    opacity: 0.5; 
+    z-index: -1; 
 
 }
 
