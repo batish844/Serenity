@@ -125,7 +125,7 @@ body {
   position: absolute;
   width: 590px;
   height: 462px;
-  top: 280px;
+  top: 270px;
   left: 60px;
   background: url('images/Group\ 864.png') no-repeat center;
   background-size: contain; /* Changed from 'cover' to 'contain' */
@@ -402,7 +402,7 @@ body {
     max-width: 1200px;
     min-height: 100vh; /* Ensure it covers the full height */
     left: 50%;
-    top: 1830px;
+    top: 1820px;
     transform: translateX(-50%);
     text-align: center;
     padding: 20px;
@@ -478,7 +478,7 @@ body {
     display: flex; /* Ensures alignment */
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
-    margin-top: 40px; /* Keep spacing above */
+    margin-top: 50px; /* Keep spacing above */
     margin-bottom: 40px; /* Add spacing below */
   }
   
@@ -622,7 +622,7 @@ body {
     }
   
     .tranquility-container::before {
-      top: 0px; /* Adjust to prevent overlap */
+      top: -10px; /* Adjust to prevent overlap */
       left: 0;
       right: 0;
       bottom: 170px;
@@ -653,6 +653,7 @@ body {
    .grouped-icons{
       width: 100%;
       max-width: 200%;
+      margin-top: -20PX;
   
    }
   }
@@ -662,12 +663,12 @@ body {
     .tranquility-container {
       width: 90%; /* Constrain width for tablets */
       padding: 20px;
-      margin-top: -1150px;
+      margin-top: -1160px;
   
     }
   
     .tranquility-container::before {
-      top: -60px; /* Maintain proportional background size */
+      top: -50px; /* Maintain proportional background size */
       border-radius: 12px; /* Adjust border radius */
       height: -50px;
     }
@@ -813,6 +814,7 @@ footer {
 @media (max-width: 480px) {
   .footer {
     padding: 20px 40px;
+    
   }
 
   .footer-column {
