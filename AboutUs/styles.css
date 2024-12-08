@@ -831,4 +831,27 @@ footer {
   }
 }
 
+/* Default styles for the line and footer */
+.w-full.border-t.border-black {
+  margin-top: 2rem; /* Base spacing */
+}
+
+.footer {
+  margin-top: 0; /* Default footer position */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .w-full.border-t.border-black {
+    margin-top: 1690px !important; /* Force a larger margin-top */
+  }
+
+}
+
+@media (max-width: 480px) {
+  .w-full.border-t.border-black {
+    margin-top: 1690px !important;
+ 
+  }
+}
 
