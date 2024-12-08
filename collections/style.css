@@ -5,7 +5,7 @@
 body {
   margin: 0;
   display: flex;
-  align-items: flex-end;
+
   background-color: #fdf8f0;
 }
 
@@ -37,8 +37,8 @@ body {
 .signature{
   margin-top: 20px;
   max-width: 580px;
-}  
-header h2 {
+} 
+.sig h2 {
   font-family: "Embarcadero MVB Pro";
     font-size: 2.3em;
     margin-top: -34px;
@@ -179,7 +179,7 @@ section {
   width: 440px;
   height: 123px;
   background: rgba(225, 168, 165, 0.76);
-  border-radius: 0px 0px 46px 44px;
+  border-radius: 0px 0px 44px 42px;
   display: flex;
   justify-content: center;
 }
@@ -287,10 +287,13 @@ section {
 
 .add-to-cart:disabled {
   cursor: not-allowed;
+
 }
 #section2 .add-to-cart:disabled {
   cursor: pointer;
 }
+
+
 
 .size-options {
   font-size: 38px;
@@ -364,6 +367,7 @@ section {
 } 
 #section2 {
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  margin-bottom: 100px;
 }
 
 #section1, #section2 {
@@ -371,7 +375,9 @@ section {
   visibility: visible;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
+#section1 .styled-img{
+  max-width: 100%;
+}
 #section1.hidden, #section2.hidden {
   opacity: 0;
   visibility: hidden;
@@ -381,7 +387,8 @@ section {
 }
 #section2{
   position: relative;
-  top: 105px;
+  top:103px;
+  margin-bottom: 120px;
 }
 #section2 .product{
   position: relative;   /* Allows precise positioning relative to the element */
@@ -391,7 +398,7 @@ section {
 }
 .giftss .add-to-cart{
   position: relative;   /* Allows precise positioning relative to the element */
-  top: -110px;          /* Moves the button upwards */
+  top: -118px;          /* Moves the button upwards */
   margin-top: 0; 
 }
 #section2 .styled-img{
@@ -402,24 +409,24 @@ section {
   display: none; /* Hide seasonal products */
 }
 
+
 /* Media Queries for iPad (768px x 526px) */
 @media (max-width: 768px) and (max-height: 526px) {
   /* General layout for products */
+  #section1{
+    margin-top: 50px;
+  }
+  #section1 .product {
+    position: relative;
+    margin-top: -80px; /* This reduces the space between products */
+  }
   .divider {
     display: inline-block;
     position: relative;
     padding-right: 20px;
 }
 
-.divider::after {
-    content: "";
-    position: absolute;
-    top: 5px; /* Center the line vertically in the middle of the element */
-    left: -123px; /* Start from the left edge */
-    width: 157px; /* Make the line span the full width of the container */
-    height: 2px; /* Thickness of the line */
-    background-color: #fdf8f0; /* Line color */
-}
+
 .checkpoints{
   position: relative;
   margin-left: 50px;
@@ -427,10 +434,11 @@ section {
 }
 
   .products {
+
     margin-top: -40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 products per row */
-    gap: 20px; /* Space between grid items */
+    gap: 10px; /* Space between grid items */
     justify-content: center;
     align-items: start;
   }
@@ -479,17 +487,45 @@ margin-top: 65px;
     /* Ensure the container takes up full available width */
 }
 
-
-  /* "Add to Cart" button */
   .add-to-cart {
-    font-size: 14px;
-    padding: 8px 12px;
-    background-color: #d7baa6; /* Button color */
+    
+    width: 190px;
+    font-size: 15px !important; /* Set the font size to 10px */
+    padding: 0px 0px;
+ 
     color: white;
     border: none;
     border-radius: 5px;
-    margin-top: 10px;
     cursor: pointer;
+
+  }
+  .divider {
+    position: relative;
+    display: inline-block; /* Ensure the parent element is positioned */
+    height: 13px; /* Adjust the height as needed */
+  }
+  
+  .divider::before {
+    content: "";
+    position: absolute;
+    top: 10px; /* Start from the top edge */
+    left: 50%; /* Center the line horizontally */
+    width: 1px; /* Thickness of the line */
+    height: 50px; /* Span the full height of the container */
+    background-color: #fdf8f0; /* Line color */
+   /* Adjust to perfectly center the line */
+  }
+  .divider::after {
+    content: "";
+    position: absolute;
+    top: -10px; /* Start from the top edge */
+    left: 50%; /* Center the line horizontally */
+    width: 1px; /* Thickness of the line */
+    height: 50px; /* Span the full height of the container */
+   /* Adjust to perfectly center the line */
+  }
+  #section1 .add-to-cart{
+    margin-left: -15px;
   }
 
   /* Product text below the buttons */
@@ -500,8 +536,11 @@ margin-top: 65px;
 
     color: #5a4a3c;
 
-    width: 89%;
+    width: 89.6%;
     border-radius: 0 0 20px 20px; /* Rounded bottom corners */
+  }
+  #section2 .styled-img{
+    width: 89.8%;
   }
  .styled-img .text-style {
     position: relative;
@@ -520,121 +559,297 @@ margin-top: 65px;
 }
 
 
-@media (max-width: 320px) and (max-height: 475px) {
-  /* Divider line style */
-  .divider {
-    display: inline-block;
+@media (max-width: 320px) {
+  .product{
+   width: 100%;
+   top: -25px;
+ left: 0px;
+ margin-bottom: -80px;
+  }
+  .btms{
     position: relative;
-    padding-right: 20px;
+ top: -160px;
   }
-
-  .divider::after {
-    content: "";
-    position: absolute;
-    top: 5px; /* Center the line vertically in the middle of the element */
-    left: 0; /* Align the line to the left */
-    width: 100%; /* Make the line span the full width of the container */
-    height: 2px; /* Thickness of the line */
-    background-color: #fdf8f0; /* Line color */
+  #section2 .styled-img{
+    width: 91.5%;
   }
+#section2{
+  position: relative;
+  margin-top: 35px;
+}
+#section2 .product {
+  margin-top: -155px;
+ 
+ 
+}
+#section2 .add-to-cart {
+  top: -150px;
+  margin-bottom: 0px; /* Adjust this value to control the space between products */
+}
+  .products{
+    display: block;
+    max-width: 400px;
+    margin: 0 auto; /* Center the container */
+    text-align: center;
+  }
+  .container {
+    padding: 5px;
+   
+  }
+.signature{
+  max-width: 280px;
+  margin-left: 5px;
 
-  /* Layout adjustments for small phones */
-  .checkpoints {
+}
+  .coll {
     position: relative;
-    margin-left: 10px; /* Reduced left margin */
-    margin-bottom: 10px; /* Reduced bottom margin */
+    font-size: 1.2em;
+    margin-top: -15px;
+  margin-left: 10%;
+  padding-right: 0px;
   }
-
-  .products {
-    margin-top: -30px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* 1 product per row on small screens */
-    gap: 10px; /* Space between grid items */
-    justify-content: center;
-    align-items: start;
-  }
-
-  .gift {
-    position: relative;
-    left: 115px;
-  }
-
-  .active {
-    margin-left: -35px;
-  }
-
-  /* Product styling */
-  .product {
-    position: relative;
-    display: flex;
-    left: -30px;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center;
-    max-width: 100%; /* Allow the product to take full width */
-    margin: 0 auto; /* Center-align products */
-    padding-bottom: 15px; /* Add space below */
-    background-color: #fdf8f0; /* Subtle background for contrast */
-    border-radius: 10px; /* Add rounded corners */
-  }
-
-  .product img {
-    width: 100%; /* Image fills container width */
-    height: auto;
-    border-radius: 10px 10px 0 0; /* Rounded top corners */
-  }
-
-  .info {
+  .active{
     max-width: 200px;
-    margin-top: 50px;
+    font-size: 0.8rem;
+    padding: 5px 5px;
+    position: absolute;
+  margin-left:-980px;
+  top: 100px;
   }
+.gift{
+  max-width: 200px;
+    font-size: 0.8rem;
+    padding: 4.4px 35px;
+    position: absolute;
+    margin-left: 12px;
+  top: 100px;
+}
 
-  /* "SML" size buttons styling */
+
+  .checkpoints label {
+    font-size: 0.8em;
+ 
+  }
+  .checkpoints{
+    top: -20px;
+    left: -15px;
+    display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 10px; 
+}
+
+.styled-img{
+  border-radius: 0px 0px 26px 25px;
+  width: 223px;
+}
+.styled-img .text-style{
+  position: absolute;
+  top: -20px;
+
+  font-size: 20px;
+}
+.info{
+  left: 10px;
+}
   .size-btn {
-    position: relative;
-    display: flex; /* Align buttons in a row */
-    justify-content: center; /* Center the buttons horizontally */
-    align-items: center; /* Align vertically */
-    gap: 10px; /* Space between buttons */
-    flex-wrap: nowrap; /* Prevent buttons from wrapping to the next line */
-    margin-left: 0; /* Ensure no offset */
-    width: 100%; /* Ensure the container takes up full available width */
-    margin-top: 10px; /* Adjust spacing between buttons */
+    
+    max-width: 100px;
+    font-size: 0.7em;
   }
 
-  /* "Add to Cart" button */
   .add-to-cart {
-    font-size: 14px;
-    padding: 8px 12px;
-    background-color: #d7baa6; /* Button color */
+    font-size: 15px !important; /* Set the font size to 10px */
+    padding: 8px 8px;
     color: white;
     border: none;
     border-radius: 5px;
-    margin-top: 10px;
     cursor: pointer;
   }
-
-  /* Product text below the buttons */
-  .styled-img {
-    top: -80px;
-    height: 47px; /* Space above */
-    padding: 10px;
-    color: #5a4a3c;
-    width: 89%;
-    border-radius: 0 0 20px 20px; /* Rounded bottom corners */
-  }
-
-  .styled-img .text-style {
+  .divider {
     position: relative;
-    padding-top: 38px;
-    justify-content: center;
-    justify-items: center;
-    top: -43px;
-    font-family: "Montserrat";
-    color: white;
-    font-size: 20px; /* Smaller font size for phones */
+    display: inline-block; /* Ensure the parent element is positioned */
+    height: 15px; /* Adjust the height as needed */
   }
-
-  #section2 .styled-img {
-    top: -76px;
+  
+  .divider::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Start from the top edge */
+    left: 50%; /* Center the line horizontally */
+    width: 1px; /* Thickness of the line */
+    height: 50px; /* Span the full height of the container */
+    background-color: #fdf8f0; /* Line color */
+    margin-left: -1px; /* Adjust to perfectly center the line */
+  }
+  .divider::after {
+    content: "";
+    position: absolute;
+    top: -10px; /* Start from the top edge */
+    left: 50%; /* Center the line horizontally */
+    width: 1px; /* Thickness of the line */
+    height: 50px; /* Span the full height of the container */
+   /* Adjust to perfectly center the line */
   }
 }
+
+
+
+
+
+
+.footer {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 100px;
+  background-color: #fdf8f0;
+  color: #5a322e;
+  padding-bottom: none;
+  text-align: left;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 15%; 
+  max-width: 280px; 
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  font-weight: 700;
+  margin-bottom: 1px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #5a322e;
+  font-weight: 400;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.newsletter .input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #c5a491;
+  border-radius: 4px;
+  background-color: #fdf8f0;
+}
+
+.newsletter input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #5a322e;
+  background-color: #fdf8f0;
+  flex: 1;
+}
+
+.newsletter button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #c5a491;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #b89584;
+}
+
+.social-section {
+  margin-top: 1px;
+}
+
+.social-section h3 {
+  margin-bottom: 1px;
+  font-weight: 700;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 30px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-column {
+    flex: 1 1 45%;
+    min-width: 200px;
+  }
+
+  .newsletter {
+    flex: 1 1 100%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 40px;
+    
+  }
+
+  .footer-column {
+    flex: 1 1 100%; 
+    min-width: auto;
+  }
+
+  .newsletter {
+    margin-top: 20px;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+  }
+}
+
+/* Default styles for the line and footer */
+.w-full.border-t.border-black {
+  margin-top: 2rem; /* Base spacing */
+}
+
+.footer {
+  margin-top: 0; /* Default footer position */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .w-full.border-t.border-black {
+    margin-top: 1690px !important; /* Force a larger margin-top */
+  }
+
+}
+
+@media (max-width: 480px) {
+  .w-full.border-t.border-black {
+    margin-top: 1690px !important;
+
+}
+}
+
+
