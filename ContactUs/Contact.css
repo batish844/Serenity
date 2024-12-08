@@ -829,7 +829,12 @@ font-weight: 400;
           display: flex;
       }
 
-
+      .Quick-help-section2 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 80px;
+    }
 
 
     .Contact_us_Container{
@@ -1067,6 +1072,48 @@ font-weight: 400;
 @media(max-width:430px){
 
 
+    .nav {
+        width: 108%;
+        background-color: #ECD3BE;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        margin-bottom: 50px;
+      }
+  
+      .nav .menu-toggle {
+          display: inline;
+          transform: scale(1.5);
+      }
+  
+      .nav .left a, .nav .right a {
+          display: none;
+      }
+  
+      .mobile-menu {
+          display: flex;
+      }
+
+      .nav .center img {
+        height: auto;
+        margin-top: 40px;
+        padding-left: 0px;
+    }
+    .nav .menu-toggle {
+        margin-left: -15px;
+        display: inline;
+        transform: scale(1.5);
+    }
+    .nav .right img {
+        display: inline;
+        transform: scale(1.3);
+    }
+
     .container {
         width: 140%;
         max-width: 500px;
@@ -1187,101 +1234,27 @@ font-weight: 400;
         max-width: 100%;
         margin-top: 20px;
     }
+
+    .footer {
+        padding: 20px 40px;
+      }
+    
+      .footer-column {
+        flex: 1 1 100%; 
+        min-width: auto;
+      }
+    
+      .newsletter {
+        margin-top: 20px;
+      }
+    
+      .social-icons {
+        justify-content: flex-start;
+      }
 }
 
-/* Ipad Mini */
-/* @media (max-width: 768px) {
-
-    .Reach-Out {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-        text-align: center;
-        margin-bottom: 40px;
-        margin-top: 50px;
-        color: #8B623C;
-        margin-left: 80px;
-    }
-
-    .Mini-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        max-width: 100%;
-        justify-content: center;
-        text-align: center;
-        margin-left: 125px;
-    }
-
-    .Quick-help-container {
-        background-color: #f9f3ee;
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        margin-bottom: 160px;
-    }
-
-    .Quick-help-Question {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #E0C1AC;
-        color: #FDF8F0;
-        border-radius: 15px;
-        padding-left: 0px;
-        max-width: 570px;
-        margin-bottom: 25px;
-        flex-direction: column;
-    }
-
-    .Quick-help-section1 {
-        text-align: center;
-        margin-bottom: 20px;
-        max-width: 100%;
-        margin-top: 20px;
-        margin-left: 40px;
-    }
-
-    .Quick-help-section1 p {
-
-        margin-top: 20px;
-        padding: 10px;
-    }
-
-    .Quick-help-Questions {
-        margin-left: 150px;
-        margin-top: -30px;
-        width: 100%;
-    }
-
-    .Quick-help-section2 {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 80px;
-        margin-left: -80px;
-        max-width: 80%;
-    }
-    .candle-image {
-        display: none;
-        transform: scale(0.8);
-        margin-right: 10px;
-    }
-    .candle-image img {
-        transform: scale(.6);
-    }
-
-    .Quick-help-Questions {
-        max-width: 600px;
-        margin-left: 180px;
-    }
-} */
-
-
-
 /* Ipad Air */
-@media((min-width: 820px) and (max-width:1124px)) {
+@media((min-width: 768px) and (max-width:1124px)) {
 
     input, textarea {
         width: 100%;
@@ -1400,115 +1373,137 @@ font-weight: 400;
         margin-top: 40px;
         margin-left: 60px;
     }
+
+    .footer {
+        border-top: 1px solid #6E4835;
+        margin-top: 90px;
+        width: 95%;
+        /* margin: auto; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 40px 80px;
+        background-color: #FDF8F0;
+        color: #5a322e;
+    }
 }
 
-
-
-/* Ipad Pro */
-/* @media(max-width:1024px) {
-
-    .container {
-        width: 100%;
-        max-width: 500px;
-        padding: 60px;
-        background-color: #ddc2b1;
-        border-radius: 60px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        margin: 20px;
-        margin-left: 80px;
+footer {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+  }
+  
+  .footer {
+    border-top: 1px solid #6E4835;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 80px;
+    background-color: #FDF8F0;
+    color: #5a322e;
+  }
+  
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1 1 15%; 
+    min-width: 180px; 
+    margin-bottom: 20px;
+  }
+  
+  .footer-column h3 {
+    font-weight: 700;
+    margin-bottom: 1px;
+  }
+  
+  .footer-column a {
+    text-decoration: none;
+    color: #5a322e;
+    font-weight: 400;
+  }
+  
+  .footer-column a:hover {
+    text-decoration: underline;
+  }
+  
+  .newsletter .input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border: 1px solid #6E4835;
+    border-radius: 10px;
+    background-color: #fdf8f0;
+  }
+  .newsletter input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #5a322e;
+    background-color: #fdf8f0;
+    flex: 1;
+  }
+  
+  .newsletter button {
+    padding: 8px 0px;
+    border: none;
+    background-color: #c5a491;
+    color: white;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .newsletter button:hover {
+    background-color: #b89584;
+  }
+  
+  .social-section {
+    margin-top: 1px;
+  }
+  
+  .social-section h3 {
+    margin-bottom: 1px;
+    font-weight: 700;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-icons a img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons a img:hover {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 1024px) {
+    .footer {
+      padding: 30px 60px;
     }
-
-
-    .contact-details h3 {
-        color: #8B623C;
-        font-size: 2rem;
-        font-weight: 300;
-        margin-bottom: 7px;
-        text-align: center;
-        width: 80%;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-column {
+      flex: 1 1 45%;
+      min-width: 200px;
     }
-
-    .Reach-Out p {
-        margin: 20px;
-        font-size: 1.4rem;
-        margin-bottom: 10px;
-        width: 80%;
-        padding: 0px;
-        color: #8B623C;
+  
+    .newsletter {
+      flex: 1 1 100%; 
     }
+  }
+  
+  @media (max-width: 480px) {
 
-    .Mini-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        max-width: 100%;
-        justify-content: center;
-        text-align: center;
-        margin-left: 180px;
-    }
-
-.Quick-help-Questions {
-    max-width: 600px;
-    margin-left: 210px;
-}
-
-    .Quick-help-section1 p {
-        margin-top: 20px;
-        padding: 0px;
-        max-width: 72%;
-        margin-left: 16%;
-        font-size: 20px;
-    }
-
-    .Reach-Out {
-        margin-left: 25px;
-    }
-
-    .Quick-help-section2 {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        margin-top: 80px;
-    }
-
-    .candle-image img {
-        display: none;
-        transform: scale(.6);
-    }
-
-    .border {
-        border-bottom: 2px solid #8B623C;
-        width: 80%;
-        margin-bottom: 10px;
-    }
-
-    .Big-Social-Media {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-left: -10px;
-        max-width: 80%;
-        margin-top: 20px;
-    }
-
-    .contact-details p {
-        max-width: 500px;
-        color: #8B623C;
-        font-size: 18px;
-        max-width: 80%;
-        margin-top: 20px;
-    }
-
-
-    .Quick-help-container {
-        background-color: #f9f3ee;
-        padding: 20px;
-        margin-top: 25px;
-    }
-
-    .Quick-help-Question p {
-        padding-left: 15px;
-        font-size: 20px;
-    }
-
-} */
+  }
+  

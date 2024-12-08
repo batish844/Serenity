@@ -32,7 +32,7 @@
         <a href="/Serenity/ContactUs/Contact.html">Contact Us</a>
         <a href="#">Log In</a>
         <a href="/Serenity/Cart/Cart.html">Cart</a>
-        <img src="Cart-Images/profileIcon.png" alt="Profile Icon" id="profile-icon">
+        <a href="/Serenity/Profile/profile.html"><img src="Cart-Images/profileIcon.png" alt="Profile Icon" id="profile-icon"></a>
         <!-- Search Icon and Input Field -->
         <a href="#" id="search-icon">
         <img src="Cart-Images/search.png" alt="Search" style="height: 24px; width: 24px">
@@ -50,7 +50,6 @@
         </div>
         <button id="menu-close" class="menu-close"> Close</button>
       </div>
-      
       <nav class="menu-links">
         <a href="/Serenity/Home/index.html">Home</a>
         <a href="/Serenity/AboutUs/index.html">About Us</a>
@@ -60,186 +59,6 @@
         <a href="/Serenity/Cart/Cart.html">Cart</a>
       </nav>
     </div>
-
-
-<!-- Pop Up  -->
-
-<div class="profile-container">
-  <div class="Account-Photo">
-      <img id="profile-picture" src="Cart-Images/Profile-sample.png" alt="User Icon" />
-      <label for="photo-upload" class="change-btn">Change photo</label>
-      <input id="photo-upload" type="file" accept="image/*" style="display: none;" />
-  </div>
-  
-  <!-- <script>
-    const profileContainer = document.querySelector(".profile-container");
-    const showProfileButton = document.getElementById("show-profile");
-    const editButton = document.querySelector(".edit-info");
-    const loginButton = document.querySelector(".Login");
-    const usernameInput = document.querySelector(".Username");
-    const passwordInput = document.querySelector(".password");
-    const rememberMeCheckbox = document.getElementById("remember");
-    const editBtns = document.querySelector(".edit-btns");
-
-    if (localStorage.getItem("rememberedUsername")) {
-        usernameInput.value = localStorage.getItem("rememberedUsername");
-        rememberMeCheckbox.checked = true;
-    }
-
-    // Popup 
-    showProfileButton.addEventListener("click", () => {
-        if (profileContainer.classList.contains("active")) {
-            profileContainer.classList.remove("active");
-            setTimeout(() => {
-                profileContainer.style.display = "none";
-            }, 300);
-        } else {
-            profileContainer.style.display = "flex";
-            setTimeout(() => profileContainer.classList.add("active"), 10);
-        }
-    });
-
-    // Login  
-    loginButton.addEventListener("click", (e) => {
-        e.preventDefault();
-        const username = usernameInput.value.trim();
-        const password = passwordInput.value.trim();
-
-        if (!username || !password) {
-            alert("Please enter both username/email and password.");
-        } else {
-            if (rememberMeCheckbox.checked) {
-                localStorage.setItem("rememberedUsername", username);
-            } else {
-                localStorage.removeItem("rememberedUsername");
-            }
-            alert(`Welcome, ${username}!`);
-        }
-    });
-
-    // Change photo 
-    const profilePicture = document.getElementById("profile-picture");
-    const photoUpload = document.getElementById("photo-upload");
-
-    const savedImage = localStorage.getItem("profilePicture");
-    if (savedImage) {
-        profilePicture.src = savedImage; 
-        profilePicture.classList.add("profile-image");
-    }
-
-    photoUpload.addEventListener("change", () => {
-        const file = photoUpload.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = () => {
-                profilePicture.src = reader.result; 
-                profilePicture.classList.add("profile-image");
-
-                localStorage.setItem("profilePicture", reader.result);
-            };
-            reader.readAsDataURL(file); 
-        }
-    });
-
-// Edit Info
-editButton.addEventListener("click", () => {
-    usernameInput.disabled = false;
-    passwordInput.disabled = false;
-
-    editButton.style.display = "none";
-    loginButton.style.display = "none";
-
-    const saveButton = document.createElement("button");
-    saveButton.textContent = "Save Changes";
-    saveButton.classList.add("save-btn");
-    editBtns.appendChild(saveButton);
-
-    const cancelButton = document.createElement("button");
-    cancelButton.textContent = "Cancel";
-    cancelButton.classList.add("cancel-btn"); 
-    editBtns.appendChild(cancelButton);
-
-    // Store  values
-    const originalUsername = usernameInput.value;
-    const originalPassword = passwordInput.value;
-
-
-    // Save  
-    saveButton.addEventListener("click", () => {
-        const newUsername = usernameInput.value.trim();
-        const newPassword = passwordInput.value.trim();
-
-        // Email valid
-        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if (!emailRegex.test(newUsername)) {
-            alert("Please enter a valid email address.");
-            return;
-        }
-
-        // Password valid
-        const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-        if (!passwordRegex.test(newPassword)) {
-            alert("Password must be at least 8 characters long, contain at least one uppercase letter, one number, and one special character.");
-            return;
-        }
-
-        localStorage.setItem("savedUsername", newUsername);
-        localStorage.setItem("savedPassword", newPassword);
-
-        usernameInput.disabled = true;
-        passwordInput.disabled = true;
-
-        saveButton.remove();
-        cancelButton.remove();
-        editButton.style.display = "inline-block";
-        loginButton.style.display = "inline-block";
-
-        alert("Changes saved successfully!");
-    });
-
-    // Cancel 
-    cancelButton.addEventListener("click", () => {
-
-        // Reset the inputs 
-        usernameInput.value = originalUsername;
-        passwordInput.value = originalPassword;
-
-        usernameInput.disabled = true;
-        passwordInput.disabled = true;
-
-        saveButton.remove();
-        cancelButton.remove();
-        editButton.style.display = "inline-block";
-        loginButton.style.display = "inline-block";
-    });
-});
-  </script> -->
-
-<div class="Account-Info">
-  <h1>Your Account</h1>
-
-  <div class="Account-Form">
-    <label for="">Username or email address</label>
-    <input type="email" name="" class="input Username" placeholder="Email" required/>
-
-    <label for="">Password</label>
-    <input type="password" name="" class="input password" placeholder="Password" required/>
-    <a class="Lost-Pass" href="###">Lost your password?</a>
-  </div>
-
-  <div class="edit-btns">
-    <a href="###"> <button class="edit-info">Edit Info</button></a>
-    <a href="###"><button class="Login">Log In</button></a>
-  </div>
-
-  <div class="remember-me">
-    <input type="checkbox" id="remember" />
-    <label for="remember">Remember me</label>
-  </div>
-</div>
-</div>
-<div class="overlay"></div>
-
 
     <!-- Cart Section -->
     <div class="Cart-Container">
@@ -386,6 +205,68 @@ editButton.addEventListener("click", () => {
           </form>
         </div>
       </div>
+
+
+      <footer class="footer">
+        <div class="border-top"></div>
+        <div class="footer-column">
+          <h3>Home</h3>
+          <a href="/Serenity/AboutUs/index.html">About us</a>
+          <a href="##">Best Sellers</a>
+          <a href="/Serenity/quiz/quiz.html">Quiz</a>
+          <a href="/Serenity/Categories/index.html">Categories</a>
+          <a href="/Serenity/Customization/index.html">Customization</a>
+          <a href="#">Testimonials</a>
+        </div>
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <a href="#">Story</a>
+          <a href="#">About the Owner</a>
+          <a href="#">Mission</a>
+          <a href="#">Our Distinctive</a>
+        </div>
+        <div class="footer-column">
+          <h3>Products</h3>
+          <a href="/Serenity/allProducts/index.html">All Products</a>
+          <a href="/Serenity/Customization/index.html">Customization</a>
+          <a href="/Serenity/Categories/index.html">Categories</a>
+          <a href="/Serenity/collections/collections.html">Collections</a>
+        </div>
+        <div class="footer-column">
+          <h3>Profile</h3>
+          <a href="/Serenity/Profile/profile.html">My account</a>
+          <a href="##">Sign In</a>
+        </div>
+        <div class="footer-column">
+          <h3>Cart</h3>
+          <a href="#">Product Info</a>
+          <a href="#">Checkout</a>
+          <a href="#">Product Tracking</a>
+        </div>
+        <div class="footer-column newsletter">
+          <h3>Newsletter</h3>
+          <div class="input-wrapper">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Enter your email" />
+          </div>
+          <button>Subscribe</button>
+          <div class="social-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#" aria-label="WhatsApp"
+                ><img src="../public/images/wp.png" alt="WhatsApp"
+              /></a>
+              <a href="#" aria-label="Facebook"
+                ><img src="../public/images/fb.png" alt="Facebook"
+              /></a>
+              <a href="#" aria-label="X (Twitter)"><img src="../public/images/x.png" alt="X" /></a>
+              <a href="#" aria-label="Instagram"
+                ><img src="../public/images/inst.png" alt="Instagram"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
