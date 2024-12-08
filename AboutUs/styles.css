@@ -419,7 +419,7 @@ body {
     bottom: 150px;
     background: url('images/image.png') no-repeat center;
     background-size: cover; /* Scale image to cover */
-    opacity: 2; /* Reduce opacity (adjust as needed) */
+    opacity: 0.5; /* Reduce opacity (adjust as needed) */
     z-index: -1; /* Place behind the content */
 
 }
