@@ -1,3 +1,3 @@
 function openPage() {
-    window.location.href = "second.html";  
+    window.location.href ="../Home/index.html";  
 }
