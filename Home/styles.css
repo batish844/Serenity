@@ -880,6 +880,8 @@ nav a:hover {
   flex: 1 1 15%;
   min-width: 180px;
   margin-bottom: 20px;
+  /*! align-content: end; */
+  /*! justify-content: left; */
 }
 
 .footer-column h3 {
@@ -903,7 +905,7 @@ nav a:hover {
   gap: 8px;
   padding: 8px 12px;
   border: 1px solid #c5a491;
-  border-radius: 4px;
+  border-radius: 12px;
   background-color: #fdf8f0;
 }
 
@@ -922,8 +924,9 @@ nav a:hover {
   background-color: #c5a491;
   color: white;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 11px;
   cursor: pointer;
+  width: 104px;
 }
 
 .newsletter button:hover {
@@ -989,7 +992,30 @@ nav a:hover {
   border: none;
   font-size: 2rem;
 }
-
+#overlay-login{
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.566);
+  height:100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+#overlay-quiz{
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.566);
+  height:100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
 #mobile-menu {
   display: none;
   position: fixed;
@@ -1021,4 +1047,173 @@ nav a:hover {
     color: #fdf8f0;
     background: none;
   }
+}
+#overlay-login iframe{
+  width: 100%;
+  max-width: 1200px;
+  min-width: 300px;
+  margin: auto;
+  height: 100%;
+}#overlay-quiz iframe{
+  width: 100%;
+  max-width: 1200px;
+  min-width: 300px;
+  margin: auto;
+  height: 100%;
+}
+#overlay-quiz .close{
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 30px;
+}
+#overlay-quiz .cover {
+  width: 100%;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 50%;
+}
+
+#overlay-quiz .quiz-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  padding: 50px;
+  border-radius: 20px;
+  background: #ECD3BE;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#overlay-quiz .question-container {
+  margin-bottom: 20px;
+  background-color: #FDF8F0;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  max-width: 649px;
+  width: 100%;
+}
+
+#overlay-quiz .question {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #8B623C;
+  font-size: 25px;
+  
+}
+
+#overlay-quiz .options {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+  
+}
+
+#overlay-quiz .option {
+  height: 22px;
+  background-color: #ECD3BE !important;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  padding: 21px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: #6E4835;
+  
+  
+  flex: 1;
+}
+
+#overlay-quiz .option:hover {
+  /*! font-size: 19px; */
+  scale: 1.1;
+  transition: all 0.3s;
+}
+
+#overlay-quiz .next-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #C5A491;
+  color: white;
+  font-size: 23px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  opacity: 0.5;
+  margin: auto;
+}
+
+#overlay-quiz .next-btn:enabled {
+  opacity: 1;
+}
+
+#overlay-quiz .next-btn:hover {
+  background-color: #C5A491;
+  scale: 1.1;
+  transition: all 0.3s;
+}
+
+#overlay-quiz .footer {
+  width: 60%;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: #666;
+}
+
+#overlay-quiz .footer a {
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+#overlay-quiz .footer a:hover {
+  text-decoration: underline;
+}
+#overlay-quiz .line{
+  height: 2px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #8B623C;
+  width: 80%;
+
+}
+
+
+
+/* Progress Label */
+.progress-label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  background-color: #ecdccf; /* Light tan background */
+  border-radius: 5px;
+  height: 10px;
+  overflow: hidden;
+}
+
+/* Progress Indicator */
+.progress {
+  width: 40%; /* 40% for "2 of 5" */
+  background-color: #795548; /* Brown */
+  height: 100%;
+  transition: width 0.3s ease-in-out;
 }
