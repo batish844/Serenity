@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const itemsContainer = document.getElementById("items-container");
   const buttons = document.querySelectorAll(".category-btn");
 
-  // Fetch data from JSON file
   async function fetchData() {
     try {
       const response = await fetch("./data.json");
@@ -30,35 +29,28 @@ document.addEventListener("DOMContentLoaded", function () {
       return data.categories;
     } catch (error) {
       console.error("Error fetching data:", error);
-      return {}; // Return an empty object to prevent crashes
+      return {}; 
     }
   }
 
-  // Function to render items
   function renderItems(category, categories) {
-    const items = categories[category] || []; // Fallback to empty array
-    itemsContainer.innerHTML = ""; // Clear previous items
+    const items = categories[category] || [];
+    itemsContainer.innerHTML = ""; 
     items.forEach((item) => {
-      const itemHTML = `
+        const itemHTML = `
           <div class="w-full md:w-auto mx-auto">
             <div class="relative w-full h-[455px] rounded-lg overflow-hidden">
               <img src="${item.image}" class="w-full h-full object-cover" alt="${item.name}" />
               <div class="absolute bottom-0 w-full h-[123px] bg-[#e0c1ac] opacity-75 sm:rounded-b-[44px] rounded-lg"></div>
-              <div class="absolute bottom-[50px] left-1/2 transform -translate-x-1/2 text-[#fdf8f0] text-[25px] lg:text-[33px] font-bold"
-                style="white-space: nowrap; font-family: 'Montserrat'">
-                ${item.name}
+              <div class="absolute bottom-[50px] left-1/2 transform -translate-x-1/2 text-[#fdf8f0] text-[25px] lg:text-[33px] font-bold" style="white-space: nowrap; font-family: 'Montserrat'">
+          ${item.name}
               </div>
             </div>
             <div class="mb-10 flex justify-center" style="margin-top: 56px;">
-              <a href="#" style="width: 199px; height: 42px; position: relative;">
-                <div style="width: 199px; height: 42px; position: absolute; left: 0; top: 0; background: #E0C1AC; border-radius: 10px;"></div>
-                <div style="position: absolute; left: 17px; top: 11px; color: #FDF8F0; font-size: 17px; font-family: Montserrat; font-weight: 500;">
-                  Add to Cart
-                </div>
-                <div style="position: absolute; left: 150px; top: 11px; color: #FDF8F0; font-size: 17px; font-family: Montserrat; font-weight: 500;">
-                  ${item.price}
-                </div>
-                <div style="position: absolute; left: 132px; top: 0; width: 42px; height: 0; transform: rotate(90deg); transform-origin: top left; border-top: 1px solid #FDF8F0;"></div>
+              <a href="../allProducts/index.html" style="width: 199px; height: 42px; background: #E0C1AC; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+          <span style="color: #FDF8F0; font-size: 17px; font-family: Montserrat; font-weight: 500; white-space: nowrap;">
+            View Products
+          </span>
               </a>
             </div>
           </div>

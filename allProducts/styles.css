@@ -444,3 +444,22 @@ font-face {
     justify-content: flex-start;
   }
 }
+
+@media (max-width: 1099px) {
+  .normal-nav {
+    display: none !important;
+  }
+  .hamburger-nav {
+    display: block !important;
+  }
+}
+
+/* At 951px and above, show normal nav, hide hamburger nav */
+@media (min-width: 1100px) {
+  .normal-nav {
+    display: flex !important;
+  }
+  .hamburger-nav {
+    display: none !important;
+  }
+}

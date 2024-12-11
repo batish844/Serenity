@@ -4,20 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link href="../dist/styles.css" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet" />
   </head>
   <body class="bg-[#FDF8F0]">
-    <nav id="mainNav"
-      class="relative z-50 w-full bg-[#ECD3BE] shadow-md rounded-b-[25px] lg:rounded-b-[50px] h-[121px] px-6 md:px-12 mb-12 flex justify-between items-center"
+    <nav
+      id="mainNav"
+      class="relative z-50 w-full bg-[#ECD3BE] shadow-md rounded-b-[25px] h-[121px] px-6 mb-12 flex justify-between items-center xl:rounded-b-[50px] xl:px-12"
     >
-      <div class="hidden md:flex items-center space-x-16">
+      <!-- Normal navigation (hidden until xl) -->
+      <div class="normal-nav hidden xl:flex items-center space-x-16">
         <a
           href="../Home/index.html"
           class="text-xl font-medium text-[#6E4835] relative group no-underline"
-          style="font-family: 'Montserrat Medium';"
+          style="font-family: 'Montserrat Medium'"
         >
           Home
           <span
@@ -27,7 +29,7 @@
         <a
           href="../AboutUs/index.html"
           class="text-xl font-medium text-[#6E4835] relative group no-underline"
-          style="font-family: 'Montserrat Medium';"
+          style="font-family: 'Montserrat Medium'"
         >
           About Us
           <span
@@ -37,7 +39,7 @@
         <a
           href="../allProducts/index.html"
           class="text-xl font-medium text-[#6E4835] relative group no-underline"
-          style="font-family: 'Montserrat Medium';"
+          style="font-family: 'Montserrat Medium'"
         >
           Products
           <span
@@ -46,17 +48,19 @@
         </a>
       </div>
 
-      <div class="flex md:hidden lg:flex justify-center items-center mt-8">
+      <!-- Logo -->
+      <div class="flex justify-center items-center mt-8">
         <a href="../Home/index.html">
           <img src="../public/images/Logo.png" alt="Logo" class="h-16 object-contain" />
         </a>
       </div>
 
-      <div class="hidden md:flex items-center space-x-16">
+      <!-- Right-side normal nav items (hidden until xl) -->
+      <div class="normal-nav hidden xl:flex items-center space-x-16">
         <a
           href="../ContactUs/Contact.html"
           class="text-xl font-medium text-[#6E4835] relative group no-underline"
-          style="font-family: 'Montserrat Medium';"
+          style="font-family: 'Montserrat Medium'"
         >
           Contact Us
           <span
@@ -66,7 +70,7 @@
         <a
           href="#"
           class="text-xl font-medium text-[#6E4835] relative group no-underline"
-          style="font-family: 'Montserrat Medium';"
+          style="font-family: 'Montserrat Medium'"
         >
           Log In
           <span
@@ -76,7 +80,7 @@
         <a
           href="../Cart/Cart.html"
           class="text-xl font-medium text-[#6E4835] relative group no-underline"
-          style="font-family: 'Montserrat Medium';"
+          style="font-family: 'Montserrat Medium'"
         >
           Cart
           <span
@@ -84,28 +88,37 @@
           ></span>
         </a>
         <a href="#" class="relative">
-          <img src="../public/images/search.png" alt="Search Icon" class="w-6 h-6 cursor-pointer transition-transform duration-300 hover:scale-110" />
+          <img
+            src="../public/images/search.png"
+            alt="Search Icon"
+            class="w-6 h-6 cursor-pointer transition-transform duration-300 hover:scale-110"
+          />
         </a>
       </div>
 
+      <!-- Hamburger menu button (visible until xl) -->
       <button
         id="menu-toggle"
-        class="block md:hidden text-[#6E4835] text-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#6E4835]"
+        class="hamburger-nav block xl:hidden text-[#6E4835] text-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#6E4835]"
         aria-label="Open Menu"
       >
         &#9776;
       </button>
     </nav>
 
+    <!-- Mobile Menu (hidden by default, toggled by JS, shown until xl) -->
     <div
       id="mobile-menu"
-      class="hidden fixed inset-0 z-40 flex-col p-6 gap-5 text-center bg-[#e0c1ac] overflow-y-auto"
+      class="hidden fixed inset-0 z-40 flex-col p-6 gap-5 text-center bg-[#e0c1ac] overflow-y-auto xl:hidden"
       aria-hidden="true"
     >
       <div class="menu-header flex justify-between items-center mb-8">
-        <div class="flex items-center">
-        </div>
-        <button id="menu-close" class="text-2xl font-medium focus:outline-none focus:ring-2 focus:ring-[#6E4835]" aria-label="Close Menu">
+        <div class="flex items-center"></div>
+        <button
+          id="menu-close"
+          class="text-2xl font-medium focus:outline-none focus:ring-2 focus:ring-[#6E4835]"
+          aria-label="Close Menu"
+        >
           Close
         </button>
       </div>
@@ -142,7 +155,8 @@
         </a>
         <a
           href="../Cart/Cart.html"
-          class="border-b border-[#cda78f] py-3 w-full text-center text-xl font-medium text-[#6E4835] no-underline">
+          class="border-b border-[#cda78f] py-3 w-full text-center text-xl font-medium text-[#6E4835] no-underline"
+        >
           Cart
         </a>
       </nav>
@@ -346,7 +360,6 @@
         </div>
       </div>
     </div>
-
     <div class="w-full border-t border-black mt-40 my-8"></div>
 
     <footer class="footer">
@@ -394,21 +407,15 @@
         <div class="social-section">
           <h3>Follow Us</h3>
           <div class="social-icons">
-            <a href="#" aria-label="WhatsApp"
-              ><img src="../public/images/wp.png" alt="WhatsApp"
-            /></a>
-            <a href="#" aria-label="Facebook"
-              ><img src="../public/images/fb.png" alt="Facebook"
-            /></a>
-            <a href="#" aria-label="X (Twitter)"><img src="../public/images/x.png" alt="X" /></a>
-            <a href="#" aria-label="Instagram"
-              ><img src="../public/images/inst.png" alt="Instagram"
-            /></a>
+            <a href="#" aria-label="WhatsApp"><img src="../public/images/wp.png" alt="WhatsApp"/></a>
+            <a href="#" aria-label="Facebook"><img src="../public/images/fb.png" alt="Facebook"/></a>
+            <a href="#" aria-label="X (Twitter)"><img src="../public/images/x.png" alt="X"/></a>
+            <a href="#" aria-label="Instagram"><img src="../public/images/inst.png" alt="Instagram"/></a>
           </div>
         </div>
       </div>
     </footer>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="main.js"></script>
   </body>

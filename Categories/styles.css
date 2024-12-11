@@ -26,6 +26,14 @@
   font-style: normal;
 }
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;1,100;1,300;1,400;1,500;1,900&display=swap");
+
+@media (max-width: 770px) {
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 /* Horizontal divider */
 .horizontal-divider {
   width: 100%;
@@ -152,5 +160,23 @@
   }
   .social-icons {
     justify-content: flex-start;
+  }
+}
+@media (max-width: 1099px) {
+  .normal-nav {
+    display: none !important;
+  }
+  .hamburger-nav {
+    display: block !important;
+  }
+}
+
+/* At 951px and above, show normal nav, hide hamburger nav */
+@media (min-width: 1100px) {
+  .normal-nav {
+    display: flex !important;
+  }
+  .hamburger-nav {
+    display: none !important;
   }
 }
