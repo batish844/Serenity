@@ -340,10 +340,10 @@ body {
   /* Purpose Title (Replaced with Image) */
   .mission-container .purpose-title {
     position: absolute;
-    width: 300px; /* Adjust width based on image size */
-    height: auto; /* Dynamic height for image */
+    width: 300px; 
+    height: auto; 
     left: 50%;
-    top: 20px; /* Adjust top to fine-tune the vertical position */
+    top: 20px; 
     transform: translateX(-50%); /* Center align the image horizontally */
     display: flex;
     justify-content: center;
@@ -351,8 +351,8 @@ body {
   }
   
   .mission-container .purpose-title img {
-    max-width: 100%; /* Ensure the image fits the container */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; 
+    height: auto; 
     object-fit: contain; /* Prevent distortion */
   }
   
@@ -419,7 +419,7 @@ body {
     bottom: 150px;
     background: url('images/image.png') no-repeat center;
     background-size: cover; 
-    opacity: 0.5; 
+    opacity: 1; 
     z-index: -1; 
 
 }
@@ -428,15 +428,15 @@ body {
   
   
   
-  /* Tranquility Title (Replaced with Image) */
+
   .tranquility-title {
     position: absolute;
-    width: auto; /* Let the image size itself naturally */
-    height: auto; /* Ensure height adjusts dynamically */
-    max-width: 300px; /* Set a maximum width for the image */
-    left: 50%; /* Center align horizontally */
-    top: 0px; /* Adjust top to fine-tune vertical position */
-    transform: translateX(-50%); /* Center align horizontally */
+    width: auto; 
+    height: auto;
+    max-width: 300px; 
+    left: 50%; 
+    top: 0px;
+    transform: translateX(-50%); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -468,18 +468,18 @@ body {
     line-height: 21px;
     text-align: center; /* Center text within the element */
     color: #8B623C;
-    margin: 0 auto 40px; /* Center horizontally and add spacing below */
-    max-width: 780px; /* Restrict width for better readability */
+    margin: 0 auto 40px;
+    max-width: 780px; 
   }
   
   
   /* Grouped Icons Container */
   .icon-group {
-    display: flex; /* Ensures alignment */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    margin-top: 50px; /* Keep spacing above */
-    margin-bottom: 40px; /* Add spacing below */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: 50px; 
+    margin-bottom: 40px; 
   }
   
   /* Grouped Icons Image */
