@@ -17,7 +17,11 @@ module.exports = {
     'mt-14'
   ],
   theme: {
-    extend: {fontFamily: {
+    extend: {
+      screens: {
+        'xl2': '1150px',
+      },
+      fontFamily: {
       billion: ['"The Billion"', 'serif'],
       width: {
         '161px': '161px',

@@ -34,8 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.classList.add('flex');
   });
 
-  menuClose.addEventListener('click', (e) => {
-    e.stopPropagation();
+  menuClose.addEventListener('click', () => {
     mobileMenu.classList.remove('flex');
     mobileMenu.classList.add('hidden');
   });
@@ -43,8 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (event) => {
     if (
       !event.target.closest('#mobile-menu') &&
-      !event.target.closest('#menu-toggle') &&
-      !event.target.closest('.serenity-logo')
+      !event.target.closest('#menu-toggle')
     ) {
       mobileMenu.classList.remove('flex');
       mobileMenu.classList.add('hidden');

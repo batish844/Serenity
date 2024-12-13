@@ -2,10 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Customization</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link href="../dist/styles.css" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet" />
   </head>
@@ -14,7 +23,6 @@
       id="mainNav"
       class="relative z-50 w-full bg-[#ECD3BE] shadow-md rounded-b-[25px] h-[121px] px-6 mb-12 flex justify-between items-center xl:rounded-b-[50px] xl:px-12"
     >
-      <!-- Normal navigation (hidden until xl) -->
       <div class="normal-nav hidden xl:flex items-center space-x-16">
         <a
           href="../Home/index.html"
@@ -48,14 +56,12 @@
         </a>
       </div>
 
-      <!-- Logo -->
       <div class="flex justify-center items-center mt-8">
         <a href="../Home/index.html">
           <img src="../public/images/Logo.png" alt="Logo" class="h-16 object-contain" />
         </a>
       </div>
 
-      <!-- Right-side normal nav items (hidden until xl) -->
       <div class="normal-nav hidden xl:flex items-center space-x-16">
         <a
           href="../ContactUs/Contact.html"
@@ -96,7 +102,6 @@
         </a>
       </div>
 
-      <!-- Hamburger menu button (visible until xl) -->
       <button
         id="menu-toggle"
         class="hamburger-nav block xl:hidden text-[#6E4835] text-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#6E4835]"
@@ -106,7 +111,6 @@
       </button>
     </nav>
 
-    <!-- Mobile Menu (hidden by default, toggled by JS, shown until xl) -->
     <div
       id="mobile-menu"
       class="hidden fixed inset-0 z-40 flex-col p-6 gap-5 text-center bg-[#e0c1ac] overflow-y-auto xl:hidden"
@@ -178,10 +182,9 @@
         </p>
       </div>
 
-      <div
-        class="flex flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-8"
-      >
-        <div class="w-full md:w-1/2 mb-8 md:mb-0 md:pr-4 flex justify-center">
+      <!-- Changed from md:flex-row to xl:flex-row, and md: classes to xl: classes -->
+      <div class="flex flex-col xl:flex-row items-start space-y-8 xl:space-y-0 xl:space-x-8">
+        <div class="w-full xl:w-1/2 mb-8 xl:mb-0 xl:pr-4 flex justify-center">
           <img
             class="w-full h-auto rounded-[44px]"
             src="/public/images/customizationpage.png"
@@ -189,7 +192,7 @@
           />
         </div>
 
-        <div class="w-full md:w-1/2 md:pl-4">
+        <div class="w-full xl:w-1/2 xl:pl-4">
           <div class="lg:mb-12 mb-5">
             <h2
               class="text-4xl text-[#8b623c] mb-6 font-semibold text-[36px]"
@@ -329,7 +332,7 @@
           </div>
 
           <div class="flex flex-wrap items-center justify-between">
-            <div class="flex items-center gap-4 mb-4 md:mb-0">
+            <div class="flex items-center gap-4 mb-4 xl:mb-0">
               <button
                 id="decrement-button"
                 class="w-8 h-8 bg-[#e0c1ac] pb-6 rounded-[7px] text-[#fdf8f0] text-[25px] flex justify-center items-center"

@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serenity Candles</title>
-  <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -12,18 +11,59 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400" />
-  <title>Signature Scents</title>
+  <title>Collections</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header >
-      
-
   
-
-
-  </header>
+</head>
+<div>
+  <body class="bg">
+    <div id="header-links">
+    <header id="header">
+    <nav id="mainNav" class="nav">
+      <div class="nav-links">
+        <a href="../Home/index.html" class="nav-link hover-underline">Home</a>
+        <a href="../AboutUs/index.html" class="nav-link hover-underline">About Us</a>
+        <a href="../allProducts/index.html" class="nav-link hover-underline">Products</a>
+      </div>
+  
+      <div class="logo">
+        <a href="../Home/index.html">
+          <img src="../public/images/Logo.png" alt="Logo" class="logo-img" />
+        </a>
+      </div>
+  
+      <div class="nav-linkss">
+        <a href="../ContactUs/Contact.html" class="nav-linksss hover-underline">Contact Us</a>
+        <a href="#" class="nav-linksss hover-underline">Log In</a>
+        <a href="../Cart/Cart.html" class="nav-linksss hover-underline">Cart</a>
+        <a href="#" class="search-icon">
+          <img src="../public/images/search.png" alt="Search Icon" class="search-img" />
+        </a>
+      </div>
+  
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open Menu">&#9776;</button>
+    </nav>
+  
+    <div id="mobile-menu" class="hidden-element fixed-position full-inset custom-bg-color z-index-high flex-container flex-column align-center justify-center spacing-y-6"> aria-hidden="true">
+      <div class="menu-header">
+        
+        <button id="menu-close" class="menu-close" aria-label="Close Menu">Close</button>
+      </div>
+      <nav class="menu-links>">
+        <a href="../Home/index.html" class="mobile-nav-link">Home</a>
+        <a href="../AboutUs/index.html" class="mobile-nav-link">About Us</a>
+        <a href="../allProducts/index.html" class="mobile-nav-link">Products</a>
+        <a href="../ContactUs/Contact.html" class="mobile-nav-link">Contact Us</a>
+        <a href="#" class="mobile-nav-link">Log In</a>
+        <a href="../Cart/Cart.html" class="mobile-nav-link">Cart</a>
+        <button class="hiddenbt">--</button>
+        
+      </nav>
+      
+    </div>
+  </div>
+</header>
   <div class="container">
     <div class="sig">
       <img src="signature.png" class="signature" alt="Signature Logo">
@@ -323,30 +363,29 @@
   <script src="script.js"></script>
 </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <div class="horizontal-divider"></div>
+  
   <footer class="footer">
     <div class="footer-column">
       <h3>Home</h3>
-      <a href="#">About us</a>
-      <a href="#">Best Sellers</a>
-      <a href="#">Quiz</a>
-      <a href="#">Categories</a>
-      <a href="#">Customization</a>
-      <a href="#">Testimonials</a>
+      <a href="/Home/index.html#about-us">About us</a>
+      <a href="/Home/index.html#best-sellers">Best Sellers</a>
+      <a href="/Home/index.html">Quiz</a>
+      <a href="/Home/index.html">Categories</a>
+      <a href="/Home/index.html">Customization</a>
+      <a href="/Home/index.html">Testimonials</a>
     </div>
     <div class="footer-column">
       <h3>About Us</h3>
-      <a href="#">Story</a>
-      <a href="#">About the Owner</a>
-      <a href="#">Mission</a>
-      <a href="#">Our Distinctive</a>
+      <a href="/Home/index.html">Story</a>
+      <a href="/Home/index.html">About the Owner</a>
+      <a href="/Home/index.html">Mission</a>
+      <a href="/Home/index.html">Our Distinctive</a>
     </div>
     <div class="footer-column">
       <h3>Products</h3>
-      <a href="#">All Products</a>
-      <a href="#">Customization</a>
-      <a href="#">Categories</a>
+      <a href="/Home/index.html">All Products</a>
+      <a href="/Home/index.html">Customization</a>
+      <a href="/Home/index.html">Categories</a>
       <a href="/collectionf/collections.html">Collections</a>
     </div>
     <div class="footer-column">
@@ -366,7 +405,7 @@
         <i class="fas fa-envelope"></i>
         <input type="email" placeholder="Enter your email" />
       </div>
-      <button>Subscribe</button>
+      <button id="subscribe">Subscribe</button>
       <div class="social-section">
         <h3>Follow Us</h3>
         <div class="social-icons">
@@ -378,4 +417,5 @@
       </div>
     </div>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </html>

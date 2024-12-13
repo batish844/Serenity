@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
   const seasonButtons = document.querySelectorAll('.filter-option'); // Radio buttons for filtering
   const seasonalProducts = document.querySelectorAll('.product.to'); // All seasonal products (those with the .to class)
@@ -142,7 +145,27 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.getElementById('menu-toggle').addEventListener('click', function() {
+  const navLinks = document.querySelector('.nav-links');
+  const logo = document.querySelector('.logo');
+  
+  if (navLinks.style.display === 'none' || navLinks.style.display === '') {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.gap = '1rem';
+      logo.style.display = 'none'; // Hide the logo
+  } else {
+      navLinks.style.display = 'none';
+      logo.style.display = 'block'; // Show the logo
+  }
+});
 
-
+document.getElementById('menu-close').addEventListener('click', function() {
+  const navLinks = document.querySelector('.nav-links');
+  const logo = document.querySelector('.logo');
+  
+  navLinks.style.display = 'none';
+  logo.style.display = 'block'; // Show the logo
+});
 
 

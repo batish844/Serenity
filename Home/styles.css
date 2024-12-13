@@ -202,18 +202,8 @@ nav a:hover {
   color: #c9b8a6;
 }
 
-/* Responsive Navigation */
-@media (max-width: 768px) {
-  .nav-main-group,
-  .nav-search-group {
-    display: none;
-  }
-  .hamburger-btn {
-    display: block;
-  }
-}
 
-@media (min-width: 769px) {
+@media (min-width: 1150px) {
   #mobile-menu {
     display: none;
   }
@@ -1041,7 +1031,7 @@ nav a:hover {
 }
 
 /* Hide main nav groups on small screens and show hamburger */
-@media (max-width: 768px) {
+@media (max-width: 1149) {
   .nav-main-group,
   .nav-search-group {
     display: none;
@@ -1205,19 +1195,34 @@ nav a:hover {
   margin-bottom: 5px;
 }
 
-/* Progress Bar */
 .progress-bar {
   width: 100%;
-  background-color: #ecdccf; /* Light tan background */
+  background-color: #ecdccf; 
   border-radius: 5px;
   height: 10px;
   overflow: hidden;
 }
 
-/* Progress Indicator */
 .progress {
-  width: 40%; /* 40% for "2 of 5" */
-  background-color: #795548; /* Brown */
+  width: 40%; 
+  background-color: #795548; 
   height: 100%;
   transition: width 0.3s ease-in-out;
+}
+
+@media (min-width: 1150px) {
+  #mobile-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1149px) {
+  .hamburger-btn {
+    display: block;
+  }
+
+  .nav-main-group,
+  .nav-search-group {
+    display: none;
+  }
 }
