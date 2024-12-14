@@ -7,7 +7,7 @@
 @font-face {
   font-family: "Embarcadero MVB Pro";
   src: url("/public/fonts/Embarcadero MVB Pro/fonnts.com-Embarcadero_MVB_Pro_Bold.otf")
-    format("opentype");
+  format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -218,6 +218,7 @@ nav a:hover {
 }
 
 .hero-section h1 {
+  font-family: "Embarcadero MVB Pro";
   font-size: 5rem;
   margin-bottom: 1rem;
   font-family: "Poppins", serif;
@@ -239,6 +240,7 @@ nav a:hover {
 }
 
 .shop-now-btn {
+  font-family: 'Montserrat', sans-serif;
   background: #fdf8f0;
   color: #8b623c;
   border: none;
@@ -254,9 +256,10 @@ nav a:hover {
 }
 @media (max-width: 768px) {
   .shop-now-btn {
-    width: 30%;
+    width: auto;
   }
 }
+
 .shop-now-btn:hover {
   background-color: #f0e6d6;
   transform: translateY(-5px);
@@ -270,7 +273,6 @@ nav a:hover {
 
 .main-background-container {
   margin-top: -90px;
-
 }
 
 .main-background-container::before {
@@ -677,6 +679,13 @@ nav a:hover {
   text-align: center;
 }
 
+.testimonial-container h2 {
+  font-family: "Montserrat Medium";
+  color: #8b623c;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
 .testimonial-logo {
   display: block;
   width: 100%;
@@ -693,7 +702,14 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+}
+
+.prev {
+  left: 90px;
+}
+
+.next {
+  right: 90px;
 }
 
 .testimonial-item {
@@ -712,6 +728,21 @@ nav a:hover {
   text-align: left;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   pointer-events: none;
+}
+
+.testimonial-item.left {
+  opacity: 0.6;
+  transform: scale(0.7) translateX(-150%);
+  z-index: 1;
+  margin-left:160px;
+}
+
+.testimonial-item.right {
+  opacity: 0.6;
+  transform: scale(0.7) translateX(150%);
+  z-index: 1;
+  margin-right:160px;
+
 }
 
 .testimonial-content {
@@ -744,10 +775,19 @@ nav a:hover {
   z-index: 3;
 }
 
+.testimonial-item.left .testimonial-quotation,
+.testimonial-item.left .testimonial-quotation {
+  transform: scale(2.2);
+  bottom: -30px;
+  right: 50px;
+  z-index: 3;
+}
+
 .testimonial-author {
+  font-family: 'Montserrat', sans-serif;
   display: inline-block;
   border: 2px solid #c4a484;
-  border-radius: 20px;
+  border-radius: 8px;
   padding: 5px 15px;
   color: #8b623c;
   font-size: 0.9em;
@@ -772,13 +812,13 @@ nav a:hover {
 }
 .testimonial-item.left {
   opacity: 0.6;
-  transform: scale(0.9) translateX(-150%);
+  transform: scale(0.7) translateX(-150%);
   z-index: 1;
 }
 
 .testimonial-item.right {
   opacity: 0.6;
-  transform: scale(0.9) translateX(150%);
+  transform: scale(0.7) translateX(150%);
   z-index: 1;
 }
 
@@ -818,13 +858,6 @@ nav a:hover {
   color: #c4a484;
 }
 
-.prev {
-  left: 50px;
-}
-
-.next {
-  right: 50px;
-}
 
 @media (max-width: 768px) {
   .hero-section h1 {
